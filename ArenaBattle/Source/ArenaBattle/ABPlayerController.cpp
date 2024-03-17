@@ -7,11 +7,10 @@ void AABPlayerController::PostInitializeComponents()
 {
 	Super::PostInitializeComponents();
 	ABLOG_S(Warning);
-	Super::Possess(aPawn);
 }
 
-void AABPlayerController::Possess(APawn* aPawn)
+void AABPlayerController::OnPossess(APawn* aPawn)
 {
 	ABLOG_S(Warning);
-	Super::Possess(aPawn);
+	Super::OnPossess(aPawn);
 }
