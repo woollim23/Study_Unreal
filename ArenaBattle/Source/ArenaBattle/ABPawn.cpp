@@ -65,6 +65,7 @@ void AABPawn::PossessedBy(AController* NewController)
 	ABLOG_S(Warning);
 	Super::PossessedBy(NewController);
 }
+  
 
 // Called to bind functionality to input
 void AABPawn::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
