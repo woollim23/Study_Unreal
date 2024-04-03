@@ -18,10 +18,15 @@ public:
 	UABAnimInstance();
 	virtual void NativeUpdateAnimation(float DeltaSeconds) override;
 
+	void PlayerAttackMontage();
+
 private:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Pawn, Meta = (AllowPrivateAccess = true))
 	float CurrentPawnSpeed;
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Pawn, Meta = (AllowPrivateAccess = true))
-		bool IsInAir;
+	bool IsInAir;
+
+	UPROPERTY(VisibleDefaultsOnly, BlueprintReadOnly, Category = Attack, Meta = (AllowPrivateAccess = true))
+	UAnimMontage* AttackMontage;
 };
