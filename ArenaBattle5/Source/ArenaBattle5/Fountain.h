@@ -2,7 +2,7 @@
 
 #pragma once
 
-#include "EngineMinimal.h"
+#include "ArenaBattle5.h"
 #include "GameFramework/Actor.h"
 #include "Fountain.generated.h"
 
@@ -34,4 +34,7 @@ public:
 
 	UPROPERTY(VisibleAnywhere)
 	UParticleSystemComponent* Splash;
+
+	UPROPERTY(EditAnywhere, Category = ID)
+	int32 ID;
 };
