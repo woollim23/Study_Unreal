@@ -14,6 +14,7 @@ AFountain::AFountain()
 	Water = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("WATER"));
 	Light = CreateDefaultSubobject<UPointLightComponent>(TEXT("LIGHT"));
 	Splash = CreateDefaultSubobject<UParticleSystemComponent>(TEXT("SPLASH"));
+	Movement = CreateDefaultSubobject<URotatingMovementComponent>(TEXT("MOVEMENT")); // (Actor Component)액터의 현재 위치와 관계없이 액터에 지정된 움직임 기능을 제공, 다른 컴포넌트들(Scene Component)과 달리 독립적으로 액터에 부착 됨
 
 	RootComponent = Body;
 	Water->SetupAttachment(Body);
@@ -45,6 +46,8 @@ AFountain::AFountain()
 
 	// 회전 속도 변수값 대입
 	RotateSpeed = 30.0f;
+	// 지정속도 RotateSpeed 만큼 Yaw 회전
+	Movement->RotationRate = FRotator(0.0f, RotateSpeed, 0.0f);
 }
 
 // Called when the game starts or when spawned
@@ -62,9 +65,9 @@ void AFountain::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
-	// 매 틱 마다 30.0f 만큼씩 회전, z축을 기준으로 Yaw회전
+	// 매 틱 마다 30.0f 만큼씩 회전, x축을 기준으로 Roll회전
 	// ( y , z , x )
-	AddActorLocalRotation(FRotator(0.0f, RotateSpeed * DeltaTime, 0.0f));
+	AddActorLocalRotation(FRotator(0.0f, 0.0f, RotateSpeed * DeltaTime));
 
 
 }

@@ -3,6 +3,7 @@
 #pragma once
 
 #include "ArenaBattle5.h"
+#include "GameFramework/RotatingMovementComponent.h"
 #include "GameFramework/Actor.h"
 #include "Fountain.generated.h"
 
@@ -38,13 +39,18 @@ public:
 	// 파티클 컴포넌트 선언
 	UPROPERTY(VisibleAnywhere)
 	UParticleSystemComponent* Splash;
+	// 무브먼트 컴포넌트 선언
+	UPROPERTY(VisibleAnywhere)
+	URotatingMovementComponent* Movement;
 
 	// ID 변수 선언
 	UPROPERTY(EditAnywhere, Category = ID)
 	int32 ID;
 
+
 private:
 	// 회전 속도 변수 선언
 	UPROPERTY(EditAnywhere, Category = Stat, Meta = (AllowPrivateAccess = true))
 	float RotateSpeed;
+
 };
