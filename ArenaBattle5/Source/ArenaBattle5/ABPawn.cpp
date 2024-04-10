@@ -25,19 +25,24 @@ void AABPawn::Tick(float DeltaTime)
 
 }
 
+// 컴포넌트 초기화 이후 호출 함수
 void AABPawn::PostInitializeComponents()
 {
+	// 3. 폰 생성시 로그 찍힘
 	Super::PostInitializeComponents();
 	ABLOG_S(Warning);
 }
 
+// 빙의시 호출 함수
 void AABPawn::PossessedBy(AController* NewController)
 {
+	// 5. 빙의시 로그 찍힘
 	ABLOG_S(Warning);
 	Super::PossessedBy(NewController);
 }
 
 // Called to bind functionality to input
+//
 void AABPawn::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 {
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
