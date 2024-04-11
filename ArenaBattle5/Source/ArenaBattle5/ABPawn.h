@@ -48,4 +48,10 @@ public:
 	// 카메라가 바라보는 게임 세계의 화면을 플레이어 화면으로 전송
 	UPROPERTY(VisibleAnywhere, Category = Camera)
 	UCameraComponent* Camera;
+
+private:
+	// 위아래 방향키 입력 함수
+	void UpDown(float NextAxisValue);
+	// 왼쪽오른쪽 방향키 입력 함수
+	void LeftRight(float NextAxisValue);
 };

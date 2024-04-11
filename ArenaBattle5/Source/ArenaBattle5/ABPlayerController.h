@@ -19,6 +19,9 @@ class ARENABATTLE5_API AABPlayerController : public APlayerController
 {
 	GENERATED_BODY()
 
+protected:
+	virtual void BeginPlay() override;
+
 public:
 	// 컴포넌트 초기화 이후 호출 함수
 	virtual void PostInitializeComponents() override;

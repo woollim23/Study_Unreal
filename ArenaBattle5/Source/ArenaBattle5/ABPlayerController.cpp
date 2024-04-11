@@ -11,6 +11,15 @@ void AABPlayerController::PostInitializeComponents()
 	ABLOG_S(Warning);
 }
 
+void AABPlayerController::BeginPlay()
+{
+	Super::BeginPlay();
+
+	// 게임 시작 후 플레이어 컨트롤러에서 UI를 배제하고 게임에서만 입력 받도록 함
+	FInputModeGameOnly InputMode;
+	SetInputMode(InputMode);
+}
+
 // 빙의시 호출 함수
 void AABPlayerController::OnPossess(APawn* aPawn)
 {
