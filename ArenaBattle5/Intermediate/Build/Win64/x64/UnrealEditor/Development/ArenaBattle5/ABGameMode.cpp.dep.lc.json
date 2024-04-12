@@ -204,10 +204,8 @@
             "c:\\program files\\epic games\\ue_5.3\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\gameplaystaticstypes.generated.h",
             "c:\\program files\\epic games\\ue_5.3\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\gameplaystatics.generated.h",
             "c:\\users\\yelim\\documents\\github\\study_unreal\\arenabattle5\\intermediate\\build\\win64\\unrealeditor\\inc\\arenabattle5\\uht\\abgamemode.generated.h",
-            "c:\\users\\yelim\\documents\\github\\study_unreal\\arenabattle5\\source\\arenabattle5\\abpawn.h",
-            "c:\\program files\\epic games\\ue_5.3\\engine\\source\\runtime\\engine\\classes\\gameframework\\floatingpawnmovement.h",
-            "c:\\program files\\epic games\\ue_5.3\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\floatingpawnmovement.generated.h",
-            "c:\\users\\yelim\\documents\\github\\study_unreal\\arenabattle5\\intermediate\\build\\win64\\unrealeditor\\inc\\arenabattle5\\uht\\abpawn.generated.h",
+            "c:\\users\\yelim\\documents\\github\\study_unreal\\arenabattle5\\source\\arenabattle5\\abcharacter.h",
+            "c:\\users\\yelim\\documents\\github\\study_unreal\\arenabattle5\\intermediate\\build\\win64\\unrealeditor\\inc\\arenabattle5\\uht\\abcharacter.generated.h",
             "c:\\users\\yelim\\documents\\github\\study_unreal\\arenabattle5\\source\\arenabattle5\\abplayercontroller.h",
             "c:\\users\\yelim\\documents\\github\\study_unreal\\arenabattle5\\intermediate\\build\\win64\\unrealeditor\\inc\\arenabattle5\\uht\\abplayercontroller.generated.h"
         ],
