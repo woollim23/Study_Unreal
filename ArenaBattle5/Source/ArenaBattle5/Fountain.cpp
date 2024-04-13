@@ -56,8 +56,8 @@ void AFountain::BeginPlay()
 	Super::BeginPlay();
 
 	// 함수 BeginPlay() 실행시 출력, 액터 이름과 아이디, 갯수 출력
-	ABLOG_S(Warning);
-	ABLOG(Warning, TEXT("Actor Name : %s, ID : %d, Location X : %.3f"), *GetName(), ID, GetActorLocation().X);
+	//ABLOG_S(Warning);
+	//ABLOG(Warning, TEXT("Actor Name : %s, ID : %d, Location X : %.3f"), *GetName(), ID, GetActorLocation().X);
 }
 
 // Called every frame
@@ -76,7 +76,7 @@ void AFountain::EndPlay(const EEndPlayReason::Type EndPlayReason)
 {
 	// 함수 EndPlay() 실행시 출력, 프로그램 종료시 출력
 	Super::EndPlay(EndPlayReason);
-	ABLOG_S(Warning);
+	//ABLOG_S(Warning);
 }
 
 void AFountain::PostInitializeComponents()
@@ -84,5 +84,5 @@ void AFountain::PostInitializeComponents()
 	// 함수 PostInitializeComponents() 실행시 출력, 컴포넌트들 세팅 완료시 출력
 	// PostInitializeComponents() -> BeginPlay() -> EndPlay() 순으로 출력
 	Super::PostInitializeComponents();
-	ABLOG_S(Warning);
+	//ABLOG_S(Warning);
 }
