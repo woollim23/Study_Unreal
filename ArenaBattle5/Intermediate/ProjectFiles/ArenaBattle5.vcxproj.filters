@@ -36,6 +36,12 @@
     <Filter Include="Source\ArenaBattle5">
       <UniqueIdentifier>{7C99FAA8-32D2-3DBA-968B-3B4169B0DB9A}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\ArenaBattle5\ABAnimInstance.cpp">
+      <Filter>Source\ArenaBattle5</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ArenaBattle5\ABAnimInstance.h">
+      <Filter>Source\ArenaBattle5</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\ArenaBattle5\ABCharacter.cpp">
       <Filter>Source\ArenaBattle5</Filter>
     </ClCompile>

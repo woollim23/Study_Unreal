@@ -46,6 +46,8 @@ AABCharacter::AABCharacter()
 
 	ArmLengthSpeed = 3.0f;
 	ArmRotationSpeed = 10.0f;
+	// 점프 높이를 800으로 변경
+	GetCharacterMovement()->JumpZVelocity = 800.0f;
 }
 
 // Called when the game starts or when spawned
@@ -145,6 +147,8 @@ void AABCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCompone
 
 	// 버튼을 누른 직후 ViewChange함수 호출
 	PlayerInputComponent->BindAction(TEXT("ViewChange"), EInputEvent::IE_Pressed, this, &AABCharacter::ViewChange);
+	// 스페이스 버튼 누른 직후 점프 함수 호출
+	PlayerInputComponent->BindAction(TEXT("Jump"), EInputEvent::IE_Pressed, this, &ACharacter::Jump);
 
 	// 언리얼은 InputComponent를 사용해 입력 설정을 연결 시키면,
 	// 입력 신호는 자동으로 캐릭터의 멤버 함수의 인자로 전달 됨
