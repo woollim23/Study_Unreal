@@ -9,6 +9,12 @@ UABAnimInstance::UABAnimInstance()
 	CurrentPawnSpeed = 0.0f;
 	// 공중 확인 부울 변수를 false로 초기화
 	IsInAir = false;
+	// 애님 몽타주 불러오기
+	static ConstructorHelpers::FObjectFinder<UAnimMontage> ATTACK_MONTAGE(TEXT("/Script/Engine.AnimMontage'/Game/Book/Animations/SK_Mannequin_Skeleton_Montage.SK_Mannequin_Skeleton_Montage'"));
+	if (ATTACK_MONTAGE.Succeeded())
+	{
+		AttackMontage = ATTACK_MONTAGE.Object;
+	}
 }
 
 // 애님 인스턴스의 Tick에서 폰의 속도 정보를 가져 온 후 이를 CurrentPawnSpeed에 업데이트 함
@@ -29,5 +35,14 @@ void UABAnimInstance::NativeUpdateAnimation(float DeltaSeconds)
 		{
 			IsInAir = Character->GetMovementComponent()->IsFalling();
 		}
+	}
+}
+
+// 어택 몽타주 재생 함수(if 어택 몽타주가 재생중이지 않는다면 가능)
+void UABAnimInstance::PlayAttackMontage()
+{
+	if (!Montage_IsPlaying(AttackMontage))
+	{
+		Montage_Play(AttackMontage, 1.0f);
 	}
 }

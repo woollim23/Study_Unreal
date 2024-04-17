@@ -41,10 +41,6 @@ protected:
 	float ArmLengthSpeed = 0.0f;
 	float ArmRotationSpeed = 0.0f;
 
-private:
-	// 조작모드 시점 전환
-	void ViewChange();
-
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
@@ -68,5 +64,10 @@ private:
 	void LookUp(float NewAxisValue);
 	// 캐릭터 y축 회전
 	void Turn(float NewAxisValue);
+
+	// 조작모드 시점 전환
+	void ViewChange();
+	// 공격 버튼 함수
+	void Attack();
 
 };

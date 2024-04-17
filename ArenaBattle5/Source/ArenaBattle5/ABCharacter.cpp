@@ -2,6 +2,7 @@
 
 
 #include "ABCharacter.h"
+#include "ABAnimInstance.h"
 
 // Sets default values
 AABCharacter::AABCharacter()
@@ -149,6 +150,8 @@ void AABCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCompone
 	PlayerInputComponent->BindAction(TEXT("ViewChange"), EInputEvent::IE_Pressed, this, &AABCharacter::ViewChange);
 	// 스페이스 버튼 누른 직후 점프 함수 호출
 	PlayerInputComponent->BindAction(TEXT("Jump"), EInputEvent::IE_Pressed, this, &ACharacter::Jump);
+	// 왼쪽 마우스 버튼 클릭 후 Attack()함수 호출
+	PlayerInputComponent->BindAction(TEXT("Attack"), EInputEvent::IE_Pressed, this, &AABCharacter::Attack);
 
 	// 언리얼은 InputComponent를 사용해 입력 설정을 연결 시키면,
 	// 입력 신호는 자동으로 캐릭터의 멤버 함수의 인자로 전달 됨
@@ -234,4 +237,13 @@ void AABCharacter::ViewChange()
 		SetControlMode(EControlMode::GTA);
 		break;
 	}
+}
+
+// 어택 함수 정의문
+void AABCharacter::Attack()
+{
+	auto AnimInstance = Cast<UABAnimInstance>(GetMesh()->GetAnimInstance());
+	if (nullptr == AnimInstance) return;
+
+	AnimInstance->PlayAttackMontage();
 }

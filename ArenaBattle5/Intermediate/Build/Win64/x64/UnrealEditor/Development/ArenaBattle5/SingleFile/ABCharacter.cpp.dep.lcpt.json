@@ -1475,7 +1475,16 @@
             "c:\\program files\\epic games\\ue_5.3\\engine\\source\\runtime\\audioextensions\\public\\iwaveformtransformation.h",
             "c:\\program files\\epic games\\ue_5.3\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\audioextensions\\uht\\iwaveformtransformation.generated.h",
             "c:\\program files\\epic games\\ue_5.3\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\soundwave.generated.h",
-            "c:\\users\\yelim\\documents\\github\\study_unreal\\arenabattle5\\intermediate\\build\\win64\\unrealeditor\\inc\\arenabattle5\\uht\\abcharacter.generated.h"
+            "c:\\users\\yelim\\documents\\github\\study_unreal\\arenabattle5\\intermediate\\build\\win64\\unrealeditor\\inc\\arenabattle5\\uht\\abcharacter.generated.h",
+            "c:\\users\\yelim\\documents\\github\\study_unreal\\arenabattle5\\source\\arenabattle5\\abaniminstance.h",
+            "c:\\program files\\epic games\\ue_5.3\\engine\\source\\runtime\\engine\\classes\\animation\\animinstance.h",
+            "c:\\program files\\epic games\\ue_5.3\\engine\\source\\runtime\\engine\\public\\animation\\animsubsysteminstance.h",
+            "c:\\program files\\epic games\\ue_5.3\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\animsubsysteminstance.generated.h",
+            "c:\\program files\\epic games\\ue_5.3\\engine\\source\\runtime\\engine\\public\\animation\\animsync.h",
+            "c:\\program files\\epic games\\ue_5.3\\engine\\source\\runtime\\engine\\classes\\animation\\animnotifies\\animnotify.h",
+            "c:\\program files\\epic games\\ue_5.3\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\animnotify.generated.h",
+            "c:\\program files\\epic games\\ue_5.3\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\animinstance.generated.h",
+            "c:\\users\\yelim\\documents\\github\\study_unreal\\arenabattle5\\intermediate\\build\\win64\\unrealeditor\\inc\\arenabattle5\\uht\\abaniminstance.generated.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []
