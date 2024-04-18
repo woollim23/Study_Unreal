@@ -38,11 +38,8 @@ void UABAnimInstance::NativeUpdateAnimation(float DeltaSeconds)
 	}
 }
 
-// 어택 몽타주 재생 함수(if 어택 몽타주가 재생중이지 않는다면 가능)
+// 어택 몽타주 재생 함수
 void UABAnimInstance::PlayAttackMontage()
 {
-	if (!Montage_IsPlaying(AttackMontage))
-	{
-		Montage_Play(AttackMontage, 1.0f);
-	}
+	Montage_Play(AttackMontage, 1.0f);
 }

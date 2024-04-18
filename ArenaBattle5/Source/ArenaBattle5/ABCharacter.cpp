@@ -147,12 +147,14 @@ void AABCharacter::Tick(float DeltaTime)
 void AABCharacter::PostInitializeComponents()
 {
 	Super::PostInitializeComponents();
-	// 애님 인스턴스를 불러옴
-	auto AnimInstance = Cast<UABAnimInstance>(GetMesh()->GetAnimInstance());
-	ABCHECK(nullptr != AnimInstance);
+	// 애님 인스턴스 불러옴
+	ABAnim = Cast<UABAnimInstance>(GetMesh()->GetAnimInstance());
+	ABCHECK(nullptr != ABAnim);
+
 	// OnMontageEnded 델리게이트와 OnAttackMontageEnded를 연결해, 델리게이트가 발동할 때까지 애니메이션 시스템에
 	// 몽타주 재생 명령을 내리지 못하게 폰 로직에서 막아줌
-	AnimInstance->OnMontageEnded.AddDynamic(this, &AABCharacter::OnAttackMontageEnded);
+	ABAnim->OnMontageEnded.AddDynamic(this, &AABCharacter::OnAttackMontageEnded);
+
 }
 
 // Called to bind functionality to input
@@ -259,10 +261,7 @@ void AABCharacter::Attack()
 	// 이미 작동 중이면 어택이 작동하지 안도록 리턴
 	if (IsAttacking) return;
 
-	auto AnimInstance = Cast<UABAnimInstance>(GetMesh()->GetAnimInstance());
-	if (nullptr == AnimInstance) return;
-
-	AnimInstance->PlayAttackMontage();
+	ABAnim->PlayAttackMontage();
 
 	IsAttacking = true;
 }

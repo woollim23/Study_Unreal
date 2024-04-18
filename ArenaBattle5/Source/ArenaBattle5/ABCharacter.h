@@ -80,4 +80,8 @@ private:
 	UPROPERTY(VisibleInstanceOnly, BlueprintReadOnly, Category = Attack, Meta = (AllowPrivateAccess = true))
 	bool IsAttacking;
 
+	// 애님인스턴스를 멤버변수로 선언
+	UPROPERTY()
+	class UABAnimInstance* ABAnim;
+
 };
