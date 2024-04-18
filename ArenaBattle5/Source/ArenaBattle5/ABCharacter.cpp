@@ -49,6 +49,9 @@ AABCharacter::AABCharacter()
 	ArmRotationSpeed = 10.0f;
 	// 점프 높이를 800으로 변경
 	GetCharacterMovement()->JumpZVelocity = 800.0f;
+
+	// 공격 중인지 확인 하는 부울 false로 초기화
+	IsAttacking = false;
 }
 
 // Called when the game starts or when spawned
@@ -139,6 +142,17 @@ void AABCharacter::Tick(float DeltaTime)
 		break;
 	}
 
+}
+
+void AABCharacter::PostInitializeComponents()
+{
+	Super::PostInitializeComponents();
+	// 애님 인스턴스를 불러옴
+	auto AnimInstance = Cast<UABAnimInstance>(GetMesh()->GetAnimInstance());
+	ABCHECK(nullptr != AnimInstance);
+	// OnMontageEnded 델리게이트와 OnAttackMontageEnded를 연결해, 델리게이트가 발동할 때까지 애니메이션 시스템에
+	// 몽타주 재생 명령을 내리지 못하게 폰 로직에서 막아줌
+	AnimInstance->OnMontageEnded.AddDynamic(this, &AABCharacter::OnAttackMontageEnded);
 }
 
 // Called to bind functionality to input
@@ -242,8 +256,20 @@ void AABCharacter::ViewChange()
 // 어택 함수 정의문
 void AABCharacter::Attack()
 {
+	// 이미 작동 중이면 어택이 작동하지 안도록 리턴
+	if (IsAttacking) return;
+
 	auto AnimInstance = Cast<UABAnimInstance>(GetMesh()->GetAnimInstance());
 	if (nullptr == AnimInstance) return;
 
 	AnimInstance->PlayAttackMontage();
+
+	IsAttacking = true;
+}
+
+// 어택이 끝났을 때 호출
+void AABCharacter::OnAttackMontageEnded(UAnimMontage* Montage, bool bInterrupted)
+{
+	ABCHECK(IsAttacking);
+	IsAttacking = false;
 }

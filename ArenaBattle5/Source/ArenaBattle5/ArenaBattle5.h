@@ -13,3 +13,6 @@ DECLARE_LOG_CATEGORY_EXTERN(ArenaBattle, Log, All);
 #define ABLOG_S(Verbosity) UE_LOG(ArenaBattle, Verbosity, TEXT("%s"), *ABLOG_CALLINFO)
 // ABLOG_S 정보에 형식 문자열로 추가 정보를 지정해 로그 남김
 #define ABLOG(Verbosity, Format, ...) UE_LOG(ArenaBattle, Verbosity, TEXT("%s %s"), *ABLOG_CALLINFO, *FString::Printf(Format, ##__VA_ARGS__))
+
+// ABCAHECK 매크로, 런타임에서 문제가 발생할 때 붉은색으로 에러 로그를 뿌리고 바로 함수를 반환하는 기능을 함
+#define ABCHECK(Expr, ...) { if(!(Expr)) { ABLOG(Error, TEXT("ASSERTION : %s"), TEXT("'"#Expr"'")); return __VA_ARGS__; } }
