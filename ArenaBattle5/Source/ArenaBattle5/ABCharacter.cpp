@@ -52,6 +52,10 @@ AABCharacter::AABCharacter()
 
 	// 공격 중인지 확인 하는 부울 false로 초기화
 	IsAttacking = false;
+
+	// 콤보 카운터의 최대치 = 4
+	MaxCombo = 4;
+	AttackEndComboState();
 }
 
 // Called when the game starts or when spawned
@@ -155,6 +159,18 @@ void AABCharacter::PostInitializeComponents()
 	// 몽타주 재생 명령을 내리지 못하게 폰 로직에서 막아줌
 	ABAnim->OnMontageEnded.AddDynamic(this, &AABCharacter::OnAttackMontageEnded);
 
+	// 람다식 구문을 이용
+	// 다음 공격 타이밍전까지 공격 명령이 들어오면 NextAttackCheck 타이밍에 다음 콤보 공격을 시작
+	ABAnim->OnNextAttackCheck.AddLambda([this]() -> void {
+		ABLOG(Warning, TEXT("OnNextAttackCheck"));
+		CanNextCombo = false;
+
+		if (IsComboInputOn)
+		{
+			AttackStartComboState();
+			ABAnim->JumpToAttackMontageSection(CurrentCombo);
+		}
+	});
 }
 
 // Called to bind functionality to input
@@ -258,17 +274,50 @@ void AABCharacter::ViewChange()
 // 어택 함수 정의문
 void AABCharacter::Attack()
 {
-	// 이미 작동 중이면 어택이 작동하지 안도록 리턴
-	if (IsAttacking) return;
-
-	ABAnim->PlayAttackMontage();
-
-	IsAttacking = true;
+	// 다음 공격 타이밍전까지 공격 명령이 들어오면 NextAttackCheck 타이밍에 다음 콤보 공격을 시작
+	if (IsAttacking)
+	{
+		ABCHECK(FMath::IsWithinInclusive<int32>(CurrentCombo, 1, MaxCombo));
+		if (CanNextCombo)
+		{
+			IsComboInputOn = true;
+		}
+	}
+	else
+	{
+		ABCHECK(CurrentCombo == 0);
+		AttackStartComboState();
+		ABAnim->PlayAttackMontage();
+		ABAnim->JumpToAttackMontageSection(CurrentCombo);
+		IsAttacking = true;
+	}
 }
 
 // 어택이 끝났을 때 호출
 void AABCharacter::OnAttackMontageEnded(UAnimMontage* Montage, bool bInterrupted)
 {
 	ABCHECK(IsAttacking);
+	ABCHECK(CurrentCombo > 0);
 	IsAttacking = false;
+	AttackEndComboState();
+}
+
+// 공격이 시작할 때 관련 속성 지정하는 함수 정의
+void AABCharacter::AttackStartComboState()
+{
+	// 다음 콤보 가능
+	CanNextCombo = true;
+	// 콤보 입력 안됨
+	IsComboInputOn = false;
+	ABCHECK(FMath::IsWithinInclusive<int32>(CurrentCombo, 0, MaxCombo - 1));
+	// 현재 콤보 = 현재 콤보 + 1
+	CurrentCombo = FMath::Clamp<int32>(CurrentCombo + 1, 1, MaxCombo);
+}
+
+// 공격이 종료할 때 사용할 함수
+void AABCharacter::AttackEndComboState()
+{
+	IsComboInputOn = false;
+	CanNextCombo = false;
+	CurrentCombo = 0;
 }

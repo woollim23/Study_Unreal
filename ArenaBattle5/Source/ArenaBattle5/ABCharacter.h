@@ -75,10 +75,27 @@ private:
 	UFUNCTION()
 	void OnAttackMontageEnded(UAnimMontage* Montage, bool bInterrupted);
 
+	// 공격이 시작할 때 관련 속성 지정하는 함수 선언
+	void AttackStartComboState();
+	// 공격이 종료할 때 사용할 함수 선언
+	void AttackEndComboState();
+
 private:
 	// 공격 중인지 확인 하는 부울
 	UPROPERTY(VisibleInstanceOnly, BlueprintReadOnly, Category = Attack, Meta = (AllowPrivateAccess = true))
 	bool IsAttacking;
+	// 다음 콤보로의 이동 가능 여부
+	UPROPERTY(VisibleInstanceOnly, BlueprintReadOnly, Category = Attack, Meta = (AllowPrivateAccess = true))
+	bool CanNextCombo;
+	// 콤보 입력 여부
+	UPROPERTY(VisibleInstanceOnly, BlueprintReadOnly, Category = Attack, Meta = (AllowPrivateAccess = true))
+	bool IsComboInputOn;
+	// 현재 실행 중인 콤보 카운터
+	UPROPERTY(VisibleInstanceOnly, BlueprintReadOnly, Category = Attack, Meta = (AllowPrivateAccess = true))
+	int32 CurrentCombo;
+	// 콤보 카운터의 최대치
+	UPROPERTY(VisibleInstanceOnly, BlueprintReadOnly, Category = Attack, Meta = (AllowPrivateAccess = true))
+	int32 MaxCombo;
 
 	// 애님인스턴스를 멤버변수로 선언
 	UPROPERTY()

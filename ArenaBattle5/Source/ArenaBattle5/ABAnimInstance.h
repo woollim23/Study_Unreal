@@ -6,6 +6,9 @@
 #include "Animation/AnimInstance.h"
 #include "ABAnimInstance.generated.h"
 
+DECLARE_MULTICAST_DELEGATE(FOnNextAttackCheckDelegate);
+DECLARE_MULTICAST_DELEGATE(FOnAttackHitCheckDelegate);
+
 /**
  * 
  */
@@ -18,13 +21,26 @@ public:
 	UABAnimInstance();
 	// 틱마다 호출 되는 함수를 가상 함수로
 	virtual void NativeUpdateAnimation(float DeltaSeconds) override;
+
 	// 공격 몽타주 함수
 	void PlayAttackMontage();
+	// 점프 공격 몽타주 함수
+	void JumpToAttackMontageSection(int32 NewSection);
+
+public:
+	// 애니메이션 노티파이가 발생할 때마다 ABCharacter에 전달할 델리게이트 선언
+	FOnNextAttackCheckDelegate OnNextAttackCheck;
+	FOnAttackHitCheckDelegate OnAttackHitCheck;
 
 private:
 	// 어택 노티파이 함수 선언
 	UFUNCTION()
 	void AnimNotify_AttackHitCheck();
+	// 다음 어택 노티파이 함수 선언
+	UFUNCTION()
+	void AnimNotify_NextAttackCheck();
+	// 공격 몽타주 섹션 이름을 얻는 함수
+	FName GetAttackMontageSectionName(int32 Section);
 
 private:
 	// 현재 캐릭터속도

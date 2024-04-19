@@ -44,9 +44,33 @@ void UABAnimInstance::PlayAttackMontage()
 	Montage_Play(AttackMontage, 1.0f);
 }
 
+
+
+// 점프 공격 몽타주 함수
+void UABAnimInstance::JumpToAttackMontageSection(int32 NewSection)
+{
+	ABCHECK(Montage_IsPlaying(AttackMontage));
+	// 몽타주를 명명된 섹션으로 이동, 현재 어택 섹션으로 이동
+	Montage_JumpToSection(GetAttackMontageSectionName(NewSection), AttackMontage);
+}
+
 // 어택 노티파이 함수 정의
 // 노티파이가 호출되면 자동으로 호출 된다
 void UABAnimInstance::AnimNotify_AttackHitCheck()
 {
-	ABLOG_S(Warning);
+	// 멀티캐스트 델리게이트에 등록된 모든 함수를 호출
+	OnAttackHitCheck.Broadcast();
+}
+
+// 다음 어택 노티파이 함수 정의
+void UABAnimInstance::AnimNotify_NextAttackCheck()
+{
+	OnNextAttackCheck.Broadcast();
+}
+
+// 현재 공격 몽타주 섹션 이름을 얻는 함수
+FName UABAnimInstance::GetAttackMontageSectionName(int32 Section)
+{
+	ABCHECK(FMath::IsWithinInclusive<int32>(Section, 1, 4), NAME_None);
+	return FName(*FString::Printf(TEXT("Attack%d"), Section));
 }
