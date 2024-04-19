@@ -43,3 +43,10 @@ void UABAnimInstance::PlayAttackMontage()
 {
 	Montage_Play(AttackMontage, 1.0f);
 }
+
+// 어택 노티파이 함수 정의
+// 노티파이가 호출되면 자동으로 호출 된다
+void UABAnimInstance::AnimNotify_AttackHitCheck()
+{
+	ABLOG_S(Warning);
+}

@@ -22,6 +22,11 @@ public:
 	void PlayAttackMontage();
 
 private:
+	// 어택 노티파이 함수 선언
+	UFUNCTION()
+	void AnimNotify_AttackHitCheck();
+
+private:
 	// 현재 캐릭터속도
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category=Pawn, Meta=(AllowPrivateAccess=true))
 	float CurrentPawnSpeed;
