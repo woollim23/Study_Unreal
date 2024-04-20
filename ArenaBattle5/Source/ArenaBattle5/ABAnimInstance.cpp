@@ -44,8 +44,6 @@ void UABAnimInstance::PlayAttackMontage()
 	Montage_Play(AttackMontage, 1.0f);
 }
 
-
-
 // 점프 공격 몽타주 함수
 void UABAnimInstance::JumpToAttackMontageSection(int32 NewSection)
 {
