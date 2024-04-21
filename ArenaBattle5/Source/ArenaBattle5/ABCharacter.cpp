@@ -56,6 +56,9 @@ AABCharacter::AABCharacter()
 	// 콤보 카운터의 최대치 = 4
 	MaxCombo = 4;
 	AttackEndComboState();
+
+	// 프로젝트 세팅에서 만든 ABCharacter 콜리전 세팅을 기본값으로 설정
+	GetCapsuleComponent()->SetCollisionProfileName(TEXT("ABCharacter"));
 }
 
 // Called when the game starts or when spawned
@@ -157,6 +160,7 @@ void AABCharacter::PostInitializeComponents()
 
 	// OnMontageEnded 델리게이트와 OnAttackMontageEnded를 연결해, 델리게이트가 발동할 때까지 애니메이션 시스템에
 	// 몽타주 재생 명령을 내리지 못하게 폰 로직에서 막아줌
+	// 공격상태 초기화
 	ABAnim->OnMontageEnded.AddDynamic(this, &AABCharacter::OnAttackMontageEnded);
 
 	// 람다식 구문을 이용
@@ -309,8 +313,9 @@ void AABCharacter::AttackStartComboState()
 	CanNextCombo = true;
 	// 콤보 입력 안됨
 	IsComboInputOn = false;
+	// FMath - > 값을 받아 최소치와 최대치로 정의된 특정 범위로 제한 시키는 것
+	// CurrentCombo를  0 ~ MaxCombo - 1 사이로 제한
 	ABCHECK(FMath::IsWithinInclusive<int32>(CurrentCombo, 0, MaxCombo - 1));
-	// 현재 콤보 = 현재 콤보 + 1
 	CurrentCombo = FMath::Clamp<int32>(CurrentCombo + 1, 1, MaxCombo);
 }
 

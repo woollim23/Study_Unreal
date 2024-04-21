@@ -9,7 +9,7 @@ UABAnimInstance::UABAnimInstance()
 	CurrentPawnSpeed = 0.0f;
 	// 공중 확인 부울 변수를 false로 초기화
 	IsInAir = false;
-	// 애님 몽타주 불러오기
+	// 애님 몽타주 불러와서 연결
 	static ConstructorHelpers::FObjectFinder<UAnimMontage> ATTACK_MONTAGE(TEXT("/Script/Engine.AnimMontage'/Game/Book/Animations/SK_Mannequin_Skeleton_Montage.SK_Mannequin_Skeleton_Montage'"));
 	if (ATTACK_MONTAGE.Succeeded())
 	{
@@ -41,6 +41,7 @@ void UABAnimInstance::NativeUpdateAnimation(float DeltaSeconds)
 // 어택 몽타주 재생 함수
 void UABAnimInstance::PlayAttackMontage()
 {
+	// 1.0 배속으로 몽타주 재생
 	Montage_Play(AttackMontage, 1.0f);
 }
 
