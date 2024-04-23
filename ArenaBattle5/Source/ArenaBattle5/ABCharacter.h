@@ -103,4 +103,12 @@ private:
 	UPROPERTY()
 	class UABAnimInstance* ABAnim;
 
+	// DrawDebugCapsule 함수를 사용해서 탐색을 하기 위해 캡슐 설정
+	// 공격 범위
+	UPROPERTY(VisibleInstanceOnly, BlueprintReadOnly, Category = Attack, Meta = (AllowPrivateAccess = true))
+	float AttackRange;
+	// 공격 반지름
+	UPROPERTY(VisibleInstanceOnly, BlueprintReadOnly, Category = Attack, Meta = (AllowPrivateAccess = true))
+	float AttackRadius;
+
 };

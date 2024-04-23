@@ -1379,3 +1379,104 @@ LogConfig: Set CVar [[r.Shadow.DetectVertexShaderLayerAtRuntime:1]]
 [2024.04.23-12.03.30:273][812]LogFileHelpers: InternalPromptForCheckoutAndSave took 147 ms
 [2024.04.23-12.03.30:275][812]AssetCheck: New page: 에셋 저장:  Step2
 [2024.04.23-12.03.30:275][812]LogContentValidation: Display: /Script/Engine.World /Game/Book/Maps/Step2.Step2 유효성 검사 중
+[2024.04.23-12.48.00:191][356]LogDerivedDataCache: C:/Users/Yelim/AppData/Local/UnrealEngine/Common/DerivedDataCache: Maintenance finished in +00:00:13.157 and deleted 0 files with total size 0 MiB and 0 empty folders. Scanned 7208 files in 8907 folders with total size 334 MiB.
+[2024.04.23-13.07.59:656][ 53]LogLiveCoding: Display: Starting Live Coding compile.
+[2024.04.23-13.08.05:724][547]LogLiveCoding: Display:    C:\Users\Yelim\Documents\GitHub\Study_Unreal\ArenaBattle5\Binaries\Win64\UnrealEditor-ArenaBattle5.patch_1.lib 라이브러리 및 C:\Users\Yelim\Documents\GitHub\Study_Unreal\ArenaBattle5\Binaries\Win64\UnrealEditor-ArenaBattle5.patch_1.exp 개체를 생성하고 있습니다.
+[2024.04.23-13.08.05:893][551]LogClass: UPackage /Script/ArenaBattle5 Reload.
+[2024.04.23-13.08.05:893][551]LogClass: UClass ABCharacter Reload.
+[2024.04.23-13.08.05:894][551]LogClass: Could not find existing class ABCharacter in package /Script/ArenaBattle5 for reload, assuming new or modified class
+[2024.04.23-13.08.05:894][551]LogClass: Function OnAttackMontageEnded is new or belongs to a modified class.
+[2024.04.23-13.08.05:911][551]Re-instancing ABCharacter after reload.
+[2024.04.23-13.08.06:199][551]LogUObjectHash: Compacting FUObjectHashTables data took   1.80ms
+[2024.04.23-13.08.06:802][552]Display: Reload/Re-instancing Complete: 1 package changed, 1 class changed
+[2024.04.23-13.08.06:802][552]LogLiveCoding: Warning: Live coding succeeded, data type changes may cause packaging to fail if assets reference the new or updated data types
+[2024.04.23-13.08.06:903][553]LogViewport: Scene viewport resized to 297x261, mode Windowed.
+[2024.04.23-13.08.08:507][638]LogDebuggerCommands: Repeating last play command: 선택된 뷰포트
+[2024.04.23-13.08.08:514][638]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2024.04.23-13.08.08:514][638]PIE: New page: PIE 세션: Step2 (2024. 4. 24. 오전 7:08:08)
+[2024.04.23-13.08.08:538][638]LogPlayLevel: Creating play world package: /Game/Book/Maps/UEDPIE_0_Step2
+[2024.04.23-13.08.08:540][638]LogPlayLevel: PIE: StaticDuplicateObject took: (0.002074s)
+[2024.04.23-13.08.08:540][638]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Book/Maps/Step2.Step2 to /Game/Book/Maps/UEDPIE_0_Step2.Step2 (0.002144s)
+[2024.04.23-13.08.08:628][638]LogUObjectHash: Compacting FUObjectHashTables data took   1.47ms
+[2024.04.23-13.08.08:630][638]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.04.23-13.08.08:630][638]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.04.23-13.08.08:630][638]LogAIModule: Creating AISystem for world Step2
+[2024.04.23-13.08.08:631][638]LogPlayLevel: PIE: World Init took: (0.001156s)
+[2024.04.23-13.08.08:631][638]LogAudio: Display: Creating Audio Device:                 Id: 4, Scope: Unique, Realtime: True
+[2024.04.23-13.08.08:631][638]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2024.04.23-13.08.08:631][638]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2024.04.23-13.08.08:631][638]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2024.04.23-13.08.08:631][638]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2024.04.23-13.08.08:631][638]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2024.04.23-13.08.08:631][638]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2024.04.23-13.08.08:631][638]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2024.04.23-13.08.08:631][638]LogAudio: Display: AudioDevice MaxSources: 32
+[2024.04.23-13.08.08:631][638]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2024.04.23-13.08.08:631][638]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2024.04.23-13.08.08:631][638]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2024.04.23-13.08.08:633][638]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2024.04.23-13.08.08:647][638]LogAudioMixer: Display: Using Audio Hardware Device Headset Earphone(CORSAIR VOID ELITE Wireless Gaming Dongle)
+[2024.04.23-13.08.08:647][638]LogAudioMixer: Display: Initializing Sound Submixes...
+[2024.04.23-13.08.08:647][638]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2024.04.23-13.08.08:648][638]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2024.04.23-13.08.08:648][638]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=4
+[2024.04.23-13.08.08:648][638]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=4
+[2024.04.23-13.08.08:649][638]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=4
+[2024.04.23-13.08.08:649][638]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=4
+[2024.04.23-13.08.08:649][638]LogInit: FAudioDevice initialized with ID 4.
+[2024.04.23-13.08.08:649][638]LogAudio: Display: Audio Device (ID: 4) registered with world 'Step2'.
+[2024.04.23-13.08.08:649][638]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 4
+[2024.04.23-13.08.08:655][638]LogLoad: Game class is 'ABGameMode'
+[2024.04.23-13.08.08:656][638]LogWorld: Bringing World /Game/Book/Maps/UEDPIE_0_Step2.Step2 up for play (max tick rate 0) at 2024.04.23-22.08.08
+[2024.04.23-13.08.08:656][638]LogWorld: Bringing up level for play took: 0.001265
+[2024.04.23-13.08.08:658][638]LogOnline: OSS: Created online subsystem instance for: :Context_12
+[2024.04.23-13.08.08:659][638]ArenaBattle: Warning: AABPlayerController::PostInitializeComponents(11)
+[2024.04.23-13.08.08:659][638]ArenaBattle: Warning: AABGameMode::PostLogin(20) PostLogin Begin
+[2024.04.23-13.08.08:660][638]ArenaBattle: Warning: AABPlayerController::OnPossess(27)
+[2024.04.23-13.08.08:660][638]ArenaBattle: Warning: AABGameMode::PostLogin(23) PostLogin End
+[2024.04.23-13.08.08:660][638]LogViewport: Display: Viewport MouseCaptureMode Changed, CapturePermanently_IncludingInitialMouseDown -> CapturePermanently
+[2024.04.23-13.08.08:660][638]PIE: 서버가 로그인했습니다.
+[2024.04.23-13.08.08:661][638]PIE: 에디터에서 플레이 총 시작 시간 0.149초입니다.
+[2024.04.23-13.08.09:845][760]ArenaBattle: Warning: AABCharacter::PostInitializeComponents::<lambda_1>::operator ()(174) OnNextAttackCheck
+[2024.04.23-13.08.10:544][839]ArenaBattle: Warning: AABCharacter::PostInitializeComponents::<lambda_1>::operator ()(174) OnNextAttackCheck
+[2024.04.23-13.08.11:243][917]ArenaBattle: Warning: AABCharacter::PostInitializeComponents::<lambda_1>::operator ()(174) OnNextAttackCheck
+[2024.04.23-13.08.12:230][ 31]ArenaBattle: Warning: AABCharacter::PostInitializeComponents::<lambda_1>::operator ()(174) OnNextAttackCheck
+[2024.04.23-13.08.17:761][665]ArenaBattle: Warning: AABCharacter::PostInitializeComponents::<lambda_1>::operator ()(174) OnNextAttackCheck
+[2024.04.23-13.08.17:838][674]ArenaBattle: Warning: AABCharacter::AttackCheck(372) Hit Actor Name : bBlockingHit:True bStartPenetrating:True Time:0.000000 Location:X=516.689 Y=-381.941 Z=89.978 ImpactPoint:X=556.442 Y=-375.466 Z=89.978 Normal:X=-0.987 Y=-0.161 Z=0.000 ImpactNormal:X=-0.987 Y=-0.161 Z=0.000 TraceStart:X=516.689 Y=-381.941 Z=89.978 TraceEnd:X=716.689 Y=-381.941 Z=89.978 PenetrationDepth:9.722450 Item:-1 PhysMaterial:None Actor:ABCharacter_1 Component:CollisionCylinder BoneName:None FaceIndex:-1
+[2024.04.23-13.08.18:379][736]ArenaBattle: Warning: AABCharacter::PostInitializeComponents::<lambda_1>::operator ()(174) OnNextAttackCheck
+[2024.04.23-13.08.18:461][745]ArenaBattle: Warning: AABCharacter::AttackCheck(372) Hit Actor Name : bBlockingHit:True bStartPenetrating:True Time:0.000000 Location:X=516.689 Y=-381.941 Z=89.978 ImpactPoint:X=556.442 Y=-375.466 Z=89.978 Normal:X=-0.987 Y=-0.161 Z=0.000 ImpactNormal:X=-0.987 Y=-0.161 Z=0.000 TraceStart:X=516.689 Y=-381.941 Z=89.978 TraceEnd:X=716.689 Y=-381.941 Z=89.978 PenetrationDepth:9.722450 Item:-1 PhysMaterial:None Actor:ABCharacter_1 Component:CollisionCylinder BoneName:None FaceIndex:-1
+[2024.04.23-13.08.18:966][802]ArenaBattle: Warning: AABCharacter::PostInitializeComponents::<lambda_1>::operator ()(174) OnNextAttackCheck
+[2024.04.23-13.08.19:043][811]ArenaBattle: Warning: AABCharacter::AttackCheck(372) Hit Actor Name : bBlockingHit:True bStartPenetrating:True Time:0.000000 Location:X=516.689 Y=-381.941 Z=89.978 ImpactPoint:X=556.442 Y=-375.466 Z=89.978 Normal:X=-0.987 Y=-0.161 Z=0.000 ImpactNormal:X=-0.987 Y=-0.161 Z=0.000 TraceStart:X=516.689 Y=-381.941 Z=89.978 TraceEnd:X=716.689 Y=-381.941 Z=89.978 PenetrationDepth:9.722450 Item:-1 PhysMaterial:None Actor:ABCharacter_1 Component:CollisionCylinder BoneName:None FaceIndex:-1
+[2024.04.23-13.08.20:755][996]ArenaBattle: Warning: AABCharacter::PostInitializeComponents::<lambda_1>::operator ()(174) OnNextAttackCheck
+[2024.04.23-13.08.21:358][ 66]ArenaBattle: Warning: AABCharacter::PostInitializeComponents::<lambda_1>::operator ()(174) OnNextAttackCheck
+[2024.04.23-13.08.23:408][287]ArenaBattle: Warning: AABCharacter::PostInitializeComponents::<lambda_1>::operator ()(174) OnNextAttackCheck
+[2024.04.23-13.08.23:484][296]ArenaBattle: Warning: AABCharacter::AttackCheck(372) Hit Actor Name : bBlockingHit:True bStartPenetrating:False Time:0.116551 Location:X=540.846 Y=-301.883 Z=89.978 ImpactPoint:X=570.104 Y=-342.429 Z=89.978 Normal:X=-0.585 Y=0.811 Z=0.000 ImpactNormal:X=-0.585 Y=0.811 Z=0.000 TraceStart:X=540.846 Y=-278.573 Z=89.978 TraceEnd:X=540.846 Y=-478.573 Z=89.978 PenetrationDepth:0.000000 Item:-1 PhysMaterial:None Actor:ABCharacter_1 Component:CollisionCylinder BoneName:None FaceIndex:-1
+[2024.04.23-13.08.25:119][486]ArenaBattle: Warning: AABCharacter::PostInitializeComponents::<lambda_1>::operator ()(174) OnNextAttackCheck
+[2024.04.23-13.08.25:193][495]ArenaBattle: Warning: AABCharacter::AttackCheck(372) Hit Actor Name : bBlockingHit:True bStartPenetrating:False Time:0.304147 Location:X=523.610 Y=-421.462 Z=89.978 ImpactPoint:X=563.128 Y=-390.830 Z=89.978 Normal:X=-0.790 Y=-0.613 Z=0.000 ImpactNormal:X=-0.790 Y=-0.613 Z=0.000 TraceStart:X=462.780 Y=-421.462 Z=89.978 TraceEnd:X=662.780 Y=-421.462 Z=89.978 PenetrationDepth:0.000000 Item:-1 PhysMaterial:None Actor:ABCharacter_1 Component:CollisionCylinder BoneName:None FaceIndex:-1
+[2024.04.23-13.08.26:300][626]ArenaBattle: Warning: AABCharacter::PostInitializeComponents::<lambda_1>::operator ()(174) OnNextAttackCheck
+[2024.04.23-13.08.26:376][635]ArenaBattle: Warning: AABCharacter::AttackCheck(372) Hit Actor Name : bBlockingHit:True bStartPenetrating:True Time:0.000000 Location:X=532.053 Y=-334.360 Z=89.978 ImpactPoint:X=561.039 Y=-352.188 Z=89.978 Normal:X=-0.852 Y=0.524 Z=0.000 ImpactNormal:X=-0.852 Y=0.524 Z=0.000 TraceStart:X=532.053 Y=-334.360 Z=89.978 TraceEnd:X=732.053 Y=-334.360 Z=89.978 PenetrationDepth:15.970261 Item:-1 PhysMaterial:None Actor:ABCharacter_1 Component:CollisionCylinder BoneName:None FaceIndex:-1
+[2024.04.23-13.08.28:255][851]ArenaBattle: Warning: AABCharacter::PostInitializeComponents::<lambda_1>::operator ()(174) OnNextAttackCheck
+[2024.04.23-13.08.28:339][861]ArenaBattle: Warning: AABCharacter::AttackCheck(372) Hit Actor Name : bBlockingHit:True bStartPenetrating:True Time:0.000000 Location:X=624.357 Y=-428.890 Z=89.978 ImpactPoint:X=607.133 Y=-399.368 Z=89.978 Normal:X=0.504 Y=-0.864 Z=0.000 ImpactNormal:X=0.504 Y=-0.864 Z=0.000 TraceStart:X=624.357 Y=-428.890 Z=89.978 TraceEnd:X=424.357 Y=-428.890 Z=89.978 PenetrationDepth:15.820229 Item:-1 PhysMaterial:None Actor:ABCharacter_1 Component:CollisionCylinder BoneName:None FaceIndex:-1
+[2024.04.23-13.08.29:008][931]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.04.23-13.08.29:008][931]LogWorld: BeginTearingDown for /Game/Book/Maps/UEDPIE_0_Step2
+[2024.04.23-13.08.29:008][931]LogWorld: UWorld::CleanupWorld for Step2, bSessionEnded=true, bCleanupResources=true
+[2024.04.23-13.08.29:008][931]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.04.23-13.08.29:011][931]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2024.04.23-13.08.29:015][931]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.04.23-13.08.29:025][931]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2024.04.23-13.08.29:030][931]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 4
+[2024.04.23-13.08.29:030][931]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=4
+[2024.04.23-13.08.29:035][931]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=4
+[2024.04.23-13.08.29:042][931]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.04.23-13.08.29:075][931]LogUObjectHash: Compacting FUObjectHashTables data took   1.25ms
+[2024.04.23-13.08.29:275][932]LogPlayLevel: Display: Destroying online subsystem :Context_12
+[2024.04.23-13.08.29:305][932]LogViewport: Scene viewport resized to 297x261, mode Windowed.
+[2024.04.23-13.08.39:660][854]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.04.23-13.08.39:714][854]LogUObjectHash: Compacting FUObjectHashTables data took   1.03ms
+[2024.04.23-13.08.39:727][854]LogSavePackage: Moving output files for package: /Game/Book/Maps/Step2
+[2024.04.23-13.08.39:727][854]LogSavePackage: Moving '../../../../../../Users/Yelim/Documents/GitHub/Study_Unreal/ArenaBattle5/Saved/Step25858E5004DFEDF581AF22A8873F4E2CB.tmp' to '../../../../../../Users/Yelim/Documents/GitHub/Study_Unreal/ArenaBattle5/Content/Book/Maps/Step2.umap'
+[2024.04.23-13.08.39:732][854]LogFileHelpers: Saving map 'Step2' took 0.046
+[2024.04.23-13.08.39:737][854]LogFileHelpers: InternalPromptForCheckoutAndSave took 77 ms (total: 225 ms)
+[2024.04.23-13.08.39:738][854]AssetCheck: New page: 에셋 저장:  Step2
+[2024.04.23-13.08.39:738][854]LogContentValidation: Display: /Script/Engine.World /Game/Book/Maps/Step2.Step2 유효성 검사 중
+[2024.04.23-13.08.40:840][946]LogUObjectHash: Compacting FUObjectHashTables data took   0.59ms
