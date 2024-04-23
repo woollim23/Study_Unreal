@@ -6,6 +6,7 @@
 #include "Animation/AnimInstance.h"
 #include "ABAnimInstance.generated.h"
 
+//멀티캐스트 델리게이트 생성
 DECLARE_MULTICAST_DELEGATE(FOnNextAttackCheckDelegate);
 DECLARE_MULTICAST_DELEGATE(FOnAttackHitCheckDelegate);
 

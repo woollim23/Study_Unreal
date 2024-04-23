@@ -79,6 +79,8 @@ private:
 	void AttackStartComboState();
 	// 공격이 종료할 때 사용할 함수 선언
 	void AttackEndComboState();
+	// 공격 충돌(?) 감지 함수
+	void AttackCheck();
 
 private:
 	// 공격 중인지 확인 하는 부울

@@ -64,6 +64,7 @@ void UABAnimInstance::AnimNotify_AttackHitCheck()
 // 다음 어택 노티파이 함수 정의
 void UABAnimInstance::AnimNotify_NextAttackCheck()
 {
+	// 이 델리게이트를 만료되었을 수도 있는 것을 제외하고, 바인딩된 모든 오브젝트에 뿌립니다.
 	OnNextAttackCheck.Broadcast();
 }
 
