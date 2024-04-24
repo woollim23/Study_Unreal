@@ -181,9 +181,11 @@ void AABCharacter::PostInitializeComponents()
 		}
 	});
 
+
 	// 어택 체크 오브젝트 추가
 	ABAnim->OnAttackHitCheck.AddUObject(this, &AABCharacter::AttackCheck);
 }
+
 
 // Called to bind functionality to input
 void AABCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
@@ -335,6 +337,9 @@ void AABCharacter::AttackEndComboState()
 	CurrentCombo = 0;
 }
 
+// TakeDamage 함수를 오버라이드해 액터가 받은 대미지를 처리하는 로직
+virtual float TakeDamage(float DamageAmount, struct FDamageEvent const& DamageEvent, class AController* EventInstigator, AActor* DamageCauser) override;
+
 void AABCharacter::AttackCheck()
 {
 	FHitResult HitResult;
@@ -370,6 +375,9 @@ void AABCharacter::AttackCheck()
 		if (HitResult.HasValidHitObjectHandle())
 		{
 			ABLOG(Warning, TEXT("Hit Actor Name : %s"), *HitResult.ToString());
+
+			FDamageEvent DamageEvent;
+			HitResult.GetActor()->TakeDamage(50.0f, DamageEvent, GetController(), this);
 		}
 	}
 }
