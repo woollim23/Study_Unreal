@@ -4,6 +4,7 @@
 #include "ABCharacter.h"
 #include "ABAnimInstance.h"
 #include "DrawDebugHelpers.h"
+#include "Engine/DamageEvents.h"
 
 // Sets default values
 AABCharacter::AABCharacter()
@@ -64,6 +65,7 @@ AABCharacter::AABCharacter()
 	//공격 캡슐 범위 초기화
 	AttackRange = 200.0f;
 	AttackRadius = 50.0f;
+
 }
 
 // Called when the game starts or when spawned
@@ -337,8 +339,21 @@ void AABCharacter::AttackEndComboState()
 	CurrentCombo = 0;
 }
 
-// TakeDamage 함수를 오버라이드해 액터가 받은 대미지를 처리하는 로직
-virtual float TakeDamage(float DamageAmount, struct FDamageEvent const& DamageEvent, class AController* EventInstigator, AActor* DamageCauser) override;
+float AABCharacter::TakeDamage(float DamageAmount, struct FDamageEvent const& DamageEvent, class AController* EventInstigator, AActor* DamageCauser)
+{
+	float FinalDamage = Super::TakeDamage(DamageAmount, DamageEvent, EventInstigator, DamageCauser);
+	ABLOG(Warning, TEXT("Actor : %s took Damage : %f"), *GetName(), FinalDamage);
+
+	// 죽을만큼의 대미지를 입었을때,
+	// 죽는 애니메이션 재생 & 충돌 콜리전 종료
+	if (FinalDamage > 0.0f)
+	{
+		ABAnim->SetDeadAnim();
+		SetActorEnableCollision(false);
+	}
+
+	return FinalDamage;
+}
 
 void AABCharacter::AttackCheck()
 {

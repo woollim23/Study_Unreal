@@ -9,6 +9,8 @@ UABAnimInstance::UABAnimInstance()
 	CurrentPawnSpeed = 0.0f;
 	// 공중 확인 부울 변수를 false로 초기화
 	IsInAir = false;
+	// 죽음 애니메이션 부울 변수 초기화
+	IsDead = false;
 	// 애님 몽타주 불러와서 연결
 	static ConstructorHelpers::FObjectFinder<UAnimMontage> ATTACK_MONTAGE(TEXT("/Script/Engine.AnimMontage'/Game/Book/Animations/SK_Mannequin_Skeleton_Montage.SK_Mannequin_Skeleton_Montage'"));
 	if (ATTACK_MONTAGE.Succeeded())
@@ -24,7 +26,11 @@ void UABAnimInstance::NativeUpdateAnimation(float DeltaSeconds)
 
 	// 애니메이션 시스템의 틱에서 폰에 접근해 폰의 속력 값을 얻어옴
 	auto Pawn = TryGetPawnOwner();
-	if (::IsValid(Pawn))
+
+	if (!::IsValid(Pawn)) return;
+
+	//if (::IsValid(Pawn))
+	if(!IsDead)
 	{
 		CurrentPawnSpeed = Pawn->GetVelocity().Size();
 		// 폰 무브먼트 컴포넌트가 제공하는 IsFalling() 함수를 사용해 폰이 현재 점프 중인지 아닌지에 대한 정보를 애님 인스턴스에 보관하고
@@ -41,6 +47,7 @@ void UABAnimInstance::NativeUpdateAnimation(float DeltaSeconds)
 // 어택 몽타주 재생 함수
 void UABAnimInstance::PlayAttackMontage()
 {
+	ABCHECK(!IsDead);
 	// 1.0 배속으로 몽타주 재생
 	Montage_Play(AttackMontage, 1.0f);
 }
@@ -48,6 +55,7 @@ void UABAnimInstance::PlayAttackMontage()
 // 점프 공격 몽타주 함수
 void UABAnimInstance::JumpToAttackMontageSection(int32 NewSection)
 {
+	ABCHECK(!IsDead);
 	ABCHECK(Montage_IsPlaying(AttackMontage));
 	// 몽타주를 명명된 섹션으로 이동, 현재 어택 섹션으로 이동
 	Montage_JumpToSection(GetAttackMontageSectionName(NewSection), AttackMontage);

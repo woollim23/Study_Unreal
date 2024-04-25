@@ -32,6 +32,8 @@ public:
 	// 애니메이션 노티파이가 발생할 때마다 ABCharacter에 전달할 델리게이트 선언
 	FOnNextAttackCheckDelegate OnNextAttackCheck;
 	FOnAttackHitCheckDelegate OnAttackHitCheck;
+	//
+	void SetDeadAnim() { IsDead = true; }
 
 private:
 	// 어택 노티파이 함수 선언
@@ -55,4 +57,8 @@ private:
 	// 애님 어택 몽타주
 	UPROPERTY(VisibleDefaultsOnly, BlueprintReadOnly, Category = Attack, Meta = (AllowPrivateAccess = true))
 	UAnimMontage* AttackMontage;
+
+	// 죽는 애니메이션 부울 속성
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Pawn, Meta = (AllowPrivateAccess = true))
+	bool IsDead;
 };
