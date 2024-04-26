@@ -60,6 +60,12 @@
     <ClInclude Include="..\..\Source\ArenaBattle5\ABPlayerController.h">
       <Filter>Source\ArenaBattle5</Filter>
     </ClInclude>
+    <ClCompile Include="..\..\Source\ArenaBattle5\ABWeapon.cpp">
+      <Filter>Source\ArenaBattle5</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ArenaBattle5\ABWeapon.h">
+      <Filter>Source\ArenaBattle5</Filter>
+    </ClInclude>
     <None Include="..\..\Source\ArenaBattle5\ArenaBattle5.Build.cs">
       <Filter>Source\ArenaBattle5</Filter>
     </None>
