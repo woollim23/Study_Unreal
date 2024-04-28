@@ -54,6 +54,12 @@
     <ClInclude Include="..\..\Source\ArenaBattle5\ABGameMode.h">
       <Filter>Source\ArenaBattle5</Filter>
     </ClInclude>
+    <ClCompile Include="..\..\Source\ArenaBattle5\ABItemBox.cpp">
+      <Filter>Source\ArenaBattle5</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ArenaBattle5\ABItemBox.h">
+      <Filter>Source\ArenaBattle5</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\ArenaBattle5\ABPlayerController.cpp">
       <Filter>Source\ArenaBattle5</Filter>
     </ClCompile>
