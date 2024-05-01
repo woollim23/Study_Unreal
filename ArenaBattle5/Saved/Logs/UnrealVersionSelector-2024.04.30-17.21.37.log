@@ -1,8 +1,16 @@
+<<<<<<<< Updated upstream:ArenaBattle5/Saved/Logs/UnrealVersionSelector-2024.04.30-17.21.37.log
 Log started at 04/30/2024 17:21:37 (2024-04-30T08:21:37Z)
 No config file at C:\Users\Yelim\Documents\Unreal Engine\UnrealBuildTool\BuildConfiguration.xml
 Configuration will be read from:
   C:\Users\Yelim\AppData\Roaming\Unreal Engine\UnrealBuildTool\BuildConfiguration.xml
 Log file: C:\Users\Yelim\Documents\GitHub\Study_Unreal\ArenaBattle5\Saved\Logs\UnrealVersionSelector-2024.04.30-17.21.37.log
+========
+Log started at 04/30/2024 22:45:36 (2024-04-30T13:45:36Z)
+No config file at C:\Users\Yelim\Documents\Unreal Engine\UnrealBuildTool\BuildConfiguration.xml
+Configuration will be read from:
+  C:\Users\Yelim\AppData\Roaming\Unreal Engine\UnrealBuildTool\BuildConfiguration.xml
+Log file: C:\Users\Yelim\Documents\GitHub\Study_Unreal\ArenaBattle5\Saved\Logs\UnrealVersionSelector-2024.04.30-22.45.36.log
+>>>>>>>> Stashed changes:ArenaBattle5/Saved/Logs/UnrealVersionSelector-2024.04.30-22.45.36.log
 
 Setting temp directory to 'C:\Users\Yelim\AppData\Local\Temp\UnrealBuildTool\319625c3'
     Registering build platform: UnrealBuildTool.AndroidPlatformFactory
@@ -59,11 +67,6 @@ Skipping C:\Program Files\Epic Games\UE_5.3\Engine\Intermediate\Build\BuildRules
 Skipping C:\Program Files\Epic Games\UE_5.3\Engine\Intermediate\Build\BuildRules\UE5ProgramRules.dll: File is installed
 Generating target Editor for C:\Users\Yelim\Documents\GitHub\Study_Unreal\ArenaBattle5\Intermediate\ProjectFiles\UE5.vcxproj
 Generating target Game for C:\Users\Yelim\Documents\GitHub\Study_Unreal\ArenaBattle5\Intermediate\ProjectFiles\UE5.vcxproj
-Compiling C:\Users\Yelim\Documents\GitHub\Study_Unreal\ArenaBattle5\Intermediate\Build\BuildRules\ArenaBattle5ModuleRules.dll: Assembly does not exist
-Adding event matcher: CompileEventMatcher
-Adding event matcher: LinkEventMatcher
-Adding event matcher: MicrosoftEventMatcher
-Adding event matcher: XoreaxEventMatcher
 Generating target Game for C:\Users\Yelim\Documents\GitHub\Study_Unreal\ArenaBattle5\Intermediate\ProjectFiles\ArenaBattle5.vcxproj
 Generating target Editor for C:\Users\Yelim\Documents\GitHub\Study_Unreal\ArenaBattle5\Intermediate\ProjectFiles\ArenaBattle5.vcxproj
 Adding shader source code...
@@ -1799,6 +1802,7 @@ Excluding module LinuxPlatformEditor: Excluded folder name
 Excluding module LinuxTargetPlatform: Excluded folder name
 Excluding module MacPlatformEditor: Excluded folder name
 Excluding module MacTargetPlatform: Excluded folder name
+@progress 'Binding IntelliSense data...' 25%
 Excluding module SlateFontDialog: Does not support Platform 'Win64'
 Excluding module ADO: Not under compatible directories
 Excluding module AMD_AGS: Not under compatible directories
@@ -8302,23 +8306,27 @@ Creating common properties file...
 @progress 'Creating common properties file...' 0%
 Writing project files...
 @progress 'Writing project files...' 0%
-Saved UE5.vcxproj
-Saved UE5.vcxproj.filters
-Saved UE5.vcxproj.user
+Skipped saving UE5.vcxproj because contents haven't changed.
+Skipped saving ArenaBattle5.vcxproj because contents haven't changed.
+Skipped saving ArenaBattle5.vcxproj.filters because contents haven't changed.
 @progress 'Writing project files...' 33%
-Saved ArenaBattle5.vcxproj
-Saved ArenaBattle5.vcxproj.filters
-Saved ArenaBattle5.vcxproj.user
+Skipped saving UE5.vcxproj.filters because contents haven't changed.
 @progress 'Writing project files...' 67%
 Saved ArenaBattle5.sln
 Skipped saving .vsconfig because contents haven't changed.
 @progress 'Writing project files...' 100%
+Updating C:\Users\Yelim\Documents\GitHub\Study_Unreal\ArenaBattle5\Intermediate\ProjectFiles\AutomationTool.csproj.References: contents have changed. Saving previous version to C:\Users\Yelim\Documents\GitHub\Study_Unreal\ArenaBattle5\Intermediate\ProjectFiles\AutomationTool.csproj.References.old.
 Project generation complete (2 generated, 47 imported)
 
 Generating QueryTargets data for editor...
-WriteFileIfChanged() wrote 5 changed files of 1509 requested writes.
+WriteFileIfChanged() wrote 1 changed files of 1509 requested writes.
 Timeline:
 
 [ 0.000]
+<<<<<<<< Updated upstream:ArenaBattle5/Saved/Logs/UnrealVersionSelector-2024.04.30-17.21.37.log
 [ 0.000](+5.733) <unknown>
 [ 5.733]
+========
+[ 0.000](+4.784) <unknown>
+[ 4.784]
+>>>>>>>> Stashed changes:ArenaBattle5/Saved/Logs/UnrealVersionSelector-2024.04.30-22.45.36.log

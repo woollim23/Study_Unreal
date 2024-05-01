@@ -10,6 +10,7 @@
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 class AActor;
+class UParticleSystemComponent;
 class UPrimitiveComponent;
 struct FHitResult;
 #ifdef ARENABATTLE5_ABItemBox_generated_h
@@ -22,6 +23,7 @@ struct FHitResult;
 #define FID_Users_Yelim_Documents_GitHub_Study_Unreal_ArenaBattle5_Source_ArenaBattle5_ABItemBox_h_12_EDITOR_ONLY_SPARSE_DATA_PROPERTY_ACCESSORS
 #define FID_Users_Yelim_Documents_GitHub_Study_Unreal_ArenaBattle5_Source_ArenaBattle5_ABItemBox_h_12_RPC_WRAPPERS_NO_PURE_DECLS \
  \
+	DECLARE_FUNCTION(execOnEffectFinished); \
 	DECLARE_FUNCTION(execOnCharacterOverlap);
 
 
