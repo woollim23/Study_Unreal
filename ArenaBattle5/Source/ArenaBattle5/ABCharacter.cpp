@@ -4,6 +4,7 @@
 #include "ABCharacter.h"
 #include "ABAnimInstance.h"
 #include "ABWeapon.h"
+#include "ABCharacterStatComponent.h"
 #include "DrawDebugHelpers.h"
 #include "Engine/DamageEvents.h"
 
@@ -16,6 +17,7 @@ AABCharacter::AABCharacter()
 	// 캐릭터를 구성하는 컴포넌트 정의
 	SpringArm = CreateDefaultSubobject<USpringArmComponent>(TEXT("SPRINGARM"));
 	Camera = CreateDefaultSubobject<UCameraComponent>(TEXT("CAMERA"));
+	CharacterStat = CreateDefaultSubobject<UABCharacterStatComponent>(TEXT("CHARACTERSTAT"));
 
 	// 부모 클래스를 보면 캡슐 컴포넌트가 있다
 	// 스프링암을 캡슐컴포넌트에 부착

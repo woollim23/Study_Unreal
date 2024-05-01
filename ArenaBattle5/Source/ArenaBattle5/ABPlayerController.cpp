@@ -8,7 +8,7 @@ void AABPlayerController::PostInitializeComponents()
 {
 	// 1. 플레이어 컨트롤러 생성시 로그 찍힘
 	Super::PostInitializeComponents();
-	ABLOG_S(Warning);
+	//ABLOG_S(Warning);
 }
 
 void AABPlayerController::BeginPlay()
@@ -24,6 +24,6 @@ void AABPlayerController::BeginPlay()
 void AABPlayerController::OnPossess(APawn* aPawn)
 {
 	// 4. 빙의시 로그 찍힘
-	ABLOG_S(Warning);
+	//ABLOG_S(Warning);
 	Super::OnPossess(aPawn);
 }
