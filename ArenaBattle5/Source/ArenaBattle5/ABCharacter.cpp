@@ -221,6 +221,12 @@ void AABCharacter::PostInitializeComponents()
 
 	// 어택 체크 오브젝트 추가
 	ABAnim->OnAttackHitCheck.AddUObject(this, &AABCharacter::AttackCheck);
+
+	CharacterStat->OnHPIsZero.AddLambda([this]() -> void {
+		ABLOG(Warning, TEXT("OnHPIsZero"));
+		ABAnim->SetDeadAnim();
+		SetActorEnableCollision(false);
+		});
 }
 
 
@@ -387,6 +393,7 @@ float AABCharacter::TakeDamage(float DamageAmount, struct FDamageEvent const& Da
 		SetActorEnableCollision(false);
 	}
 
+	CharacterStat->SetDamage(FinalDamage);
 	return FinalDamage;
 }
 
@@ -427,7 +434,7 @@ void AABCharacter::AttackCheck()
 			ABLOG(Warning, TEXT("Hit Actor Name : %s"), *HitResult.ToString());
 
 			FDamageEvent DamageEvent;
-			HitResult.GetActor()->TakeDamage(50.0f, DamageEvent, GetController(), this);
+			HitResult.GetActor()->TakeDamage(CharacterStat->GetAttack(), DamageEvent, GetController(), this);
 		}
 	}
 }

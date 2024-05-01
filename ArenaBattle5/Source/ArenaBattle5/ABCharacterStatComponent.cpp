@@ -42,7 +42,7 @@ void UABCharacterStatComponent::SetNewLevel(int32 NewLevel)
 	}
 	else
 	{
-		ABLOG(Error, TEXT("Level (%d) data doesn't exist"), NewLevel);
+		ABLOG(Warning, TEXT("Level (%d) data doesn't exist"), NewLevel);
 	}
 }
 
@@ -54,3 +54,18 @@ void UABCharacterStatComponent::TickComponent(float DeltaTime, ELevelTick TickTy
 	// ...
 }
 
+void UABCharacterStatComponent::SetDamage(float NewDamage)
+{
+	ABCHECK(nullptr != CurrentStatData);
+	CurrentHP = FMath::Clamp<float>(CurrentHP - NewDamage, 0.0f, CurrentStatData->MaxHP);
+	if (CurrentHP <= 0.0f)
+	{
+		OnHPIsZero.Broadcast();
+	}
+}
+
+float UABCharacterStatComponent::GetAttack()
+{
+	ABCHECK(nullptr != CurrentStatData, 0.0f);
+	return CurrentStatData->Attack;
+}
