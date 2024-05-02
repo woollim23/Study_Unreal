@@ -36,10 +36,11 @@ AABItemBox::AABItemBox()
 
 	Box->SetRelativeLocation(FVector(0.0f, -3.5f, -30.0f));
 
+	// 기본 콜리전 프로필 설정
 	Trigger->SetCollisionProfileName(TEXT("ItemBox"));
 	Box->SetCollisionProfileName(TEXT("NoCollision"));
 
-	// 웨폰 클래스 정보 저장
+	// 웨폰 클래스 해당 속성에 대한 기본 클래스 값 지정
 	WeaponItemClass = AABWeapon::StaticClass();
 }
 
@@ -57,6 +58,7 @@ void AABItemBox::PostInitializeComponents()
 }
 
 // 캐릭터 오버랩 이벤트 함수
+// 캐릭터가 박스를 통과할 때마다 오버랩 델리게이트와 바인딩 된 함수가 실행
 void AABItemBox::OnCharacterOverlap(UPrimitiveComponent* OverlappedComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
 {
 	ABLOG_S(Warning);
@@ -94,4 +96,3 @@ void AABItemBox::Tick(float DeltaTime)
 	Super::Tick(DeltaTime);
 
 }
-

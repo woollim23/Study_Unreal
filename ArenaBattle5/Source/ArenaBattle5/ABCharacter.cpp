@@ -400,6 +400,7 @@ void AABCharacter::AttackEndComboState()
 	CurrentCombo = 0;
 }
 
+// 가상함수로 오버라이드 한 TakeDamage 함수에 액터가 받는 대미지를 처리하는 로직 추가
 float AABCharacter::TakeDamage(float DamageAmount, struct FDamageEvent const& DamageEvent, class AController* EventInstigator, AActor* DamageCauser)
 {
 	float FinalDamage = Super::TakeDamage(DamageAmount, DamageEvent, EventInstigator, DamageCauser);
@@ -417,6 +418,9 @@ float AABCharacter::TakeDamage(float DamageAmount, struct FDamageEvent const& Da
 	return FinalDamage;
 }
 
+// 어택 충돌 탐색 함수
+// 공격시 어택 범위 도형 그림
+// 공격 성공시 녹색, 실패시 빨강 
 void AABCharacter::AttackCheck()
 {
 	FHitResult HitResult;
@@ -453,6 +457,7 @@ void AABCharacter::AttackCheck()
 		{
 			ABLOG(Warning, TEXT("Hit Actor Name : %s"), *HitResult.ToString());
 
+			// 히트 이벤트로 액터에 공격 대미지 전달
 			FDamageEvent DamageEvent;
 			HitResult.GetActor()->TakeDamage(CharacterStat->GetAttack(), DamageEvent, GetController(), this);
 		}

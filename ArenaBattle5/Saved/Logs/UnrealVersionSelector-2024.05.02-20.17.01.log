@@ -1,0 +1,78 @@
+Log started at 05/02/2024 20:17:01 (2024-05-02T11:17:01Z)
+No config file at C:\ProgramData\Unreal Engine\UnrealBuildTool\BuildConfiguration.xml
+No config file at C:\Users\Yelim\AppData\Local\Unreal Engine\UnrealBuildTool\BuildConfiguration.xml
+No config file at C:\Users\Yelim\Documents\Unreal Engine\UnrealBuildTool\BuildConfiguration.xml
+Configuration will be read from:
+  C:\Users\Yelim\AppData\Roaming\Unreal Engine\UnrealBuildTool\BuildConfiguration.xml
+Log file: C:\Users\Yelim\Documents\GitHub\Study_Unreal\ArenaBattle5\Saved\Logs\UnrealVersionSelector-2024.05.02-20.17.01.log
+
+Setting temp directory to 'C:\Users\Yelim\AppData\Local\Temp\UnrealBuildTool\6e23c306'
+    Registering build platform: UnrealBuildTool.AndroidPlatformFactory
+    Registering build platform: UnrealBuildTool.IOSPlatformFactory
+    Registering build platform: UnrealBuildTool.LinuxPlatformFactory
+    Registering build platform: UnrealBuildTool.MacPlatformFactory
+    Registering build platform: UnrealBuildTool.TVOSPlatformFactory
+    Registering build platform: UnrealBuildTool.WindowsPlatformFactory
+Found Windows 10 SDK root at C:\Program Files (x86)\Windows Kits\10 (1)
+Found Windows 10 SDK root at C:\Program Files (x86)\Windows Kits\10 (2)
+Found Windows 10 SDK version 10.0.18362.0 at C:\Program Files (x86)\Windows Kits\10
+Found Universal CRT version 10.0.18362.0 at C:\Program Files (x86)\Windows Kits\10
+Found Windows 10 SDK version 10.0.19041.0 at C:\Program Files (x86)\Windows Kits\10
+Found Universal CRT version 10.0.19041.0 at C:\Program Files (x86)\Windows Kits\10
+Found Windows 10 SDK version 10.0.20348.0 at C:\Program Files (x86)\Windows Kits\10
+Found Universal CRT version 10.0.20348.0 at C:\Program Files (x86)\Windows Kits\10
+Found Windows 10 SDK version 10.0.22000.0 at C:\Program Files (x86)\Windows Kits\10
+Found Universal CRT version 10.0.22000.0 at C:\Program Files (x86)\Windows Kits\10
+Found Windows 10 SDK version 10.0.22621.0 at C:\Program Files (x86)\Windows Kits\10
+Found Universal CRT version 10.0.22621.0 at C:\Program Files (x86)\Windows Kits\10
+Win64 Installed SDK(s): MinVersion_Sdk=10.0.18362.0, MaxVersion_Sdk=10.9.99999.0, CurrentVersion_Sdk=10.0.19041.0, Version_AutoSdk=10.0.19041.0, CurrentVersion_AutoSdk=
+        Registering build platform: Win64 - buildable: True
+    Registering build platform: UnrealBuildTool.VisionOSPlatformFactory
+Log file: C:\Users\Yelim\AppData\Local\UnrealBuildTool\Log_GPF.txt
+Deleting old log file: C:\Users\Yelim\AppData\Local\UnrealBuildTool\Log_GPF-backup-2024.04.04-11.18.53.txt
+Resolved project argument C:/Users/Yelim/Documents/GitHub/Study_Unreal/ArenaBattle5/ArenaBattle5.uproject to C:\Users\Yelim\Documents\GitHub\Study_Unreal\ArenaBattle5\ArenaBattle5.uproject
+Registering project generator UnrealBuildTool.AndroidProjectGenerator for Android
+Skipping project file generator registration for Android due to no valid BuildPlatform.
+Registering project generator UnrealBuildTool.IOSProjectGenerator for IOS
+Skipping project file generator registration for IOS due to no valid BuildPlatform.
+Registering project generator UnrealBuildTool.LinuxProjectGenerator for Linux
+Skipping project file generator registration for Linux due to no valid BuildPlatform.
+Registering project generator UnrealBuildTool.LinuxProjectGenerator for LinuxArm64
+Skipping project file generator registration for LinuxArm64 due to no valid BuildPlatform.
+Registering project generator UnrealBuildTool.MacProjectGenerator for Mac
+Skipping project file generator registration for Mac due to no valid BuildPlatform.
+Registering project generator UnrealBuildTool.TVOSProjectGenerator for TVOS
+Skipping project file generator registration for TVOS due to no valid BuildPlatform.
+Registering project generator UnrealBuildTool.WindowsProjectGenerator for Win64
+Registering project generator UnrealBuildTool.VisionOSProjectGenerator for VisionOS
+Skipping project file generator registration for VisionOS due to no valid BuildPlatform.
+
+---   SDK INFO START   ---
+---   SDK INFO END   ---
+
+
+Generating VisualStudio2022 project files:
+Discovering modules, targets and source code for project...
+Total execution time: 0.72 seconds
+Unhandled exception: System.UnauthorizedAccessException: Access to the path 'C:\Program Files\Epic Games\UE_5.4\Engine\Intermediate\ProjectFiles' is denied.
+   at System.IO.FileSystem.CreateDirectory(String fullPath, Byte[] securityDescriptor)
+   at System.IO.Directory.CreateDirectory(String path)
+   at EpicGames.Core.DirectoryReference.CreateDirectory(DirectoryReference location) in D:\build\++UE5\Sync\Engine\Saved\CsTools\Engine\Source\Programs\Shared\EpicGames.Core\DirectoryReference.cs:line 272
+   at UnrealBuildTool.Utils.WriteFileIfChanged(FileItem FileItem, String Contents, StringComparison Comparison, ILogger Logger) in D:\build\++UE5\Sync\Engine\Saved\CsTools\Engine\Source\Programs\UnrealBuildTool\System\Utils.cs:line 1765
+   at UnrealBuildTool.ProjectFileGenerator.GenerateProjectFiles(PlatformProjectGeneratorCollection PlatformProjectGenerators, String[] Arguments, Boolean bCacheDataForEditor, ILogger Logger) in D:\build\++UE5\Sync\Engine\Saved\CsTools\Engine\Source\Programs\UnrealBuildTool\ProjectFiles\ProjectFileGenerator.cs:line 954
+   at UnrealBuildTool.GenerateProjectFilesMode.ExecuteAsync(CommandLineArguments Arguments, ILogger Logger) in D:\build\++UE5\Sync\Engine\Saved\CsTools\Engine\Source\Programs\UnrealBuildTool\Modes\GenerateProjectFilesMode.cs:line 65
+   at UnrealBuildTool.UnrealBuildTool.Main(String[] ArgumentsArray) in D:\build\++UE5\Sync\Engine\Saved\CsTools\Engine\Source\Programs\UnrealBuildTool\UnrealBuildTool.cs:line 660
+Unhandled exception: UnauthorizedAccessException: Access to the path 'C:\Program Files\Epic Games\UE_5.4\Engine\Intermediate\ProjectFiles' is denied.
+   at System.IO.FileSystem.CreateDirectory(String fullPath, Byte[] securityDescriptor)
+   at System.IO.Directory.CreateDirectory(String path)
+   at EpicGames.Core.DirectoryReference.CreateDirectory(DirectoryReference location) in D:\build\++UE5\Sync\Engine\Saved\CsTools\Engine\Source\Programs\Shared\EpicGames.Core\DirectoryReference.cs:line 272
+   at UnrealBuildTool.Utils.WriteFileIfChanged(FileItem FileItem, String Contents, StringComparison Comparison, ILogger Logger) in D:\build\++UE5\Sync\Engine\Saved\CsTools\Engine\Source\Programs\UnrealBuildTool\System\Utils.cs:line 1765
+   at UnrealBuildTool.ProjectFileGenerator.GenerateProjectFiles(PlatformProjectGeneratorCollection PlatformProjectGenerators, String[] Arguments, Boolean bCacheDataForEditor, ILogger Logger) in D:\build\++UE5\Sync\Engine\Saved\CsTools\Engine\Source\Programs\UnrealBuildTool\ProjectFiles\ProjectFileGenerator.cs:line 954
+   at UnrealBuildTool.GenerateProjectFilesMode.ExecuteAsync(CommandLineArguments Arguments, ILogger Logger) in D:\build\++UE5\Sync\Engine\Saved\CsTools\Engine\Source\Programs\UnrealBuildTool\Modes\GenerateProjectFilesMode.cs:line 65
+   at UnrealBuildTool.UnrealBuildTool.Main(String[] ArgumentsArray) in D:\build\++UE5\Sync\Engine\Saved\CsTools\Engine\Source\Programs\UnrealBuildTool\UnrealBuildTool.cs:line 660
+WriteFileIfChanged() wrote 0 changed files of 0 requested writes.
+Timeline:
+
+[ 0.000]
+[ 0.000](+0.743) <unknown>
+[ 0.743]
