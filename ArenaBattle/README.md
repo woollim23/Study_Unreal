@@ -1,1 +1,0 @@
-Daily Unreal Study Record
