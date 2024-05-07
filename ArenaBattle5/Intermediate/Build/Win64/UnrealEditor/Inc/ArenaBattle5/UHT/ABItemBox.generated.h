@@ -18,16 +18,11 @@ struct FHitResult;
 #endif
 #define ARENABATTLE5_ABItemBox_generated_h
 
-#define FID_Users_Yelim_Documents_GitHub_Study_Unreal_ArenaBattle5_Source_ArenaBattle5_ABItemBox_h_12_SPARSE_DATA
-#define FID_Users_Yelim_Documents_GitHub_Study_Unreal_ArenaBattle5_Source_ArenaBattle5_ABItemBox_h_12_SPARSE_DATA_PROPERTY_ACCESSORS
-#define FID_Users_Yelim_Documents_GitHub_Study_Unreal_ArenaBattle5_Source_ArenaBattle5_ABItemBox_h_12_EDITOR_ONLY_SPARSE_DATA_PROPERTY_ACCESSORS
 #define FID_Users_Yelim_Documents_GitHub_Study_Unreal_ArenaBattle5_Source_ArenaBattle5_ABItemBox_h_12_RPC_WRAPPERS_NO_PURE_DECLS \
- \
 	DECLARE_FUNCTION(execOnEffectFinished); \
 	DECLARE_FUNCTION(execOnCharacterOverlap);
 
 
-#define FID_Users_Yelim_Documents_GitHub_Study_Unreal_ArenaBattle5_Source_ArenaBattle5_ABItemBox_h_12_ACCESSORS
 #define FID_Users_Yelim_Documents_GitHub_Study_Unreal_ArenaBattle5_Source_ArenaBattle5_ABItemBox_h_12_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAABItemBox(); \
@@ -40,8 +35,8 @@ public: \
 #define FID_Users_Yelim_Documents_GitHub_Study_Unreal_ArenaBattle5_Source_ArenaBattle5_ABItemBox_h_12_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
-	NO_API AABItemBox(AABItemBox&&); \
-	NO_API AABItemBox(const AABItemBox&); \
+	AABItemBox(AABItemBox&&); \
+	AABItemBox(const AABItemBox&); \
 public: \
 	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, AABItemBox); \
 	DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(AABItemBox); \
@@ -53,11 +48,7 @@ public: \
 #define FID_Users_Yelim_Documents_GitHub_Study_Unreal_ArenaBattle5_Source_ArenaBattle5_ABItemBox_h_12_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Users_Yelim_Documents_GitHub_Study_Unreal_ArenaBattle5_Source_ArenaBattle5_ABItemBox_h_12_SPARSE_DATA \
-	FID_Users_Yelim_Documents_GitHub_Study_Unreal_ArenaBattle5_Source_ArenaBattle5_ABItemBox_h_12_SPARSE_DATA_PROPERTY_ACCESSORS \
-	FID_Users_Yelim_Documents_GitHub_Study_Unreal_ArenaBattle5_Source_ArenaBattle5_ABItemBox_h_12_EDITOR_ONLY_SPARSE_DATA_PROPERTY_ACCESSORS \
 	FID_Users_Yelim_Documents_GitHub_Study_Unreal_ArenaBattle5_Source_ArenaBattle5_ABItemBox_h_12_RPC_WRAPPERS_NO_PURE_DECLS \
-	FID_Users_Yelim_Documents_GitHub_Study_Unreal_ArenaBattle5_Source_ArenaBattle5_ABItemBox_h_12_ACCESSORS \
 	FID_Users_Yelim_Documents_GitHub_Study_Unreal_ArenaBattle5_Source_ArenaBattle5_ABItemBox_h_12_INCLASS_NO_PURE_DECLS \
 	FID_Users_Yelim_Documents_GitHub_Study_Unreal_ArenaBattle5_Source_ArenaBattle5_ABItemBox_h_12_ENHANCED_CONSTRUCTORS \
 private: \

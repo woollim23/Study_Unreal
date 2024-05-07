@@ -1,8 +1,8 @@
 "C:\Users\Yelim\Documents\GitHub\Study_Unreal\ArenaBattle5\Source\ArenaBattle5\ABGameInstance.cpp"
-/FI"C:\Users\Yelim\Documents\GitHub\Study_Unreal\ArenaBattle5\Intermediate\Build\Win64\x64\ArenaBattle5Editor\Development\Engine\SharedPCH.Engine.Cpp20.h"
+/FI"C:\Users\Yelim\Documents\GitHub\Study_Unreal\ArenaBattle5\Intermediate\Build\Win64\x64\ArenaBattle5Editor\Development\UnrealEd\SharedPCH.UnrealEd.Project.NoValFmtStr.ValApi.Cpp20.h"
 /FI"C:\Users\Yelim\Documents\GitHub\Study_Unreal\ArenaBattle5\Intermediate\Build\Win64\x64\UnrealEditor\Development\ArenaBattle5\Definitions.ArenaBattle5.h"
-/Yu"C:\Users\Yelim\Documents\GitHub\Study_Unreal\ArenaBattle5\Intermediate\Build\Win64\x64\ArenaBattle5Editor\Development\Engine\SharedPCH.Engine.Cpp20.h"
-/Fp"C:\Users\Yelim\Documents\GitHub\Study_Unreal\ArenaBattle5\Intermediate\Build\Win64\x64\ArenaBattle5Editor\Development\Engine\SharedPCH.Engine.Cpp20.h.pch"
+/Yu"C:\Users\Yelim\Documents\GitHub\Study_Unreal\ArenaBattle5\Intermediate\Build\Win64\x64\ArenaBattle5Editor\Development\UnrealEd\SharedPCH.UnrealEd.Project.NoValFmtStr.ValApi.Cpp20.h"
+/Fp"C:\Users\Yelim\Documents\GitHub\Study_Unreal\ArenaBattle5\Intermediate\Build\Win64\x64\ArenaBattle5Editor\Development\UnrealEd\SharedPCH.UnrealEd.Project.NoValFmtStr.ValApi.Cpp20.h.pch"
 /Fo"C:\Users\Yelim\Documents\GitHub\Study_Unreal\ArenaBattle5\Intermediate\Build\Win64\x64\UnrealEditor\Development\ArenaBattle5\ABGameInstance.cpp.obj"
 /sourceDependencies "C:\Users\Yelim\Documents\GitHub\Study_Unreal\ArenaBattle5\Intermediate\Build\Win64\x64\UnrealEditor\Development\ArenaBattle5\ABGameInstance.cpp.dep.json"
 @"C:\Users\Yelim\Documents\GitHub\Study_Unreal\ArenaBattle5\Intermediate\Build\Win64\x64\UnrealEditor\Development\ArenaBattle5\ArenaBattle5.Shared.rsp"
@@ -24,6 +24,7 @@
 /D_WINDLL
 /D_DISABLE_EXTENDED_ALIGNED_STORAGE
 /Ob2
+/d2ExtendedWarningInfo
 /Ox
 /Ot
 /GF

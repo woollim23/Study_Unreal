@@ -15,15 +15,10 @@ class UAnimMontage;
 #endif
 #define ARENABATTLE5_ABCharacter_generated_h
 
-#define FID_Users_Yelim_Documents_GitHub_Study_Unreal_ArenaBattle5_Source_ArenaBattle5_ABCharacter_h_13_SPARSE_DATA
-#define FID_Users_Yelim_Documents_GitHub_Study_Unreal_ArenaBattle5_Source_ArenaBattle5_ABCharacter_h_13_SPARSE_DATA_PROPERTY_ACCESSORS
-#define FID_Users_Yelim_Documents_GitHub_Study_Unreal_ArenaBattle5_Source_ArenaBattle5_ABCharacter_h_13_EDITOR_ONLY_SPARSE_DATA_PROPERTY_ACCESSORS
 #define FID_Users_Yelim_Documents_GitHub_Study_Unreal_ArenaBattle5_Source_ArenaBattle5_ABCharacter_h_13_RPC_WRAPPERS_NO_PURE_DECLS \
- \
 	DECLARE_FUNCTION(execOnAttackMontageEnded);
 
 
-#define FID_Users_Yelim_Documents_GitHub_Study_Unreal_ArenaBattle5_Source_ArenaBattle5_ABCharacter_h_13_ACCESSORS
 #define FID_Users_Yelim_Documents_GitHub_Study_Unreal_ArenaBattle5_Source_ArenaBattle5_ABCharacter_h_13_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAABCharacter(); \
@@ -36,8 +31,8 @@ public: \
 #define FID_Users_Yelim_Documents_GitHub_Study_Unreal_ArenaBattle5_Source_ArenaBattle5_ABCharacter_h_13_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
-	NO_API AABCharacter(AABCharacter&&); \
-	NO_API AABCharacter(const AABCharacter&); \
+	AABCharacter(AABCharacter&&); \
+	AABCharacter(const AABCharacter&); \
 public: \
 	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, AABCharacter); \
 	DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(AABCharacter); \
@@ -49,11 +44,7 @@ public: \
 #define FID_Users_Yelim_Documents_GitHub_Study_Unreal_ArenaBattle5_Source_ArenaBattle5_ABCharacter_h_13_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Users_Yelim_Documents_GitHub_Study_Unreal_ArenaBattle5_Source_ArenaBattle5_ABCharacter_h_13_SPARSE_DATA \
-	FID_Users_Yelim_Documents_GitHub_Study_Unreal_ArenaBattle5_Source_ArenaBattle5_ABCharacter_h_13_SPARSE_DATA_PROPERTY_ACCESSORS \
-	FID_Users_Yelim_Documents_GitHub_Study_Unreal_ArenaBattle5_Source_ArenaBattle5_ABCharacter_h_13_EDITOR_ONLY_SPARSE_DATA_PROPERTY_ACCESSORS \
 	FID_Users_Yelim_Documents_GitHub_Study_Unreal_ArenaBattle5_Source_ArenaBattle5_ABCharacter_h_13_RPC_WRAPPERS_NO_PURE_DECLS \
-	FID_Users_Yelim_Documents_GitHub_Study_Unreal_ArenaBattle5_Source_ArenaBattle5_ABCharacter_h_13_ACCESSORS \
 	FID_Users_Yelim_Documents_GitHub_Study_Unreal_ArenaBattle5_Source_ArenaBattle5_ABCharacter_h_13_INCLASS_NO_PURE_DECLS \
 	FID_Users_Yelim_Documents_GitHub_Study_Unreal_ArenaBattle5_Source_ArenaBattle5_ABCharacter_h_13_ENHANCED_CONSTRUCTORS \
 private: \
