@@ -105,5 +105,11 @@
     <ClInclude Include="..\..\Source\ArenaBattle5\ArenaBattle5.h">
       <Filter>Source\ArenaBattle5</Filter>
     </ClInclude>
+    <ClCompile Include="..\..\Source\ArenaBattle5\BTTask_FindPatrolPos.cpp">
+      <Filter>Source\ArenaBattle5</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ArenaBattle5\BTTask_FindPatrolPos.h">
+      <Filter>Source\ArenaBattle5</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
