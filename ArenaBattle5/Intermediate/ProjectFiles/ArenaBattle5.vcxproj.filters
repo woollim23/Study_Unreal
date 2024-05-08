@@ -12,7 +12,6 @@
       <Filter>Source</Filter>
     </None>
     <None Include="..\..\.vsconfig" />
-    <None Include="..\..\test.txt" />
     <Filter Include="Config">
       <UniqueIdentifier>{FA535FFB-25E1-3D20-B416-52F9BE21E06E}</UniqueIdentifier>
     </Filter>
@@ -37,6 +36,12 @@
     <Filter Include="Source\ArenaBattle5">
       <UniqueIdentifier>{7C99FAA8-32D2-3DBA-968B-3B4169B0DB9A}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\ArenaBattle5\ABAIController.cpp">
+      <Filter>Source\ArenaBattle5</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ArenaBattle5\ABAIController.h">
+      <Filter>Source\ArenaBattle5</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\ArenaBattle5\ABAnimInstance.cpp">
       <Filter>Source\ArenaBattle5</Filter>
     </ClCompile>
@@ -98,18 +103,6 @@
       <Filter>Source\ArenaBattle5</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\ArenaBattle5\ArenaBattle5.h">
-      <Filter>Source\ArenaBattle5</Filter>
-    </ClInclude>
-    <ClCompile Include="..\..\Source\ArenaBattle5\ArenaBattle5Character.cpp">
-      <Filter>Source\ArenaBattle5</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\ArenaBattle5\ArenaBattle5Character.h">
-      <Filter>Source\ArenaBattle5</Filter>
-    </ClInclude>
-    <ClCompile Include="..\..\Source\ArenaBattle5\ArenaBattle5GameMode.cpp">
-      <Filter>Source\ArenaBattle5</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\ArenaBattle5\ArenaBattle5GameMode.h">
       <Filter>Source\ArenaBattle5</Filter>
     </ClInclude>
   </ItemGroup>

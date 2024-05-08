@@ -9,6 +9,7 @@
 #include "Components/WidgetComponent.h"
 #include "Engine/DamageEvents.h"
 #include "ABCharacterWidget.h"
+#include "ABAIController.h"
 
 // Sets default values
 AABCharacter::AABCharacter()
@@ -96,6 +97,11 @@ AABCharacter::AABCharacter()
 		HPBarWidget->SetWidgetClass(UI_HUD.Class);
 		HPBarWidget->SetDrawSize(FVector2D(150.0f, 50.0f));
 	}
+
+	// ABCharacter가 이를 사용하도록, 클래스 속성을 AABAIController 로 정함
+	AIControllerClass = AABAIController::StaticClass();
+	// AI 생성옵션을 PlacedInWorldOrSpawned 으로 설정
+	AutoPossessAI = EAutoPossessAI::PlacedInWorldOrSpawned;
 }
 
 // Called when the game starts or when spawned
