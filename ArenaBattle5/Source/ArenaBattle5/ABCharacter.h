@@ -24,7 +24,8 @@ protected:
 	enum class EControlMode
 	{
 		GTA,
-		DIABLO
+		DIABLO,
+		NPC
 	};
 
 	// 조작 모드 전환을 쉽게 해주는 
@@ -48,7 +49,8 @@ public:
 
 	// TakeDamage 함수를 오버라이드해 액터가 받은 대미지를 처리하는 로직
 	virtual float TakeDamage(float DamageAmount, struct FDamageEvent const& DamageEvent, class AController* EventInstigator, AActor* DamageCauser) override;
-	
+	//
+	virtual void PossessedBy(AController* NewController) override;
 
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;

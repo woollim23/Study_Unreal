@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <None Include="..\..\ArenaBattle5.uproject" />
+    <Filter Include="Source">
+      <UniqueIdentifier>{F31BBDD1-B3E8-3BCC-9652-680E16935819}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\ArenaBattle5.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\Source\ArenaBattle5Editor.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\.vsconfig" />
+    <Filter Include="Config">
+      <UniqueIdentifier>{FA535FFB-25E1-3D20-B416-52F9BE21E06E}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\DefaultArenaBattle5.ini.txt">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEditor.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEditorPerProjectUserSettings.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEditorSettings.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEngine.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultGame.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultInput.ini">
+      <Filter>Config</Filter>
+    </None>
+    <Filter Include="Source\ArenaBattle5">
+      <UniqueIdentifier>{7C99FAA8-32D2-3DBA-968B-3B4169B0DB9A}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\ArenaBattle5\ABAIController.cpp">
+      <Filter>Source\ArenaBattle5</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ArenaBattle5\ABAIController.h">
+      <Filter>Source\ArenaBattle5</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\ArenaBattle5\ABAnimInstance.cpp">
+      <Filter>Source\ArenaBattle5</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ArenaBattle5\ABAnimInstance.h">
+      <Filter>Source\ArenaBattle5</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\ArenaBattle5\ABCharacter.cpp">
+      <Filter>Source\ArenaBattle5</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ArenaBattle5\ABCharacter.h">
+      <Filter>Source\ArenaBattle5</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\ArenaBattle5\ABCharacterStatComponent.cpp">
+      <Filter>Source\ArenaBattle5</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ArenaBattle5\ABCharacterStatComponent.h">
+      <Filter>Source\ArenaBattle5</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\ArenaBattle5\ABCharacterWidget.cpp">
+      <Filter>Source\ArenaBattle5</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ArenaBattle5\ABCharacterWidget.h">
+      <Filter>Source\ArenaBattle5</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\ArenaBattle5\ABGameInstance.cpp">
+      <Filter>Source\ArenaBattle5</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ArenaBattle5\ABGameInstance.h">
+      <Filter>Source\ArenaBattle5</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\ArenaBattle5\ABGameMode.cpp">
+      <Filter>Source\ArenaBattle5</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ArenaBattle5\ABGameMode.h">
+      <Filter>Source\ArenaBattle5</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\ArenaBattle5\ABItemBox.cpp">
+      <Filter>Source\ArenaBattle5</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ArenaBattle5\ABItemBox.h">
+      <Filter>Source\ArenaBattle5</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\ArenaBattle5\ABPlayerController.cpp">
+      <Filter>Source\ArenaBattle5</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ArenaBattle5\ABPlayerController.h">
+      <Filter>Source\ArenaBattle5</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\ArenaBattle5\ABWeapon.cpp">
+      <Filter>Source\ArenaBattle5</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ArenaBattle5\ABWeapon.h">
+      <Filter>Source\ArenaBattle5</Filter>
+    </ClInclude>
+    <None Include="..\..\Source\ArenaBattle5\ArenaBattle5.Build.cs">
+      <Filter>Source\ArenaBattle5</Filter>
+    </None>
+    <ClCompile Include="..\..\Source\ArenaBattle5\ArenaBattle5.cpp">
+      <Filter>Source\ArenaBattle5</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ArenaBattle5\ArenaBattle5.h">
+      <Filter>Source\ArenaBattle5</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\ArenaBattle5\BTService_Detect.cpp">
+      <Filter>Source\ArenaBattle5</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ArenaBattle5\BTService_Detect.h">
+      <Filter>Source\ArenaBattle5</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\ArenaBattle5\BTTask_FindPatrolPos.cpp">
+      <Filter>Source\ArenaBattle5</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ArenaBattle5\BTTask_FindPatrolPos.h">
+      <Filter>Source\ArenaBattle5</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

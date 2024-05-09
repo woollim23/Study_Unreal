@@ -165,25 +165,26 @@ void AABCharacter::SetControlMode(EControlMode NewControlMode)
 		// SpringArm->SetRelativeRotation(FRotator(-45.0f, 0.0f, 0.0f));
 		ArmLengthTo = 800.0f;
 		ArmRotationTo = FRotator(-45.0f, 0.0f, 0.0f);
-
 		SpringArm->bUsePawnControlRotation = false;
 		SpringArm->bInheritPitch = false;
 		SpringArm->bInheritRoll = false;
 		SpringArm->bInheritYaw = false;
 		SpringArm->bDoCollisionTest = false;
-
 		// 회전 끊김 방지 => 속성 해제 후 회전 보완 코드 작성
 		// bOrientRotationToMovement 로 대체됨(UE4.26이상)
 		bUseControllerRotationYaw = false;
-
 		// 캐릭터 자동 회전 (키보드로 캐릭터 회전시키므로 해제)
 		GetCharacterMovement()->bOrientRotationToMovement = false;
-
 		// 컨트롤 회전이 가리키는 방향으로 캐릭터 회전
 		GetCharacterMovement()->bUseControllerDesiredRotation = true;
-
 		// 캐릭터가 부드럽게 회전하도록 보완 (회전 속도 지정)
 		GetCharacterMovement()->RotationRate = FRotator(0.0f, 720.0f, 0.0f);
+		break;
+	case EControlMode::NPC:
+		bUseControllerRotationYaw = false;
+		GetCharacterMovement()->bUseControllerDesiredRotation = false;
+		GetCharacterMovement()->bOrientRotationToMovement = true;
+		GetCharacterMovement()->RotationRate = FRotator(0.0f, 480.0f, 0.0f);
 		break;
 	}
 }
@@ -274,6 +275,22 @@ void AABCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCompone
 	PlayerInputComponent->BindAxis(TEXT("LeftRight"), this, &AABCharacter::LeftRight);
 	PlayerInputComponent->BindAxis(TEXT("LookUp"), this, &AABCharacter::LookUp);
 	PlayerInputComponent->BindAxis(TEXT("Turn"), this, &AABCharacter::Turn);
+}
+
+void AABCharacter::PossessedBy(AController* NewController)
+{
+	Super::PossessedBy(NewController);
+
+	if (IsPlayerControlled())
+	{
+		SetControlMode(EControlMode::DIABLO);
+		GetCharacterMovement()->MaxWalkSpeed = 600.0f;
+	}
+	else
+	{
+		SetControlMode(EControlMode::NPC);
+		GetCharacterMovement()->MaxWalkSpeed = 300.0f;
+	}
 }
 
 void AABCharacter::UpDown(float NewAxisValue)

@@ -9,7 +9,7 @@ public class ArenaBattle5EditorTarget : TargetRules
 	{
 		Type = TargetType.Editor;
 		DefaultBuildSettings = BuildSettingsVersion.V4;
-		IncludeOrderVersion = EngineIncludeOrderVersion.Unreal5_4;
+		IncludeOrderVersion = EngineIncludeOrderVersion.Unreal5_1;
 		ExtraModuleNames.Add("ArenaBattle5");
 	}
 }
