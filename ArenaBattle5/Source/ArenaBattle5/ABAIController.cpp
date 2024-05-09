@@ -37,5 +37,5 @@ void AABAIController::OnPossess(APawn* InPawn)
 			ABLOG(Error, TEXT("AIController couldn't run behavior tree!"));
 		}
 	}
-	this->Blackboard = BlackboardComp;
+	//this->Blackboard = BlackboardComp;
 }

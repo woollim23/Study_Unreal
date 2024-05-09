@@ -2,7 +2,7 @@
 
 #pragma once
 
-#include "CoreMinimal.h"
+#include "ArenaBattle5.h"
 #include "BehaviorTree/BTTaskNode.h"
 #include "BTTask_FindPatrolPos.generated.h"
 
