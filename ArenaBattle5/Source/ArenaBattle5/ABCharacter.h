@@ -7,6 +7,8 @@
 #include "GameFramework/Character.h"
 #include "ABCharacter.generated.h"
 
+DECLARE_MULTICAST_DELEGATE(FOnAttackEndDelegate);
+
 UCLASS()
 class ARENABATTLE5_API AABCharacter : public ACharacter
 {
@@ -59,6 +61,10 @@ public:
 	bool CanSetWeapon();
 	// 무기 장착 함수
 	void SetWeapon(class AABWeapon* NewWeapon);
+	// 공격 버튼 함수
+	void Attack();
+	FOnAttackEndDelegate OnAttackEnd;
+	
 	// 현재 무기 함수
 	UPROPERTY(VisibleAnywhere, Category = Weapon)
 	class AABWeapon* CurrentWeapon;
@@ -91,8 +97,6 @@ private:
 
 	// 조작모드 시점 전환
 	void ViewChange();
-	// 공격 버튼 함수
-	void Attack();
 
 	// 어택 몽타쥬가 끝났음을 알리는 함수
 	UFUNCTION()

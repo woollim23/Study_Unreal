@@ -108,16 +108,34 @@
     <ClInclude Include="..\..\Source\ArenaBattle5\ArenaBattle5.h">
       <Filter>Source\ArenaBattle5</Filter>
     </ClInclude>
+    <ClCompile Include="..\..\Source\ArenaBattle5\BTDecorator_IsInAttackRange.cpp">
+      <Filter>Source\ArenaBattle5</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ArenaBattle5\BTDecorator_IsInAttackRange.h">
+      <Filter>Source\ArenaBattle5</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\ArenaBattle5\BTService_Detect.cpp">
       <Filter>Source\ArenaBattle5</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\ArenaBattle5\BTService_Detect.h">
       <Filter>Source\ArenaBattle5</Filter>
     </ClInclude>
+    <ClCompile Include="..\..\Source\ArenaBattle5\BTTask_Attack.cpp">
+      <Filter>Source\ArenaBattle5</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ArenaBattle5\BTTask_Attack.h">
+      <Filter>Source\ArenaBattle5</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\ArenaBattle5\BTTask_FindPatrolPos.cpp">
       <Filter>Source\ArenaBattle5</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\ArenaBattle5\BTTask_FindPatrolPos.h">
+      <Filter>Source\ArenaBattle5</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\ArenaBattle5\BTTask_TurnToTarget.cpp">
+      <Filter>Source\ArenaBattle5</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ArenaBattle5\BTTask_TurnToTarget.h">
       <Filter>Source\ArenaBattle5</Filter>
     </ClInclude>
   </ItemGroup>
