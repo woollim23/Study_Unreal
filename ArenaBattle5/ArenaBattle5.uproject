@@ -5,13 +5,22 @@
 	"Description": "",
 	"Modules": [
 		{
+			"Name": "ArenaBattle5Setting",
+			"Type": "Runtime",
+			"LoadingPhase": "PreDefault",
+			"AdditionalDependencies": [
+				"CoreUObject"
+			]
+		},
+		{
 			"Name": "ArenaBattle5",
 			"Type": "Runtime",
 			"LoadingPhase": "Default",
 			"AdditionalDependencies": [
 				"Engine",
 				"UMG",
-				"AIModule"
+				"AIModule",
+				"ArenaBattle5Setting"
 			]
 		}
 	],

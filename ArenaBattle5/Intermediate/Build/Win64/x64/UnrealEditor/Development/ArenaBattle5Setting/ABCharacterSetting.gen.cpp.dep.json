@@ -1,0 +1,21 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\users\\yelim\\documents\\github\\study_unreal\\arenabattle5\\intermediate\\build\\win64\\unrealeditor\\inc\\arenabattle5setting\\uht\\abcharactersetting.gen.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\users\\yelim\\documents\\github\\study_unreal\\arenabattle5\\intermediate\\build\\win64\\x64\\arenabattle5editor\\development\\unrealed\\sharedpch.unrealed.project.novalfmtstr.valapi.cpp20.inclorderunreal5_1.h.pch",
+        "Includes": [
+            "c:\\users\\yelim\\documents\\github\\study_unreal\\arenabattle5\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\arenabattle5setting\\definitions.arenabattle5setting.h",
+            "c:\\users\\yelim\\documents\\github\\study_unreal\\arenabattle5\\source\\arenabattle5setting\\public\\abcharactersetting.h",
+            "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\coreuobject\\public\\uobject\\noexporttypes.h",
+            "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\coreuobject\\public\\uobject\\propertyaccessutil.h",
+            "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\coreuobject\\public\\serialization\\testundeclaredscriptstructobjectreferences.h",
+            "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\core\\public\\math\\unitconversion.h",
+            "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\core\\public\\math\\unitconversion.inl",
+            "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\core\\public\\internationalization\\polyglottextdata.h",
+            "c:\\users\\yelim\\documents\\github\\study_unreal\\arenabattle5\\intermediate\\build\\win64\\unrealeditor\\inc\\arenabattle5setting\\uht\\abcharactersetting.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

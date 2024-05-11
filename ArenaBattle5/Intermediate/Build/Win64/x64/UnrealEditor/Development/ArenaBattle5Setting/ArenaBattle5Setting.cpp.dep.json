@@ -1,0 +1,14 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\users\\yelim\\documents\\github\\study_unreal\\arenabattle5\\source\\arenabattle5setting\\private\\arenabattle5setting.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\users\\yelim\\documents\\github\\study_unreal\\arenabattle5\\intermediate\\build\\win64\\x64\\arenabattle5editor\\development\\unrealed\\sharedpch.unrealed.project.novalfmtstr.valapi.cpp20.inclorderunreal5_1.h.pch",
+        "Includes": [
+            "c:\\users\\yelim\\documents\\github\\study_unreal\\arenabattle5\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\arenabattle5setting\\definitions.arenabattle5setting.h",
+            "c:\\users\\yelim\\documents\\github\\study_unreal\\arenabattle5\\source\\arenabattle5setting\\public\\arenabattle5setting.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

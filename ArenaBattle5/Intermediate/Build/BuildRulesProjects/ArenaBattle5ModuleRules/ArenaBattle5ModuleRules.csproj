@@ -16,6 +16,7 @@
   <ItemGroup>
   <Compile Include="..\..\..\..\Source\ArenaBattle5.Target.cs"><Link>Source\ArenaBattle5.Target.cs</Link></Compile>
   <Compile Include="..\..\..\..\Source\ArenaBattle5Editor.Target.cs"><Link>Source\ArenaBattle5Editor.Target.cs</Link></Compile>
+  <Compile Include="..\..\..\..\Source\ArenaBattle5Setting\ArenaBattle5Setting.Build.cs"><Link>Source\ArenaBattle5Setting\ArenaBattle5Setting.Build.cs</Link></Compile>
   <Compile Include="..\..\..\..\Source\ArenaBattle5\ArenaBattle5.Build.cs"><Link>Source\ArenaBattle5\ArenaBattle5.Build.cs</Link></Compile>
   </ItemGroup>
 </Project>

@@ -11,5 +11,7 @@ public class ArenaBattle5EditorTarget : TargetRules
 		DefaultBuildSettings = BuildSettingsVersion.V4;
 		IncludeOrderVersion = EngineIncludeOrderVersion.Unreal5_1;
 		ExtraModuleNames.Add("ArenaBattle5");
-	}
+
+        ExtraModuleNames.AddRange(new string[] { "ArenaBattle5", "ArenaBattle5Setting" });
+    }
 }
