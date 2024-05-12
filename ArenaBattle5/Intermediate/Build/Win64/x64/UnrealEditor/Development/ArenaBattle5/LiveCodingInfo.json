@@ -2,22 +2,6 @@
 	"RemapUnityFiles": 
 	{
 		"Module.ArenaBattle5.cpp.obj": [
-			"ABAIController.cpp.obj",
-			"ABAnimInstance.cpp.obj",
-			"ABCharacter.cpp.obj",
-			"ABCharacterStatComponent.cpp.obj",
-			"ABCharacterWidget.cpp.obj",
-			"ABGameInstance.cpp.obj",
-			"ABGameMode.cpp.obj",
-			"ABItemBox.cpp.obj",
-			"ABPlayerController.cpp.obj",
-			"ABWeapon.cpp.obj",
-			"ArenaBattle5.cpp.obj",
-			"BTDecorator_IsInAttackRange.cpp.obj",
-			"BTService_Detect.cpp.obj",
-			"BTTask_Attack.cpp.obj",
-			"BTTask_FindPatrolPos.cpp.obj",
-			"BTTask_TurnToTarget.cpp.obj",
 			"ABAIController.gen.cpp.obj",
 			"ABAnimInstance.gen.cpp.obj",
 			"ABCharacter.gen.cpp.obj",
@@ -33,7 +17,23 @@
 			"BTService_Detect.gen.cpp.obj",
 			"BTTask_Attack.gen.cpp.obj",
 			"BTTask_FindPatrolPos.gen.cpp.obj",
-			"BTTask_TurnToTarget.gen.cpp.obj"
+			"BTTask_TurnToTarget.gen.cpp.obj",
+			"ABAIController.cpp.obj",
+			"ABAnimInstance.cpp.obj",
+			"ABCharacterStatComponent.cpp.obj",
+			"ABCharacterWidget.cpp.obj",
+			"ABGameMode.cpp.obj",
+			"ABItemBox.cpp.obj",
+			"ABPlayerController.cpp.obj",
+			"ABWeapon.cpp.obj",
+			"ArenaBattle5.cpp.obj",
+			"BTDecorator_IsInAttackRange.cpp.obj",
+			"BTService_Detect.cpp.obj",
+			"BTTask_Attack.cpp.obj",
+			"BTTask_FindPatrolPos.cpp.obj",
+			"BTTask_TurnToTarget.cpp.obj",
+			"ABCharacter.cpp.obj",
+			"ABGameInstance.cpp.obj"
 		]
 	}
 }

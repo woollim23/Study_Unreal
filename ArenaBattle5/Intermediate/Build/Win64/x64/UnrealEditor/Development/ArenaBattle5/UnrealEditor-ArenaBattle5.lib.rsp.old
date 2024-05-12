@@ -1,0 +1,13 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UnrealEditor-ArenaBattle5.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"C:\Users\Yelim\Documents\GitHub\Study_Unreal\ArenaBattle5\Intermediate\Build\Win64\x64\ArenaBattle5Editor\Development\UnrealEd\SharedPCH.UnrealEd.Project.NoValFmtStr.ValApi.Cpp20.InclOrderUnreal5_1.h.obj"
+"C:\Users\Yelim\Documents\GitHub\Study_Unreal\ArenaBattle5\Intermediate\Build\Win64\x64\UnrealEditor\Development\ArenaBattle5\Module.ArenaBattle5.cpp.obj"
+"C:\Users\Yelim\Documents\GitHub\Study_Unreal\ArenaBattle5\Intermediate\Build\Win64\x64\UnrealEditor\Development\ArenaBattle5\ABCharacter.cpp.obj"
+"C:\Users\Yelim\Documents\GitHub\Study_Unreal\ArenaBattle5\Intermediate\Build\Win64\x64\UnrealEditor\Development\ArenaBattle5\Default.rc2.res"
+/OUT:"C:\Users\Yelim\Documents\GitHub\Study_Unreal\ArenaBattle5\Intermediate\Build\Win64\x64\UnrealEditor\Development\ArenaBattle5\UnrealEditor-ArenaBattle5.lib"

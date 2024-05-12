@@ -86,6 +86,7 @@ public:
 	class UWidgetComponent* HPBarWidget;
 
 private:
+	void OnAssetLoadCompleted();
 	// 위아래 방향키 입력 함수
 	void UpDown(float NewAxisValue);
 	// 왼쪽오른쪽 방향키 입력 함수
@@ -138,4 +139,6 @@ private:
 	UPROPERTY(VisibleInstanceOnly, BlueprintReadOnly, Category = Attack, Meta = (AllowPrivateAccess = true))
 	float AttackRadius;
 
+	FSoftObjectPath CharacterAssetToLoad = FSoftObjectPath(nullptr);
+	TSharedPtr<struct FStreamableHandle> AssetStreamingHandle;
 };

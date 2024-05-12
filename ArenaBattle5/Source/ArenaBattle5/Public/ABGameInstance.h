@@ -5,6 +5,7 @@
 #include "ArenaBattle5.h"
 #include "Engine/DataTable.h"
 #include "Engine/GameInstance.h"
+#include "Engine/StreamableManager.h"
 #include "ABGameInstance.generated.h"
 
 USTRUCT(BlueprintType)
@@ -45,6 +46,8 @@ public:
 	virtual void Init() override;
 	// 데이터테이블 구조체 변수? 선언
 	FABCharacterData* GetABCharacterData(int32 Level);
+
+	FStreamableManager StreamableManager;
 
 private:
 	// 데이터테이블 변수
