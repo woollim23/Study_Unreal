@@ -2,6 +2,8 @@
 
 
 #include "ABSection.h"
+#include "ABCharacter.h"
+#include "ABItemBox.h"
 
 // Sets default values
 AABSection::AABSection()
@@ -66,6 +68,9 @@ AABSection::AABSection()
 	}
 	
 	bNoBattle = false;
+
+	EnemySpawnTime = 2.0f;
+	ItemBoxSpawnTime = 5.0f;
 }
 
 void AABSection::OnConstruction(const FTransform& Transform)
@@ -134,6 +139,14 @@ void AABSection::SetState(ESectionState NewState)
 		}
 
 		OperateGates(true);
+
+		GetWorld()->GetTimerManager().SetTimer(SpawnNPCTimerHandle, FTimerDelegate::CreateUObject(this, &AABSection::OnNPCSpawn), EnemySpawnTime, false);
+
+		GetWorld()->GetTimerManager().SetTimer(SpawnItemBoxTimerHandle, FTimerDelegate::CreateLambda([this]() -> void {
+			FVector2D RandXY = FMath::RandPointInCircle(600.0f);
+			GetWorld()->SpawnActor<AABItemBox>(GetActorLocation() + FVector(RandXY, 30.0f), FRotator::ZeroRotator);
+			}), ItemBoxSpawnTime, false);
+
 		break;
 	}
 	case ESectionState::BATTLE:
@@ -178,3 +191,7 @@ void AABSection::Tick(float DeltaTime)
 
 }
 
+void AABSection::OnNPCSpawn()
+{
+	GetWorld()->SpawnActor<AABCharacter>(GetActorLocation() + FVector::UpVector * 88.0f, FRotator::ZeroRotator);
+}

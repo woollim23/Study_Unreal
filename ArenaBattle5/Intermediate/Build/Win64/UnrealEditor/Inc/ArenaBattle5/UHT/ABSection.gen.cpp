@@ -247,6 +247,16 @@ struct Z_Construct_UClass_AABSection_Statics
 		{ "Category", "State" },
 		{ "ModuleRelativePath", "Public/ABSection.h" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_EnemySpawnTime_MetaData[] = {
+		{ "AllowPrivateAccess", "TRUE" },
+		{ "Category", "Spawn" },
+		{ "ModuleRelativePath", "Public/ABSection.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_ItemBoxSpawnTime_MetaData[] = {
+		{ "AllowPrivateAccess", "TRUE" },
+		{ "Category", "Spawn" },
+		{ "ModuleRelativePath", "Public/ABSection.h" },
+	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_GateMeshes_Inner;
 	static const UECodeGen_Private::FArrayPropertyParams NewProp_GateMeshes;
@@ -256,6 +266,8 @@ struct Z_Construct_UClass_AABSection_Statics
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_Trigger;
 	static void NewProp_bNoBattle_SetBit(void* Obj);
 	static const UECodeGen_Private::FBoolPropertyParams NewProp_bNoBattle;
+	static const UECodeGen_Private::FFloatPropertyParams NewProp_EnemySpawnTime;
+	static const UECodeGen_Private::FFloatPropertyParams NewProp_ItemBoxSpawnTime;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
@@ -279,6 +291,8 @@ void Z_Construct_UClass_AABSection_Statics::NewProp_bNoBattle_SetBit(void* Obj)
 	((AABSection*)Obj)->bNoBattle = 1;
 }
 const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_AABSection_Statics::NewProp_bNoBattle = { "bNoBattle", nullptr, (EPropertyFlags)0x0040000000000001, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(AABSection), &Z_Construct_UClass_AABSection_Statics::NewProp_bNoBattle_SetBit, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_bNoBattle_MetaData), NewProp_bNoBattle_MetaData) };
+const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AABSection_Statics::NewProp_EnemySpawnTime = { "EnemySpawnTime", nullptr, (EPropertyFlags)0x0040000000000001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AABSection, EnemySpawnTime), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_EnemySpawnTime_MetaData), NewProp_EnemySpawnTime_MetaData) };
+const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AABSection_Statics::NewProp_ItemBoxSpawnTime = { "ItemBoxSpawnTime", nullptr, (EPropertyFlags)0x0040000000000001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AABSection, ItemBoxSpawnTime), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ItemBoxSpawnTime_MetaData), NewProp_ItemBoxSpawnTime_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AABSection_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AABSection_Statics::NewProp_GateMeshes_Inner,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AABSection_Statics::NewProp_GateMeshes,
@@ -287,6 +301,8 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AABSectio
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AABSection_Statics::NewProp_Mesh,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AABSection_Statics::NewProp_Trigger,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AABSection_Statics::NewProp_bNoBattle,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AABSection_Statics::NewProp_EnemySpawnTime,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AABSection_Statics::NewProp_ItemBoxSpawnTime,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_AABSection_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_AABSection_Statics::DependentSingletons[])() = {
@@ -329,10 +345,10 @@ AABSection::~AABSection() {}
 struct Z_CompiledInDeferFile_FID_Users_Yelim_Documents_GitHub_Study_Unreal_ArenaBattle5_Source_ArenaBattle5_Public_ABSection_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_AABSection, AABSection::StaticClass, TEXT("AABSection"), &Z_Registration_Info_UClass_AABSection, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AABSection), 2428619089U) },
+		{ Z_Construct_UClass_AABSection, AABSection::StaticClass, TEXT("AABSection"), &Z_Registration_Info_UClass_AABSection, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AABSection), 4059513737U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Yelim_Documents_GitHub_Study_Unreal_ArenaBattle5_Source_ArenaBattle5_Public_ABSection_h_3781174257(TEXT("/Script/ArenaBattle5"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Yelim_Documents_GitHub_Study_Unreal_ArenaBattle5_Source_ArenaBattle5_Public_ABSection_h_2065916182(TEXT("/Script/ArenaBattle5"),
 	Z_CompiledInDeferFile_FID_Users_Yelim_Documents_GitHub_Study_Unreal_ArenaBattle5_Source_ArenaBattle5_Public_ABSection_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Yelim_Documents_GitHub_Study_Unreal_ArenaBattle5_Source_ArenaBattle5_Public_ABSection_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
