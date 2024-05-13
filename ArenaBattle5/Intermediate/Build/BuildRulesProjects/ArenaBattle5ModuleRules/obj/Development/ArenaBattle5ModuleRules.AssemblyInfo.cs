@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ArenaBattle5ModuleRules")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Development")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+73f6b96e1af260ba2cb97e377fafb82a5cb46c2d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5aa6096a211efcaad06ddf023379f5ab20822e55")]
 [assembly: System.Reflection.AssemblyProductAttribute("ArenaBattle5ModuleRules")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ArenaBattle5ModuleRules")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

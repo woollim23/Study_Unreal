@@ -15,6 +15,9 @@
     <Filter Include="Config">
       <UniqueIdentifier>{FA535FFB-25E1-3D20-B416-52F9BE21E06E}</UniqueIdentifier>
     </Filter>
+    <None Include="..\..\Config\DefaultArenaBattle5.ini">
+      <Filter>Config</Filter>
+    </None>
     <None Include="..\..\Config\DefaultArenaBattle5.ini.txt">
       <Filter>Config</Filter>
     </None>
@@ -96,6 +99,9 @@
     <ClCompile Include="..\..\Source\ArenaBattle5\Private\ABPlayerController.cpp">
       <Filter>Source\ArenaBattle5\Private</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\ArenaBattle5\Private\ABSection.cpp">
+      <Filter>Source\ArenaBattle5\Private</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\ArenaBattle5\Private\ABWeapon.cpp">
       <Filter>Source\ArenaBattle5\Private</Filter>
     </ClCompile>
@@ -145,6 +151,9 @@
       <Filter>Source\ArenaBattle5\Public</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\ArenaBattle5\Public\ABPlayerController.h">
+      <Filter>Source\ArenaBattle5\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\ArenaBattle5\Public\ABSection.h">
       <Filter>Source\ArenaBattle5\Public</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\ArenaBattle5\Public\ABWeapon.h">

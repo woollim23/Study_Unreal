@@ -520,6 +520,7 @@
     <None Include="..\..\Source\ArenaBattle5.Target.cs"/>
     <None Include="..\..\Source\ArenaBattle5Editor.Target.cs"/>
     <None Include="..\..\.vsconfig"/>
+    <None Include="..\..\Config\DefaultArenaBattle5.ini"/>
     <None Include="..\..\Config\DefaultArenaBattle5.ini.txt"/>
     <None Include="..\..\Config\DefaultEditor.ini"/>
     <None Include="..\..\Config\DefaultEditorPerProjectUserSettings.ini"/>
@@ -575,6 +576,10 @@
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories_1)</AdditionalIncludeDirectories>
       <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles_1)</ForcedIncludeFiles>
     </ClCompile>
+    <ClCompile Include="..\..\Source\ArenaBattle5\Private\ABSection.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories_1)</AdditionalIncludeDirectories>
+      <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles_1)</ForcedIncludeFiles>
+    </ClCompile>
     <ClCompile Include="..\..\Source\ArenaBattle5\Private\ABWeapon.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories_1)</AdditionalIncludeDirectories>
       <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles_1)</ForcedIncludeFiles>
@@ -612,6 +617,7 @@
     <ClInclude Include="..\..\Source\ArenaBattle5\Public\ABGameMode.h"/>
     <ClInclude Include="..\..\Source\ArenaBattle5\Public\ABItemBox.h"/>
     <ClInclude Include="..\..\Source\ArenaBattle5\Public\ABPlayerController.h"/>
+    <ClInclude Include="..\..\Source\ArenaBattle5\Public\ABSection.h"/>
     <ClInclude Include="..\..\Source\ArenaBattle5\Public\ABWeapon.h"/>
     <ClInclude Include="..\..\Source\ArenaBattle5\Public\ArenaBattle5.h"/>
     <ClInclude Include="..\..\Source\ArenaBattle5\Public\BTDecorator_IsInAttackRange.h"/>
