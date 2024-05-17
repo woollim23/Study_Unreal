@@ -42,22 +42,14 @@ void UABCharacterStatComponent::SetNewLevel(int32 NewLevel)
 	}
 	else
 	{
-		ABLOG(Warning, TEXT("Level (%d) data doesn't exist"), NewLevel);
+		ABLOG(Error, TEXT("Level (%d) data doesn't exist"), NewLevel);
 	}
-}
-
-// Called every frame
-void UABCharacterStatComponent::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
-{
-	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
-
-	// ...
 }
 
 void UABCharacterStatComponent::SetDamage(float NewDamage)
 {
 	ABCHECK(nullptr != CurrentStatData);
-	SetHP(FMath::ClampAngle<float>(CurrentHP - NewDamage, 0.0f, CurrentStatData->MaxHP));
+	SetHP(FMath::Clamp<float>(CurrentHP - NewDamage, 0.0f, CurrentStatData->MaxHP));
 }
 
 void UABCharacterStatComponent::SetHP(float NewHP)

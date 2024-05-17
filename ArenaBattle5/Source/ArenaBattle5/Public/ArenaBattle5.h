@@ -4,6 +4,15 @@
 
 #include "EngineMinimal.h"
 
+UENUM(BlueprintType)
+enum class ECharacterState : uint8
+{
+	PREINIT,
+	LOADING,
+	READY,
+	DEAD
+};
+
 // 매크로, 로그 카테고리 선언 매크로 Log = 'ArenaBattle'
 DECLARE_LOG_CATEGORY_EXTERN(ArenaBattle, Log, All);
 // 매크로, 발생한 함수 이름과 코드 라인을 함께 출력 함
