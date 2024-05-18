@@ -23,6 +23,8 @@ void UABCharacterStatComponent::BeginPlay()
 
 }
 
+// PostInitializeComponents함수가 호출되기 전에 호출 됨
+// 이 함수가 호출되려면 생성자에서 bWantsInitializeComponent 값을 true로 설정해줘야 함
 void UABCharacterStatComponent::InitializeComponent()
 {
 	Super::InitializeComponent();
