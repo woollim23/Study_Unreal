@@ -577,12 +577,13 @@ float AABCharacter::TakeDamage(float DamageAmount, struct FDamageEvent const& Da
 
 	// 죽을만큼의 대미지를 입었을때,
 	// 죽는 애니메이션 재생 & 충돌 콜리전 종료
+	/*
 	if (FinalDamage > 0.0f)
 	{
 		ABAnim->SetDeadAnim();
 		SetActorEnableCollision(false);
 	}
-
+	*/
 	CharacterStat->SetDamage(FinalDamage);
 	return FinalDamage;
 }
