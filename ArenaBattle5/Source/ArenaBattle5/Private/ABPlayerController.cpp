@@ -50,6 +50,11 @@ void AABPlayerController::NPCKill(AABCharacter* KilledNPC) const
 	ABPlayerState->AddExp(KilledNPC->GetExp());
 }
 
+void AABPlayerController::AddGameScore() const
+{
+	ABPlayerState->AddGameScore();
+}
+
 // 빙의시 호출 함수
 void AABPlayerController::OnPossess(APawn* aPawn)
 {

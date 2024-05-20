@@ -18,6 +18,7 @@ struct FHitResult;
 #define ARENABATTLE5_ABSection_generated_h
 
 #define FID_Users_Yelim_Documents_GitHub_Study_Unreal_ArenaBattle5_Source_ArenaBattle5_Public_ABSection_h_12_RPC_WRAPPERS_NO_PURE_DECLS \
+	DECLARE_FUNCTION(execOnKeyNPCDestroyed); \
 	DECLARE_FUNCTION(execOnGateTriggerBeginOverlap); \
 	DECLARE_FUNCTION(execOnTriggerBeginOverlap);
 

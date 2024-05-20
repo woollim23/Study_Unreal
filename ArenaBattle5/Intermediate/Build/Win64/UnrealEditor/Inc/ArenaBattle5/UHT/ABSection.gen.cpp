@@ -103,6 +103,48 @@ DEFINE_FUNCTION(AABSection::execOnGateTriggerBeginOverlap)
 }
 // End Class AABSection Function OnGateTriggerBeginOverlap
 
+// Begin Class AABSection Function OnKeyNPCDestroyed
+struct Z_Construct_UFunction_AABSection_OnKeyNPCDestroyed_Statics
+{
+	struct ABSection_eventOnKeyNPCDestroyed_Parms
+	{
+		AActor* DestroyedActor;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Public/ABSection.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_DestroyedActor;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_AABSection_OnKeyNPCDestroyed_Statics::NewProp_DestroyedActor = { "DestroyedActor", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABSection_eventOnKeyNPCDestroyed_Parms, DestroyedActor), Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_AABSection_OnKeyNPCDestroyed_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AABSection_OnKeyNPCDestroyed_Statics::NewProp_DestroyedActor,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_AABSection_OnKeyNPCDestroyed_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_AABSection_OnKeyNPCDestroyed_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AABSection, nullptr, "OnKeyNPCDestroyed", nullptr, nullptr, Z_Construct_UFunction_AABSection_OnKeyNPCDestroyed_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_AABSection_OnKeyNPCDestroyed_Statics::PropPointers), sizeof(Z_Construct_UFunction_AABSection_OnKeyNPCDestroyed_Statics::ABSection_eventOnKeyNPCDestroyed_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00040401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_AABSection_OnKeyNPCDestroyed_Statics::Function_MetaDataParams), Z_Construct_UFunction_AABSection_OnKeyNPCDestroyed_Statics::Function_MetaDataParams) };
+static_assert(sizeof(Z_Construct_UFunction_AABSection_OnKeyNPCDestroyed_Statics::ABSection_eventOnKeyNPCDestroyed_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_AABSection_OnKeyNPCDestroyed()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_AABSection_OnKeyNPCDestroyed_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(AABSection::execOnKeyNPCDestroyed)
+{
+	P_GET_OBJECT(AActor,Z_Param_DestroyedActor);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnKeyNPCDestroyed(Z_Param_DestroyedActor);
+	P_NATIVE_END;
+}
+// End Class AABSection Function OnKeyNPCDestroyed
+
 // Begin Class AABSection Function OnTriggerBeginOverlap
 struct Z_Construct_UFunction_AABSection_OnTriggerBeginOverlap_Statics
 {
@@ -190,6 +232,7 @@ void AABSection::StaticRegisterNativesAABSection()
 	UClass* Class = AABSection::StaticClass();
 	static const FNameNativePtrPair Funcs[] = {
 		{ "OnGateTriggerBeginOverlap", &AABSection::execOnGateTriggerBeginOverlap },
+		{ "OnKeyNPCDestroyed", &AABSection::execOnKeyNPCDestroyed },
 		{ "OnTriggerBeginOverlap", &AABSection::execOnTriggerBeginOverlap },
 	};
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
@@ -272,6 +315,7 @@ struct Z_Construct_UClass_AABSection_Statics
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
 		{ &Z_Construct_UFunction_AABSection_OnGateTriggerBeginOverlap, "OnGateTriggerBeginOverlap" }, // 572463762
+		{ &Z_Construct_UFunction_AABSection_OnKeyNPCDestroyed, "OnKeyNPCDestroyed" }, // 135186975
 		{ &Z_Construct_UFunction_AABSection_OnTriggerBeginOverlap, "OnTriggerBeginOverlap" }, // 1265388344
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
@@ -345,10 +389,10 @@ AABSection::~AABSection() {}
 struct Z_CompiledInDeferFile_FID_Users_Yelim_Documents_GitHub_Study_Unreal_ArenaBattle5_Source_ArenaBattle5_Public_ABSection_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_AABSection, AABSection::StaticClass, TEXT("AABSection"), &Z_Registration_Info_UClass_AABSection, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AABSection), 4059513737U) },
+		{ Z_Construct_UClass_AABSection, AABSection::StaticClass, TEXT("AABSection"), &Z_Registration_Info_UClass_AABSection, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AABSection), 589688566U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Yelim_Documents_GitHub_Study_Unreal_ArenaBattle5_Source_ArenaBattle5_Public_ABSection_h_2065916182(TEXT("/Script/ArenaBattle5"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Yelim_Documents_GitHub_Study_Unreal_ArenaBattle5_Source_ArenaBattle5_Public_ABSection_h_2707615662(TEXT("/Script/ArenaBattle5"),
 	Z_CompiledInDeferFile_FID_Users_Yelim_Documents_GitHub_Study_Unreal_ArenaBattle5_Source_ArenaBattle5_Public_ABSection_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Yelim_Documents_GitHub_Study_Unreal_ArenaBattle5_Source_ArenaBattle5_Public_ABSection_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

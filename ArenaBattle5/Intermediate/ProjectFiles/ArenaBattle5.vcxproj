@@ -568,6 +568,10 @@
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories_1)</AdditionalIncludeDirectories>
       <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles_1)</ForcedIncludeFiles>
     </ClCompile>
+    <ClCompile Include="..\..\Source\ArenaBattle5\Private\ABGameState.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories_1)</AdditionalIncludeDirectories>
+      <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles_1)</ForcedIncludeFiles>
+    </ClCompile>
     <ClCompile Include="..\..\Source\ArenaBattle5\Private\ABHUDWidget.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories_1)</AdditionalIncludeDirectories>
       <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles_1)</ForcedIncludeFiles>
@@ -623,6 +627,7 @@
     <ClInclude Include="..\..\Source\ArenaBattle5\Public\ABCharacterWidget.h"/>
     <ClInclude Include="..\..\Source\ArenaBattle5\Public\ABGameInstance.h"/>
     <ClInclude Include="..\..\Source\ArenaBattle5\Public\ABGameMode.h"/>
+    <ClInclude Include="..\..\Source\ArenaBattle5\Public\ABGameState.h"/>
     <ClInclude Include="..\..\Source\ArenaBattle5\Public\ABHUDWidget.h"/>
     <ClInclude Include="..\..\Source\ArenaBattle5\Public\ABItemBox.h"/>
     <ClInclude Include="..\..\Source\ArenaBattle5\Public\ABPlayerController.h"/>

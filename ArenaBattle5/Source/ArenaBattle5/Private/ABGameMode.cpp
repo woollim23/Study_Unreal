@@ -5,6 +5,7 @@
 #include "ABCharacter.h"
 #include "ABPlayerController.h"
 #include "ABPlayerState.h"
+#include "ABGameState.h"
 
 AABGameMode::AABGameMode()
 {
@@ -12,8 +13,14 @@ AABGameMode::AABGameMode()
 	DefaultPawnClass = AABCharacter::StaticClass();
 	// 플레이어 컨트롤러 클래스를 AABPlayerController으로 지정
 	PlayerControllerClass = AABPlayerController::StaticClass();
-
 	PlayerStateClass = AABPlayerState::StaticClass();
+	GameStateClass = AABGameState::StaticClass();
+}
+
+void AABGameMode::PostInitializeComponents()
+{
+	Super::PostInitializeComponents();
+	ABGameState = Cast<AABGameState>(GameState);
 }
 
 // 로그인 성공 후 호출되는 함수
@@ -28,4 +35,19 @@ void AABGameMode::PostLogin(APlayerController* NewPlayer)
 	auto ABPlayerState = Cast<AABPlayerState>(NewPlayer->PlayerState);
 	ABCHECK(nullptr != ABPlayerState);
 	ABPlayerState->InitPlayerData();
+}
+
+void AABGameMode::AddScore(AABPlayerController* ScoredPlayer)
+{
+	for (FConstPlayerControllerIterator It = GetWorld()->GetPlayerControllerIterator(); It; ++It)
+	{
+		const auto ABPlayerController = Cast<AABPlayerController>(It->Get());
+		if ((nullptr != ABPlayerController) && (ScoredPlayer == ABPlayerController))
+		{
+			ABPlayerController->AddGameScore();
+			break;
+		}
+	}
+
+	ABGameState->AddGameScore();
 }
