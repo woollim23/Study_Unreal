@@ -4,6 +4,7 @@
 #include "ABGameMode.h"
 #include "ABCharacter.h"
 #include "ABPlayerController.h"
+#include "ABPlayerState.h"
 
 AABGameMode::AABGameMode()
 {
@@ -11,6 +12,8 @@ AABGameMode::AABGameMode()
 	DefaultPawnClass = AABCharacter::StaticClass();
 	// 플레이어 컨트롤러 클래스를 AABPlayerController으로 지정
 	PlayerControllerClass = AABPlayerController::StaticClass();
+
+	PlayerStateClass = AABPlayerState::StaticClass();
 }
 
 // 로그인 성공 후 호출되는 함수
@@ -21,4 +24,8 @@ void AABGameMode::PostLogin(APlayerController* NewPlayer)
 	Super::PostLogin(NewPlayer);
 	// 6. 게임에 입장된 플레이어 세팅이 끝난 시점
 	//ABLOG(Warning, TEXT("PostLogin End"));
+
+	auto ABPlayerState = Cast<AABPlayerState>(NewPlayer->PlayerState);
+	ABCHECK(nullptr != ABPlayerState);
+	ABPlayerState->InitPlayerData();
 }

@@ -2,13 +2,16 @@
 	"RemapUnityFiles": 
 	{
 		"Module.ArenaBattle5.cpp.obj": [
+			"ABHUDWidget.gen.cpp.obj",
+			"ABPlayerState.gen.cpp.obj",
+			"ABAIController.cpp.obj",
 			"ABAnimInstance.cpp.obj",
 			"ABCharacterWidget.cpp.obj",
 			"ABGameInstance.cpp.obj",
-			"ABGameMode.cpp.obj",
 			"ABItemBox.cpp.obj",
-			"ABPlayerController.cpp.obj",
+			"ABSection.cpp.obj",
 			"ABWeapon.cpp.obj",
+			"ArenaBattle5.cpp.obj",
 			"BTDecorator_IsInAttackRange.cpp.obj",
 			"BTService_Detect.cpp.obj",
 			"BTTask_Attack.cpp.obj",
@@ -32,11 +35,12 @@
 			"BTTask_Attack.gen.cpp.obj",
 			"BTTask_FindPatrolPos.gen.cpp.obj",
 			"BTTask_TurnToTarget.gen.cpp.obj",
-			"ABAIController.cpp.obj",
 			"ABCharacter.cpp.obj",
 			"ABCharacterStatComponent.cpp.obj",
-			"ABSection.cpp.obj",
-			"ArenaBattle5.cpp.obj"
+			"ABGameMode.cpp.obj",
+			"ABHUDWidget.cpp.obj",
+			"ABPlayerController.cpp.obj",
+			"ABPlayerState.cpp.obj"
 		]
 	}
 }

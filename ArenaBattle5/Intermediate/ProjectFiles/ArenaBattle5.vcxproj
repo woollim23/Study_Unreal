@@ -568,11 +568,19 @@
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories_1)</AdditionalIncludeDirectories>
       <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles_1)</ForcedIncludeFiles>
     </ClCompile>
+    <ClCompile Include="..\..\Source\ArenaBattle5\Private\ABHUDWidget.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories_1)</AdditionalIncludeDirectories>
+      <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles_1)</ForcedIncludeFiles>
+    </ClCompile>
     <ClCompile Include="..\..\Source\ArenaBattle5\Private\ABItemBox.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories_1)</AdditionalIncludeDirectories>
       <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles_1)</ForcedIncludeFiles>
     </ClCompile>
     <ClCompile Include="..\..\Source\ArenaBattle5\Private\ABPlayerController.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories_1)</AdditionalIncludeDirectories>
+      <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles_1)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\ArenaBattle5\Private\ABPlayerState.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories_1)</AdditionalIncludeDirectories>
       <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles_1)</ForcedIncludeFiles>
     </ClCompile>
@@ -615,8 +623,10 @@
     <ClInclude Include="..\..\Source\ArenaBattle5\Public\ABCharacterWidget.h"/>
     <ClInclude Include="..\..\Source\ArenaBattle5\Public\ABGameInstance.h"/>
     <ClInclude Include="..\..\Source\ArenaBattle5\Public\ABGameMode.h"/>
+    <ClInclude Include="..\..\Source\ArenaBattle5\Public\ABHUDWidget.h"/>
     <ClInclude Include="..\..\Source\ArenaBattle5\Public\ABItemBox.h"/>
     <ClInclude Include="..\..\Source\ArenaBattle5\Public\ABPlayerController.h"/>
+    <ClInclude Include="..\..\Source\ArenaBattle5\Public\ABPlayerState.h"/>
     <ClInclude Include="..\..\Source\ArenaBattle5\Public\ABSection.h"/>
     <ClInclude Include="..\..\Source\ArenaBattle5\Public\ABWeapon.h"/>
     <ClInclude Include="..\..\Source\ArenaBattle5\Public\ArenaBattle5.h"/>

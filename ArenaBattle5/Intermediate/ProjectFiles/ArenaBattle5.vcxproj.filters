@@ -93,10 +93,16 @@
     <ClCompile Include="..\..\Source\ArenaBattle5\Private\ABGameMode.cpp">
       <Filter>Source\ArenaBattle5\Private</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\ArenaBattle5\Private\ABHUDWidget.cpp">
+      <Filter>Source\ArenaBattle5\Private</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\ArenaBattle5\Private\ABItemBox.cpp">
       <Filter>Source\ArenaBattle5\Private</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\ArenaBattle5\Private\ABPlayerController.cpp">
+      <Filter>Source\ArenaBattle5\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\ArenaBattle5\Private\ABPlayerState.cpp">
       <Filter>Source\ArenaBattle5\Private</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\ArenaBattle5\Private\ABSection.cpp">
@@ -147,10 +153,16 @@
     <ClInclude Include="..\..\Source\ArenaBattle5\Public\ABGameMode.h">
       <Filter>Source\ArenaBattle5\Public</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\Source\ArenaBattle5\Public\ABHUDWidget.h">
+      <Filter>Source\ArenaBattle5\Public</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\Source\ArenaBattle5\Public\ABItemBox.h">
       <Filter>Source\ArenaBattle5\Public</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\ArenaBattle5\Public\ABPlayerController.h">
+      <Filter>Source\ArenaBattle5\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\ArenaBattle5\Public\ABPlayerState.h">
       <Filter>Source\ArenaBattle5\Public</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\ArenaBattle5\Public\ABSection.h">

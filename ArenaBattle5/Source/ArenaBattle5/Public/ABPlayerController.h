@@ -19,14 +19,27 @@ class ARENABATTLE5_API AABPlayerController : public APlayerController
 {
 	GENERATED_BODY()
 
-protected:
-	virtual void BeginPlay() override;
-
-
 public:
+	AABPlayerController();
+
 	// 컴포넌트 초기화 이후 호출 함수
 	virtual void PostInitializeComponents() override;
 	// 빙의시 호출 함수
 	virtual void OnPossess(APawn* aPawn) override;
+
+	class UABHUDWidget* GetHUDWidget() const;
+	void NPCKill(class AABCharacter* KilledNPC) const;
 	
+protected:
+	virtual void BeginPlay() override;
+	//virtual void SetUpInputComponent() override;
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = UI)
+	TSubclassOf<class UABHUDWidget> HUDWidgetClass;
+
+private:
+	UPROPERTY()
+	class UABHUDWidget* HUDWidget;
+	UPROPERTY()
+	class AABPlayerState* ABPlayerState;
 };
