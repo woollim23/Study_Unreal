@@ -108,6 +108,9 @@
     <ClCompile Include="..\..\Source\ArenaBattle5\Private\ABPlayerState.cpp">
       <Filter>Source\ArenaBattle5\Private</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\ArenaBattle5\Private\ABSaveGame.cpp">
+      <Filter>Source\ArenaBattle5\Private</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\ArenaBattle5\Private\ABSection.cpp">
       <Filter>Source\ArenaBattle5\Private</Filter>
     </ClCompile>
@@ -169,6 +172,9 @@
       <Filter>Source\ArenaBattle5\Public</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\ArenaBattle5\Public\ABPlayerState.h">
+      <Filter>Source\ArenaBattle5\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\ArenaBattle5\Public\ABSaveGame.h">
       <Filter>Source\ArenaBattle5\Public</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\ArenaBattle5\Public\ABSection.h">
