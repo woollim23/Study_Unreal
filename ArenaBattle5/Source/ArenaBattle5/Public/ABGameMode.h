@@ -23,6 +23,7 @@ public:
 	// PlayerController 에서 리플리케이트되는 함수 호출을 하기에 안전한 첫 번째 장소
 	virtual void PostLogin(APlayerController* NewPlayer) override;
 	void AddScore(class AABPlayerController* ScoredPlayer);
+	int32 GetScore() const;
 
 private:
 	UPROPERTY()

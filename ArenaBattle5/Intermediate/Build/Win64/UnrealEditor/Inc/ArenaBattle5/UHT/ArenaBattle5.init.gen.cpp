@@ -17,7 +17,7 @@ void EmptyLinkFunctionForGeneratedCodeArenaBattle5_init() {}
 				nullptr,
 				0,
 				PKG_CompiledIn | 0x00000000,
-				0x857A12F6,
+				0x6A58AB3A,
 				0x8DB969C7,
 				METADATA_PARAMS(0, nullptr)
 			};
@@ -25,5 +25,5 @@ void EmptyLinkFunctionForGeneratedCodeArenaBattle5_init() {}
 		}
 		return Z_Registration_Info_UPackage__Script_ArenaBattle5.OuterSingleton;
 	}
-	static FRegisterCompiledInInfo Z_CompiledInDeferPackage_UPackage__Script_ArenaBattle5(Z_Construct_UPackage__Script_ArenaBattle5, TEXT("/Script/ArenaBattle5"), Z_Registration_Info_UPackage__Script_ArenaBattle5, CONSTRUCT_RELOAD_VERSION_INFO(FPackageReloadVersionInfo, 0x857A12F6, 0x8DB969C7));
+	static FRegisterCompiledInInfo Z_CompiledInDeferPackage_UPackage__Script_ArenaBattle5(Z_Construct_UPackage__Script_ArenaBattle5, TEXT("/Script/ArenaBattle5"), Z_Registration_Info_UPackage__Script_ArenaBattle5, CONSTRUCT_RELOAD_VERSION_INFO(FPackageReloadVersionInfo, 0x6A58AB3A, 0x8DB969C7));
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
