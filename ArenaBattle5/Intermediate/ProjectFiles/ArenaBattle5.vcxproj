@@ -596,6 +596,10 @@
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories_1)</AdditionalIncludeDirectories>
       <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles_1)</ForcedIncludeFiles>
     </ClCompile>
+    <ClCompile Include="..\..\Source\ArenaBattle5\Private\ABUIPlayerController.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories_1)</AdditionalIncludeDirectories>
+      <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles_1)</ForcedIncludeFiles>
+    </ClCompile>
     <ClCompile Include="..\..\Source\ArenaBattle5\Private\ABWeapon.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories_1)</AdditionalIncludeDirectories>
       <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles_1)</ForcedIncludeFiles>
@@ -638,6 +642,7 @@
     <ClInclude Include="..\..\Source\ArenaBattle5\Public\ABPlayerState.h"/>
     <ClInclude Include="..\..\Source\ArenaBattle5\Public\ABSaveGame.h"/>
     <ClInclude Include="..\..\Source\ArenaBattle5\Public\ABSection.h"/>
+    <ClInclude Include="..\..\Source\ArenaBattle5\Public\ABUIPlayerController.h"/>
     <ClInclude Include="..\..\Source\ArenaBattle5\Public\ABWeapon.h"/>
     <ClInclude Include="..\..\Source\ArenaBattle5\Public\ArenaBattle5.h"/>
     <ClInclude Include="..\..\Source\ArenaBattle5\Public\BTDecorator_IsInAttackRange.h"/>
