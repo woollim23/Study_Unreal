@@ -552,6 +552,10 @@
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories_1)</AdditionalIncludeDirectories>
       <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles_1)</ForcedIncludeFiles>
     </ClCompile>
+    <ClCompile Include="..\..\Source\ArenaBattle5\Private\ABCharacterSelectWidget.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories_1)</AdditionalIncludeDirectories>
+      <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles_1)</ForcedIncludeFiles>
+    </ClCompile>
     <ClCompile Include="..\..\Source\ArenaBattle5\Private\ABCharacterStatComponent.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories_1)</AdditionalIncludeDirectories>
       <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles_1)</ForcedIncludeFiles>
@@ -631,6 +635,7 @@
     <ClInclude Include="..\..\Source\ArenaBattle5\Public\ABAIController.h"/>
     <ClInclude Include="..\..\Source\ArenaBattle5\Public\ABAnimInstance.h"/>
     <ClInclude Include="..\..\Source\ArenaBattle5\Public\ABCharacter.h"/>
+    <ClInclude Include="..\..\Source\ArenaBattle5\Public\ABCharacterSelectWidget.h"/>
     <ClInclude Include="..\..\Source\ArenaBattle5\Public\ABCharacterStatComponent.h"/>
     <ClInclude Include="..\..\Source\ArenaBattle5\Public\ABCharacterWidget.h"/>
     <ClInclude Include="..\..\Source\ArenaBattle5\Public\ABGameInstance.h"/>

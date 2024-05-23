@@ -28,5 +28,9 @@ public:
 
 	UPROPERTY()
 	int32 HighScore;
+
+	UPROPERTY()
+	int32 CharacterIndex;
+
 	
 };

@@ -148,8 +148,9 @@ void AABCharacter::BeginPlay()
 
 	if (bIsPlayer)
 	{
-		// 플레이어는 임시로 4번 인덱스 캐릭터 에셋을 이용
-		AssetIndex = 4;
+		auto ABPlayerState = Cast<AABPlayerState>(GetPlayerState());
+		ABCHECK(nullptr != ABPlayerState);
+		AssetIndex = ABPlayerState->GetCharacterIndex();
 	}
 	else
 	{

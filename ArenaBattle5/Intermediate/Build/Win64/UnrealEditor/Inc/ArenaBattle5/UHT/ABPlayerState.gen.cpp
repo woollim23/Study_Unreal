@@ -49,11 +49,15 @@ struct Z_Construct_UClass_AABPlayerState_Statics
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Exp_MetaData[] = {
 		{ "ModuleRelativePath", "Public/ABPlayerState.h" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_CharacterIndex_MetaData[] = {
+		{ "ModuleRelativePath", "Public/ABPlayerState.h" },
+	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FIntPropertyParams NewProp_GameScore;
 	static const UECodeGen_Private::FIntPropertyParams NewProp_GameHighScore;
 	static const UECodeGen_Private::FIntPropertyParams NewProp_CharacterLevel;
 	static const UECodeGen_Private::FIntPropertyParams NewProp_Exp;
+	static const UECodeGen_Private::FIntPropertyParams NewProp_CharacterIndex;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -65,11 +69,13 @@ const UECodeGen_Private::FIntPropertyParams Z_Construct_UClass_AABPlayerState_St
 const UECodeGen_Private::FIntPropertyParams Z_Construct_UClass_AABPlayerState_Statics::NewProp_GameHighScore = { "GameHighScore", nullptr, (EPropertyFlags)0x0020080000002000, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AABPlayerState, GameHighScore), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_GameHighScore_MetaData), NewProp_GameHighScore_MetaData) };
 const UECodeGen_Private::FIntPropertyParams Z_Construct_UClass_AABPlayerState_Statics::NewProp_CharacterLevel = { "CharacterLevel", nullptr, (EPropertyFlags)0x0020080000002000, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AABPlayerState, CharacterLevel), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_CharacterLevel_MetaData), NewProp_CharacterLevel_MetaData) };
 const UECodeGen_Private::FIntPropertyParams Z_Construct_UClass_AABPlayerState_Statics::NewProp_Exp = { "Exp", nullptr, (EPropertyFlags)0x0020080000002000, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AABPlayerState, Exp), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Exp_MetaData), NewProp_Exp_MetaData) };
+const UECodeGen_Private::FIntPropertyParams Z_Construct_UClass_AABPlayerState_Statics::NewProp_CharacterIndex = { "CharacterIndex", nullptr, (EPropertyFlags)0x0020080000002000, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AABPlayerState, CharacterIndex), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_CharacterIndex_MetaData), NewProp_CharacterIndex_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AABPlayerState_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AABPlayerState_Statics::NewProp_GameScore,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AABPlayerState_Statics::NewProp_GameHighScore,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AABPlayerState_Statics::NewProp_CharacterLevel,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AABPlayerState_Statics::NewProp_Exp,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AABPlayerState_Statics::NewProp_CharacterIndex,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_AABPlayerState_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_AABPlayerState_Statics::DependentSingletons[])() = {
@@ -112,10 +118,10 @@ AABPlayerState::~AABPlayerState() {}
 struct Z_CompiledInDeferFile_FID_Users_Yelim_Documents_GitHub_Study_Unreal_ArenaBattle5_Source_ArenaBattle5_Public_ABPlayerState_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_AABPlayerState, AABPlayerState::StaticClass, TEXT("AABPlayerState"), &Z_Registration_Info_UClass_AABPlayerState, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AABPlayerState), 3547822325U) },
+		{ Z_Construct_UClass_AABPlayerState, AABPlayerState::StaticClass, TEXT("AABPlayerState"), &Z_Registration_Info_UClass_AABPlayerState, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AABPlayerState), 1663141995U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Yelim_Documents_GitHub_Study_Unreal_ArenaBattle5_Source_ArenaBattle5_Public_ABPlayerState_h_3231888688(TEXT("/Script/ArenaBattle5"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Yelim_Documents_GitHub_Study_Unreal_ArenaBattle5_Source_ArenaBattle5_Public_ABPlayerState_h_2002904840(TEXT("/Script/ArenaBattle5"),
 	Z_CompiledInDeferFile_FID_Users_Yelim_Documents_GitHub_Study_Unreal_ArenaBattle5_Source_ArenaBattle5_Public_ABPlayerState_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Yelim_Documents_GitHub_Study_Unreal_ArenaBattle5_Source_ArenaBattle5_Public_ABPlayerState_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
