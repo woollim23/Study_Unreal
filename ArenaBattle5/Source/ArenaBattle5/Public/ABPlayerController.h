@@ -32,6 +32,9 @@ public:
 	void AddGameScore() const;
 
 	void ChangeInputMode(bool bGameMode = true);
+
+	void ShowResultUI();
+
 	
 protected:
 	virtual void BeginPlay() override;
@@ -41,7 +44,8 @@ protected:
 	TSubclassOf<class UABHUDWidget> HUDWidgetClass;
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = UI)
 	TSubclassOf<class UABGameplayWidget> MenuWidgetClass;
-
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = UI)
+	TSubclassOf<class UMyABGameplayResultWidget> ResultWidgetClass;
 
 private:
 	void OnGamePause();
@@ -52,6 +56,8 @@ private:
 	class AABPlayerState* ABPlayerState;
 	UPROPERTY()
 	class UABGameplayWidget* MenuWidget;
+	UPROPERTY()
+	class UMyABGameplayResultWidget* ResultWidget;
 
 	FInputModeGameOnly GameInputMode;
 	FInputModeUIOnly UIInputMode;

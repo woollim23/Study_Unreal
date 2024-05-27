@@ -230,7 +230,6 @@ void AABCharacter::SetCharacterState(ECharacterState NewState)
 	}
 	case ECharacterState::DEAD:
 	{
-		ABLOG(Warning, TEXT("DEAD!!!!!!!!!!!!!!!"));
 		SetActorEnableCollision(false);
 		GetMesh()->SetHiddenInGame(false);
 		HPBarWidget->SetHiddenInGame(true);
@@ -238,8 +237,7 @@ void AABCharacter::SetCharacterState(ECharacterState NewState)
 		SetCanBeDamaged(false);
 		if (bIsPlayer)
 		{
-			//ABLOG(Warning, TEXT("check!!!!!!!!!!!!!!!"));
-			DisableInput(ABPlayerController);
+			ABPlayerController->ShowResultUI();
 		}
 		else
 		{

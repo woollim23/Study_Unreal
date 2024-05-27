@@ -6,6 +6,8 @@
 #include "ABPlayerState.h"
 #include "ABCharacter.h"
 #include "ABGameplayWidget.h"
+#include "MyABGameplayResultWidget.h"
+#include "ABGameState.h"
 
 AABPlayerController::AABPlayerController()
 {
@@ -19,6 +21,12 @@ AABPlayerController::AABPlayerController()
 	if (UI_MENU_C.Succeeded())
 	{
 		MenuWidgetClass = UI_MENU_C.Class;
+	}
+
+	static ConstructorHelpers::FClassFinder<UMyABGameplayResultWidget> UI_RESULT_C(TEXT("/Game/Book/UI/UI_Menu.UI_Result_C"));
+	if (UI_RESULT_C.Succeeded())
+	{
+		ResultWidgetClass = UI_RESULT_C.Class;
 	}
 }
 
@@ -42,6 +50,9 @@ void AABPlayerController::BeginPlay()
 	HUDWidget = CreateWidget<UABHUDWidget>(this, HUDWidgetClass);
 	ABCHECK(nullptr != HUDWidget);
 	HUDWidget->AddToViewport(1);
+
+	ResultWidget = CreateWidget<UMyABGameplayResultWidget>(this, ResultWidgetClass);
+	ABCHECK(nullptr != ResultWidget);
 
 	ABPlayerState = Cast<AABPlayerState>(PlayerState);
 	ABCHECK(nullptr != ABPlayerState);
@@ -82,6 +93,16 @@ void AABPlayerController::ChangeInputMode(bool bGameMode)
 		SetInputMode(UIInputMode);
 		bShowMouseCursor = true;
 	}
+}
+
+void AABPlayerController::ShowResultUI()
+{
+	auto ABGameState = Cast<AABGameState>(UGameplayStatics::GetGameState(this));
+	ABCHECK(nullptr != ABGameState);
+	ResultWidget->BindGameState(ABGameState);
+
+	ResultWidget->AddToViewport();
+	ChangeInputMode(false);
 }
 
 // 빙의시 호출 함수

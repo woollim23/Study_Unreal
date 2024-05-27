@@ -2178,7 +2178,13 @@
             "c:\\users\\yelim\\documents\\github\\study_unreal\\arenabattle5\\source\\arenabattle5\\public\\abcharacter.h",
             "c:\\users\\yelim\\documents\\github\\study_unreal\\arenabattle5\\intermediate\\build\\win64\\unrealeditor\\inc\\arenabattle5\\uht\\abcharacter.generated.h",
             "c:\\users\\yelim\\documents\\github\\study_unreal\\arenabattle5\\source\\arenabattle5\\public\\abgameplaywidget.h",
-            "c:\\users\\yelim\\documents\\github\\study_unreal\\arenabattle5\\intermediate\\build\\win64\\unrealeditor\\inc\\arenabattle5\\uht\\abgameplaywidget.generated.h"
+            "c:\\users\\yelim\\documents\\github\\study_unreal\\arenabattle5\\intermediate\\build\\win64\\unrealeditor\\inc\\arenabattle5\\uht\\abgameplaywidget.generated.h",
+            "c:\\users\\yelim\\documents\\github\\study_unreal\\arenabattle5\\source\\arenabattle5\\public\\myabgameplayresultwidget.h",
+            "c:\\users\\yelim\\documents\\github\\study_unreal\\arenabattle5\\intermediate\\build\\win64\\unrealeditor\\inc\\arenabattle5\\uht\\myabgameplayresultwidget.generated.h",
+            "c:\\users\\yelim\\documents\\github\\study_unreal\\arenabattle5\\source\\arenabattle5\\public\\abgamestate.h",
+            "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\engine\\classes\\gameframework\\gamestatebase.h",
+            "c:\\program files\\epic games\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\gamestatebase.generated.h",
+            "c:\\users\\yelim\\documents\\github\\study_unreal\\arenabattle5\\intermediate\\build\\win64\\unrealeditor\\inc\\arenabattle5\\uht\\abgamestate.generated.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

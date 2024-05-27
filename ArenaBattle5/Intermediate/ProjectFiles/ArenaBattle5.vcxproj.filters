@@ -144,6 +144,9 @@
     <ClCompile Include="..\..\Source\ArenaBattle5\Private\BTTask_TurnToTarget.cpp">
       <Filter>Source\ArenaBattle5\Private</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\ArenaBattle5\Private\MyABGameplayResultWidget.cpp">
+      <Filter>Source\ArenaBattle5\Private</Filter>
+    </ClCompile>
     <Filter Include="Source\ArenaBattle5\Public">
       <UniqueIdentifier>{8B331DFE-B474-3F9D-A3F5-308B53DCD426}</UniqueIdentifier>
     </Filter>
@@ -217,6 +220,9 @@
       <Filter>Source\ArenaBattle5\Public</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\ArenaBattle5\Public\BTTask_TurnToTarget.h">
+      <Filter>Source\ArenaBattle5\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\ArenaBattle5\Public\MyABGameplayResultWidget.h">
       <Filter>Source\ArenaBattle5\Public</Filter>
     </ClInclude>
   </ItemGroup>

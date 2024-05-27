@@ -9,8 +9,7 @@
 			"ABCharacterStatComponent.gen.cpp.obj",
 			"ABCharacterWidget.gen.cpp.obj",
 			"ABGameInstance.gen.cpp.obj",
-			"ABGameMode.gen.cpp.obj",
-			"ABGameState.gen.cpp.obj",
+			"ABGameplayWidget.gen.cpp.obj",
 			"ABHUDWidget.gen.cpp.obj",
 			"ABItemBox.gen.cpp.obj",
 			"ABPlayerState.gen.cpp.obj",
@@ -26,13 +25,10 @@
 			"BTTask_TurnToTarget.gen.cpp.obj",
 			"ABAIController.cpp.obj",
 			"ABAnimInstance.cpp.obj",
-			"ABCharacter.cpp.obj",
 			"ABCharacterSelectWidget.cpp.obj",
 			"ABCharacterStatComponent.cpp.obj",
 			"ABCharacterWidget.cpp.obj",
 			"ABGameInstance.cpp.obj",
-			"ABGameMode.cpp.obj",
-			"ABGameState.cpp.obj",
 			"ABHUDWidget.cpp.obj",
 			"ABItemBox.cpp.obj",
 			"ABPlayerState.cpp.obj",
@@ -46,11 +42,17 @@
 			"BTTask_Attack.cpp.obj",
 			"BTTask_FindPatrolPos.cpp.obj",
 			"BTTask_TurnToTarget.cpp.obj",
-			"ABGameplayWidget.gen.cpp.obj",
+			"ABGameMode.gen.cpp.obj",
+			"ABGameState.gen.cpp.obj",
 			"ABPlayerController.gen.cpp.obj",
 			"ArenaBattle5.init.gen.cpp.obj",
+			"MyABGameplayResultWidget.gen.cpp.obj",
+			"ABCharacter.cpp.obj",
+			"ABGameMode.cpp.obj",
 			"ABGameplayWidget.cpp.obj",
-			"ABPlayerController.cpp.obj"
+			"ABGameState.cpp.obj",
+			"ABPlayerController.cpp.obj",
+			"MyABGameplayResultWidget.cpp.obj"
 		]
 	}
 }
