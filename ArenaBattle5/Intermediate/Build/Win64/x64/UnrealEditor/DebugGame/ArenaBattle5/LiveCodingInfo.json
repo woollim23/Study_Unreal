@@ -30,7 +30,6 @@
 			"MyABGameplayResultWidget.gen.cpp.obj",
 			"ABAIController.cpp.obj",
 			"ABAnimInstance.cpp.obj",
-			"ABCharacter.cpp.obj",
 			"ABCharacterSelectWidget.cpp.obj",
 			"ABCharacterStatComponent.cpp.obj",
 			"ABCharacterWidget.cpp.obj",
@@ -44,7 +43,6 @@
 			"ABSaveGame.cpp.obj",
 			"ABSection.cpp.obj",
 			"ABUIPlayerController.cpp.obj",
-			"ABWeapon.cpp.obj",
 			"ArenaBattle5.cpp.obj",
 			"BTDecorator_IsInAttackRange.cpp.obj",
 			"BTService_Detect.cpp.obj",
@@ -52,7 +50,9 @@
 			"BTTask_FindPatrolPos.cpp.obj",
 			"BTTask_TurnToTarget.cpp.obj",
 			"MyABGameplayResultWidget.cpp.obj",
-			"ABGameMode.cpp.obj"
+			"ABCharacter.cpp.obj",
+			"ABGameMode.cpp.obj",
+			"ABWeapon.cpp.obj"
 		]
 	}
 }

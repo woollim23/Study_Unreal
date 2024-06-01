@@ -59,16 +59,19 @@ AABCharacter::AABCharacter()
 	}
 
 	// 무기 컴포넌트 생성 후 부착
-	FName WeaponSocket(TEXT("hand_rSocket"));
+	FName WeaponSocket(TEXT("hand_rSocket")); // 무기 소켓 파츠 찾음 -> 오른손
 	if (GetMesh()->DoesSocketExist(WeaponSocket))
 	{
+		// 무기의 스태틱메쉬컴포넌트를 만듦
 		Weapon = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("WEAPON"));
 		static ConstructorHelpers::FObjectFinder<USkeletalMesh> SK_WEAPON(TEXT("/Script/Engine.SkeletalMesh'/Game/InfinityBladeWeapons/Weapons/Blade/Swords/Blade_BlackKnight/SK_Blade_BlackKnight.SK_Blade_BlackKnight'"));
 		if (SK_WEAPON.Succeeded())
 		{
+			// 만든 무기 스태틱 메쉬 컴포넌트에 파일 경로에 있던 무기 오브젝트 연결
 			Weapon->SetSkeletalMesh(SK_WEAPON.Object);
 		}
 
+		// 무기를 무기 소켓파츠(오른손)에 부착
 		Weapon->SetupAttachment(GetMesh(), WeaponSocket);
 	}
 
@@ -639,22 +642,28 @@ void AABCharacter::AttackCheck()
 
 	FHitResult HitResult;
 	FCollisionQueryParams Params(NAME_None, false, this);
+
+	// 공격 체크한 후 불리언값으로 받음
+	// 채널을 이용하여 범위 내를 휩쓸어 보겠다(체크하겠다)
 	bool bResult = GetWorld()->SweepSingleByChannel(
-		HitResult,
-		GetActorLocation(),
-		GetActorLocation() + GetActorForwardVector() * FinalAttackRange,
-		FQuat::Identity,
-		ECollisionChannel::ECC_GameTraceChannel2,
-		FCollisionShape::MakeSphere(AttackRadius),
+		HitResult, // 결과물 받아줌
+		GetActorLocation(), // 탐색 시작 위치
+		GetActorLocation() + GetActorForwardVector() * FinalAttackRange, // 탐색 종료 위치
+		FQuat::Identity, // 피격판정 할 도형의 회전 값
+		ECollisionChannel::ECC_GameTraceChannel2, // 충돌 탐지할때 사용할 채널정보
+		FCollisionShape::MakeSphere(AttackRadius), // 어떤 형태로 탐색할지
 		Params);
+
+	// 디버그 할때 유용, 공격 판정이 제대로 되고 있는지 육안으로 확인
 #if ENABLE_DRAW_DEBUG
-	FVector TraceVec = GetActorForwardVector() * FinalAttackRange;
-	FVector Center = GetActorLocation() + TraceVec * 0.5f;
+	FVector TraceVec = GetActorForwardVector() * FinalAttackRange; // 공격범위
+	FVector Center = GetActorLocation() + TraceVec * 0.5f; // 캡슐의 중앙 위치
 	float HalfHeight = FinalAttackRange * 0.5f + AttackRadius;
-	FQuat CapsuleRot = FRotationMatrix::MakeFromZ(TraceVec).ToQuat();
+	FQuat CapsuleRot = FRotationMatrix::MakeFromZ(TraceVec).ToQuat(); // 회전 값
 	FColor DrawColor = bResult ? FColor::Green : FColor::Red;
 	float DebugLifeTime = 5.0f;
 
+	// 위에서 설정한 값 넣어줌
 	DrawDebugCapsule(GetWorld(),
 		Center,
 		HalfHeight,

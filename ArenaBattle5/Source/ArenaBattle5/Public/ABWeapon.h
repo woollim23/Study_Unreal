@@ -40,9 +40,6 @@ protected:
 	float AttackModifier;
 
 public:	
-	// Called every frame
-	virtual void Tick(float DeltaTime) override;
-
 	// 무기 컴포넌트
 	UPROPERTY(VisibleAnywhere, Category = Weapon)
 	USkeletalMeshComponent* Weapon;

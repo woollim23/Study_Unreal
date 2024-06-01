@@ -10,13 +10,14 @@ AABWeapon::AABWeapon()
 	PrimaryActorTick.bCanEverTick = false;
 
 
-	// 무기 불러와서 붙이기
+	// 무기 스태틱매쉬 컴포넌트 만들기
 	Weapon = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("WEAPON"));
 	RootComponent = Weapon;
 
 	static ConstructorHelpers::FObjectFinder<USkeletalMesh> SK_WEAPON(TEXT("/Script/Engine.SkeletalMesh'/Game/InfinityBladeWeapons/Weapons/Blade/Swords/Blade_BlackKnight/SK_Blade_BlackKnight.SK_Blade_BlackKnight'"));
 	if (SK_WEAPON.Succeeded())
 	{
+		// 만든 무기 스태틱 메쉬 컴포넌트에 파일 경로에 있던 무기 오브젝트 연결
 		Weapon->SetSkeletalMesh(SK_WEAPON.Object);
 	}
 	// 콜리전 no
@@ -55,11 +56,3 @@ void AABWeapon::BeginPlay()
 	ABLOG(Warning, TEXT("Weapon Damage : %f, Modifier : %f"), AttackDamage, AttackModifier);
 	
 }
-
-// Called every frame
-void AABWeapon::Tick(float DeltaTime)
-{
-	Super::Tick(DeltaTime);
-
-}
-

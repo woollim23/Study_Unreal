@@ -56,12 +56,12 @@ void AABGameMode::AddScore(AABPlayerController* ScoredPlayer)
 	if (GetScore() >= ScoreToClear)
 	{
 		ABGameState->SetGameCleared();
-		
+		/*
 		for (FConstPawnIterator It = GetWorld()->GetPawnIterator(); It; ++It)
 		{
 			(*It)->TurnOff();
 		}
-		
+		*/
 		for (FConstPlayerControllerIterator It = GetWorld()->GetPlayerControllerIterator(); It; ++It)
 		{
 			const auto ABPlayerController = Cast<AABPlayerController>(It->Get());
