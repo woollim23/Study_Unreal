@@ -16,6 +16,7 @@ class ARENABATTLE5_API AABAIController : public AAIController
 
 public:
 	AABAIController();
+	// 빙의를 할때 호출하는 함수
 	virtual void OnPossess(APawn* InPawn) override;
 
 	static const FName HomePosKey;

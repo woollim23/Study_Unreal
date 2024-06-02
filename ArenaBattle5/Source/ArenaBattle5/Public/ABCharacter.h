@@ -7,6 +7,7 @@
 #include "GameFramework/Character.h"
 #include "ABCharacter.generated.h"
 
+// 공격이 끝났음을 알리는 델리게이트
 DECLARE_MULTICAST_DELEGATE(FOnAttackEndDelegate);
 
 UCLASS()

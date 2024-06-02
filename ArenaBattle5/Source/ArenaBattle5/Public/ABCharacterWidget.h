@@ -15,6 +15,7 @@ class ARENABATTLE5_API UABCharacterWidget : public UUserWidget
 	GENERATED_BODY()
 
 public:
+	// 스탯 컴포넌트를 받아서 스탯을 바인드함
 	void BindCharacterStat(class UABCharacterStatComponent* NewCharacterStat);
 
 protected:
@@ -22,6 +23,7 @@ protected:
 	void UpdateHPWidget();
 
 private:
+	// 스마트포인터
 	TWeakObjectPtr<class UABCharacterStatComponent> CurrentCharacterStat;
 
 	UPROPERTY()

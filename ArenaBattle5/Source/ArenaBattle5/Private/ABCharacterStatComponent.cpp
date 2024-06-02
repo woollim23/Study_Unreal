@@ -57,6 +57,7 @@ void UABCharacterStatComponent::SetDamage(float NewDamage)
 void UABCharacterStatComponent::SetHP(float NewHP)
 {
 	CurrentHP = NewHP;
+	// HP가 변한 사실을 통보해주는 델리게이트, 리스너 패턴
 	OnHPChanged.Broadcast();
 	if (CurrentHP < KINDA_SMALL_NUMBER)
 	{

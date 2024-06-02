@@ -19,5 +19,7 @@ void UABGameInstance::Init()
 
 FABCharacterData* UABGameInstance::GetABCharacterData(int32 Level)
 {
+    // TEXT는 더 세밀하게 찾을 때 이용하는 것, 지금은 필요없어서 공백으로 남긴다
+    // 현재 레벨의 데이터 행을 찾는다
     return ABCharacterTable->FindRow<FABCharacterData>(*FString::FromInt(Level), TEXT(""));
 }

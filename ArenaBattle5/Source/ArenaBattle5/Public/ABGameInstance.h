@@ -1,5 +1,5 @@
 // Fill out your copyright notice in the Description page of Project Settings.
-
+// 일반적인 액터가 아니라 액터 컴포넌트이다
 #pragma once
 
 #include "ArenaBattle5.h"

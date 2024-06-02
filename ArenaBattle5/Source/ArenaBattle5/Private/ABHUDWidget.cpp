@@ -7,10 +7,14 @@
 #include "ABCharacterStatComponent.h"
 #include "ABPlayerState.h"
 
+// 스탯 컴포넌트를 받아서 스탯을 바인드함
 void UABHUDWidget::BindCharacterStat(UABCharacterStatComponent* CharacterStat)
 {
 	ABCHECK(nullptr != CharacterStat);
+	// 초기 스탯 정보를 가져옴
 	CurrentCharacterStat = CharacterStat;
+	// 스탯 컴포넌트 클래스의 셋스탯 함수안에 있는 브로드 캐스트가 발동하면 작동
+	// 업데이트 스탯 함수를 호출하도록 바인딩 해둠
 	CharacterStat->OnHPChanged.AddUObject(this, &UABHUDWidget::UpdateCharacterStat);
 }
 
@@ -43,6 +47,7 @@ void UABHUDWidget::NativeConstruct()
 	ABCHECK(nullptr != HighScore);
 }
 
+// 스탯에 변경이 생겼다는 브로드캐스트 발동시 호출
 void UABHUDWidget::UpdateCharacterStat()
 {
 	ABCHECK(CurrentCharacterStat.IsValid());

@@ -97,8 +97,9 @@ AABCharacter::AABCharacter()
 	AttackRange = 80.0f;
 	AttackRadius = 50.0f;
 
-
+	// HP바 위치 조정
 	HPBarWidget->SetRelativeLocation(FVector(0.0f, 0.0f, 180.0f));
+	// world 3D, screen 2D 스크린은 항상 잘리지 않고 보인다
 	HPBarWidget->SetWidgetSpace(EWidgetSpace::Screen);
 	static ConstructorHelpers::FClassFinder<UUserWidget> UI_HUD(TEXT("/Game/Book/UI/UI_HPBar.UI_HPBar_C"));
 	if (UI_HUD.Succeeded())
@@ -107,9 +108,10 @@ AABCharacter::AABCharacter()
 		HPBarWidget->SetDrawSize(FVector2D(150.0f, 50.0f));
 	}
 
-	// ABCharacter가 이를 사용하도록, 클래스 속성을 AABAIController 로 정함
+	// ABCharacter가 이를 기본적으로 사용하도록, 클래스 속성을 AABAIController 로 정함
 	AIControllerClass = AABAIController::StaticClass();
 	// AI 생성옵션을 PlacedInWorldOrSpawned 으로 설정
+	// 월드에 배치되었거나 스폰 되었을때 자동으로 불러와짐
 	AutoPossessAI = EAutoPossessAI::PlacedInWorldOrSpawned;
 
 	auto DefaultSetting = GetDefault<UABCharacterSetting>();
@@ -434,15 +436,6 @@ void AABCharacter::PostInitializeComponents()
 
 	// 어택 체크 오브젝트 추가
 	ABAnim->OnAttackHitCheck.AddUObject(this, &AABCharacter::AttackCheck);
-
-	/*
-	CharacterStat->OnHPIsZero.AddLambda([this]() -> void {
-		ABLOG(Warning, TEXT("OnHPIsZero"));
-		ABAnim->SetDeadAnim();
-		SetActorEnableCollision(false);
-	});
-
-	*/
 }
 
 
@@ -590,6 +583,7 @@ void AABCharacter::OnAttackMontageEnded(UAnimMontage* Montage, bool bInterrupted
 	IsAttacking = false;
 	AttackEndComboState();
 
+	// 공격이 끝났음을 알리는 델리게이트
 	OnAttackEnd.Broadcast();
 }
 
@@ -681,6 +675,7 @@ void AABCharacter::AttackCheck()
 			ABLOG(Warning, TEXT("Hit Actor Name : %s"), *HitResult.ToString());
 
 			// 히트 이벤트로 액터에 공격 대미지 전달
+			// 주로 피격받는 쪽에서 대미지 처리하는게 편하다
 			FDamageEvent DamageEvent;
 			HitResult.GetActor()->TakeDamage(GetFinalAttackDamage(), DamageEvent, GetController(), this);
 		}

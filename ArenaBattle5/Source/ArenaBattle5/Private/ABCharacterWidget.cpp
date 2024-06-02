@@ -8,7 +8,8 @@
 void UABCharacterWidget::BindCharacterStat(UABCharacterStatComponent* NewCharacterStat)
 {
 	ABCHECK(nullptr != NewCharacterStat);
-
+	
+	// 스탯 처음 불러와서 임시저장
 	CurrentCharacterStat = NewCharacterStat;
 	NewCharacterStat->OnHPChanged.AddUObject(this, &UABCharacterWidget::UpdateHPWidget);
 }
@@ -27,6 +28,7 @@ void UABCharacterWidget::UpdateHPWidget()
 	{
 		if (nullptr != HPProgressBar)
 		{
+			// 스탯 정보 불러와 HP바 세팅
 			HPProgressBar->SetPercent(CurrentCharacterStat->GetHPRatio());
 		}
 	}

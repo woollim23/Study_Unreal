@@ -42,6 +42,7 @@ private:
 	// 오버랩 이벤트 발생 델리게이트
 	UFUNCTION()
 	void OnCharacterOverlap(UPrimitiveComponent* OverLappedComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult);
+	// ( , 나랑 충돌한 인자는 누구인가, 충돌한 컴포넌트 , , , 충돌결과)
 
 	// 이펙트 끝났을때 발생 델리게이트
 	UFUNCTION()
