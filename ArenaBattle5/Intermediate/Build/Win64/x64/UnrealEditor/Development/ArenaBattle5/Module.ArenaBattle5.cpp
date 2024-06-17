@@ -6,6 +6,7 @@
 #include "C:/Users/Yelim/Documents/GitHub/Study_Unreal/ArenaBattle5/Source/ArenaBattle5/Private/ABCharacterStatComponent.cpp"
 #include "C:/Users/Yelim/Documents/GitHub/Study_Unreal/ArenaBattle5/Source/ArenaBattle5/Private/ABCharacterWidget.cpp"
 #include "C:/Users/Yelim/Documents/GitHub/Study_Unreal/ArenaBattle5/Source/ArenaBattle5/Private/ABGameInstance.cpp"
+#include "C:/Users/Yelim/Documents/GitHub/Study_Unreal/ArenaBattle5/Source/ArenaBattle5/Private/ABGameMode.cpp"
 #include "C:/Users/Yelim/Documents/GitHub/Study_Unreal/ArenaBattle5/Source/ArenaBattle5/Private/ABGameplayWidget.cpp"
 #include "C:/Users/Yelim/Documents/GitHub/Study_Unreal/ArenaBattle5/Source/ArenaBattle5/Private/ABGameState.cpp"
 #include "C:/Users/Yelim/Documents/GitHub/Study_Unreal/ArenaBattle5/Source/ArenaBattle5/Private/ABHUDWidget.cpp"

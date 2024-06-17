@@ -9,6 +9,7 @@
 			"ABCharacterStatComponent.cpp.obj",
 			"ABCharacterWidget.cpp.obj",
 			"ABGameInstance.cpp.obj",
+			"ABGameMode.cpp.obj",
 			"ABGameplayWidget.cpp.obj",
 			"ABGameState.cpp.obj",
 			"ABHUDWidget.cpp.obj",
@@ -51,8 +52,7 @@
 			"BTTask_Attack.gen.cpp.obj",
 			"BTTask_FindPatrolPos.gen.cpp.obj",
 			"BTTask_TurnToTarget.gen.cpp.obj",
-			"MyABGameplayResultWidget.gen.cpp.obj",
-			"ABGameMode.cpp.obj"
+			"MyABGameplayResultWidget.gen.cpp.obj"
 		]
 	}
 }
