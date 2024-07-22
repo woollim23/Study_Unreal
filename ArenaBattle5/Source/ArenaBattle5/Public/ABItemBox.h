@@ -47,9 +47,4 @@ private:
 	// 이펙트 끝났을때 발생 델리게이트
 	UFUNCTION()
 	void OnEffectFinished(class UParticleSystemComponent* PSystem);
-
-public:	
-	// Called every frame
-	virtual void Tick(float DeltaTime) override;
-
 };

@@ -14,7 +14,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define ARENABATTLE5_ABGameInstance_generated_h
 
-#define FID_Users_Yelim_Documents_GitHub_Study_Unreal_ArenaBattle5_Source_ArenaBattle5_Public_ABGameInstance_h_14_GENERATED_BODY \
+#define FID_Git_Study_Unreal_ArenaBattle5_Source_ArenaBattle5_Public_ABGameInstance_h_14_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FABCharacterData_Statics; \
 	ARENABATTLE5_API static class UScriptStruct* StaticStruct(); \
 	typedef FTableRowBase Super;
@@ -22,7 +22,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
 template<> ARENABATTLE5_API UScriptStruct* StaticStruct<struct FABCharacterData>();
 
-#define FID_Users_Yelim_Documents_GitHub_Study_Unreal_ArenaBattle5_Source_ArenaBattle5_Public_ABGameInstance_h_41_INCLASS_NO_PURE_DECLS \
+#define FID_Git_Study_Unreal_ArenaBattle5_Source_ArenaBattle5_Public_ABGameInstance_h_41_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUABGameInstance(); \
 	friend struct Z_Construct_UClass_UABGameInstance_Statics; \
@@ -31,7 +31,7 @@ public: \
 	DECLARE_SERIALIZER(UABGameInstance)
 
 
-#define FID_Users_Yelim_Documents_GitHub_Study_Unreal_ArenaBattle5_Source_ArenaBattle5_Public_ABGameInstance_h_41_ENHANCED_CONSTRUCTORS \
+#define FID_Git_Study_Unreal_ArenaBattle5_Source_ArenaBattle5_Public_ABGameInstance_h_41_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	UABGameInstance(UABGameInstance&&); \
@@ -43,12 +43,12 @@ public: \
 	NO_API virtual ~UABGameInstance();
 
 
-#define FID_Users_Yelim_Documents_GitHub_Study_Unreal_ArenaBattle5_Source_ArenaBattle5_Public_ABGameInstance_h_38_PROLOG
-#define FID_Users_Yelim_Documents_GitHub_Study_Unreal_ArenaBattle5_Source_ArenaBattle5_Public_ABGameInstance_h_41_GENERATED_BODY \
+#define FID_Git_Study_Unreal_ArenaBattle5_Source_ArenaBattle5_Public_ABGameInstance_h_38_PROLOG
+#define FID_Git_Study_Unreal_ArenaBattle5_Source_ArenaBattle5_Public_ABGameInstance_h_41_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Users_Yelim_Documents_GitHub_Study_Unreal_ArenaBattle5_Source_ArenaBattle5_Public_ABGameInstance_h_41_INCLASS_NO_PURE_DECLS \
-	FID_Users_Yelim_Documents_GitHub_Study_Unreal_ArenaBattle5_Source_ArenaBattle5_Public_ABGameInstance_h_41_ENHANCED_CONSTRUCTORS \
+	FID_Git_Study_Unreal_ArenaBattle5_Source_ArenaBattle5_Public_ABGameInstance_h_41_INCLASS_NO_PURE_DECLS \
+	FID_Git_Study_Unreal_ArenaBattle5_Source_ArenaBattle5_Public_ABGameInstance_h_41_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -56,7 +56,7 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 template<> ARENABATTLE5_API UClass* StaticClass<class UABGameInstance>();
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_Users_Yelim_Documents_GitHub_Study_Unreal_ArenaBattle5_Source_ArenaBattle5_Public_ABGameInstance_h
+#define CURRENT_FILE_ID FID_Git_Study_Unreal_ArenaBattle5_Source_ArenaBattle5_Public_ABGameInstance_h
 
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

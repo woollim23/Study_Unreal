@@ -20,7 +20,6 @@ UABCharacterStatComponent::UABCharacterStatComponent()
 void UABCharacterStatComponent::BeginPlay()
 {
 	Super::BeginPlay();
-
 }
 
 // PostInitializeComponents함수가 호출되기 전에 호출 됨

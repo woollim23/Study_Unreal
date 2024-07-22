@@ -18,7 +18,7 @@ AABSection::AABSection()
 	RootComponent = Mesh;
 
 	// 배경 애셋 경로 참조
-	FString AssetPath = TEXT("/Script/Engine.StaticMesh'/Game/Book/StaticMesh/SM_SQUARE.SM_SQUARE'");
+	FString AssetPath = TEXT("/Game/Book/StaticMesh/SM_SQUARE.SM_SQUARE");
 	// ConstructorHelpers: 애셋의 내용물을 가져올 때 사용
 	static ConstructorHelpers::FObjectFinder<UStaticMesh> SM_SQUARE(*AssetPath);
 	if (SM_SQUARE.Succeeded())
@@ -38,7 +38,7 @@ AABSection::AABSection()
 	Trigger->OnComponentBeginOverlap.AddDynamic(this, &AABSection::OnTriggerBeginOverlap);
 
 	// 철문 애셋 경로 참조
-	FString GateAssetPath = TEXT("/Script/Engine.StaticMesh'/Game/Book/StaticMesh/SM_GATE.SM_GATE'");
+	FString GateAssetPath = TEXT("/Game/Book/StaticMesh/SM_GATE.SM_GATE");
 	static ConstructorHelpers::FObjectFinder<UStaticMesh> SM_GATE(*GateAssetPath);
 	if (!SM_GATE.Succeeded())
 	{
@@ -141,14 +141,6 @@ void AABSection::SetState(ESectionState NewState)
 		}
 
 		OperateGates(true);
-
-		GetWorld()->GetTimerManager().SetTimer(SpawnNPCTimerHandle, FTimerDelegate::CreateUObject(this, &AABSection::OnNPCSpawn), EnemySpawnTime, false);
-
-		GetWorld()->GetTimerManager().SetTimer(SpawnItemBoxTimerHandle, FTimerDelegate::CreateLambda([this]() -> void {
-			FVector2D RandXY = FMath::RandPointInCircle(600.0f);
-			GetWorld()->SpawnActor<AABItemBox>(GetActorLocation() + FVector(RandXY, 30.0f), FRotator::ZeroRotator);
-			}), ItemBoxSpawnTime, false);
-
 		break;
 	}
 	case ESectionState::BATTLE:
@@ -160,6 +152,13 @@ void AABSection::SetState(ESectionState NewState)
 		}
 
 		OperateGates(false);
+
+		GetWorld()->GetTimerManager().SetTimer(SpawnNPCTimeHandle, FTimerDelegate::CreateUObject(this, &AABSection::OnNPCSpawn), EnemySpawnTime, false);
+		GetWorld()->GetTimerManager().SetTimer(SpawnItemBoxTimerHandle, FTimerDelegate::CreateLambda([this]()->void {
+			FVector2D RandXY = FMath::RandPointInCircle(600.0f);
+			GetWorld()->SpawnActor<AABItemBox>(GetActorLocation() + FVector(RandXY, 30.0f), FRotator::ZeroRotator);
+			}), ItemBoxSpawnTime, false);
+
 		break;
 	}
 	case ESectionState::COMPLETE:
@@ -186,16 +185,8 @@ void AABSection::OperateGates(bool bOpen)
 	}
 }
 
-// Called every frame
-void AABSection::Tick(float DeltaTime)
-{
-	Super::Tick(DeltaTime);
-
-}
-
 void AABSection::OnNPCSpawn()
 {
-	GetWorld()->GetTimerManager().ClearTimer(SpawnNPCTimerHandle);
 	auto KeyNPC = GetWorld()->SpawnActor<AABCharacter>(GetActorLocation() + FVector::UpVector * 88.0f, FRotator::ZeroRotator);
 	if (nullptr != KeyNPC)
 	{

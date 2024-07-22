@@ -32,7 +32,7 @@ public:
 	// 애니메이션 노티파이가 발생할 때마다 ABCharacter에 전달할 델리게이트 선언
 	FOnNextAttackCheckDelegate OnNextAttackCheck;
 	FOnAttackHitCheckDelegate OnAttackHitCheck;
-	//
+	
 	void SetDeadAnim() { IsDead = true; }
 
 private:

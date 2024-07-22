@@ -23,6 +23,11 @@ protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
+public:
+	// 무기 컴포넌트
+	UPROPERTY(VisibleAnywhere, Category = Weapon)
+	USkeletalMeshComponent* Weapon;
+
 protected:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Attack)
 	float AttackRange;
@@ -38,10 +43,4 @@ protected:
 	float AttackDamage;
 	UPROPERTY(Transient, VisibleInstanceOnly, BlueprintReadOnly, Category = Attack)
 	float AttackModifier;
-
-public:	
-	// 무기 컴포넌트
-	UPROPERTY(VisibleAnywhere, Category = Weapon)
-	USkeletalMeshComponent* Weapon;
-
 };

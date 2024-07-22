@@ -1,11 +1,11 @@
 {
     "Version": "1.2",
     "Data": {
-        "Source": "c:\\users\\yelim\\documents\\github\\study_unreal\\arenabattle5\\intermediate\\build\\win64\\unrealeditor\\inc\\arenabattle5setting\\uht\\arenabattle5setting.init.gen.cpp",
+        "Source": "c:\\git\\study_unreal\\arenabattle5\\intermediate\\build\\win64\\unrealeditor\\inc\\arenabattle5setting\\uht\\arenabattle5setting.init.gen.cpp",
         "ProvidedModule": "",
-        "PCH": "c:\\users\\yelim\\documents\\github\\study_unreal\\arenabattle5\\intermediate\\build\\win64\\x64\\arenabattle5editor\\development\\unrealed\\sharedpch.unrealed.project.novalfmtstr.valapi.cpp20.inclorderunreal5_1.h.pch",
+        "PCH": "c:\\git\\study_unreal\\arenabattle5\\intermediate\\build\\win64\\x64\\arenabattle5editor\\development\\unrealed\\sharedpch.unrealed.project.novalfmtstr.valapi.cpp20.inclorderunreal5_1.h.pch",
         "Includes": [
-            "c:\\users\\yelim\\documents\\github\\study_unreal\\arenabattle5\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\arenabattle5setting\\definitions.arenabattle5setting.h"
+            "c:\\git\\study_unreal\\arenabattle5\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\arenabattle5setting\\definitions.arenabattle5setting.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

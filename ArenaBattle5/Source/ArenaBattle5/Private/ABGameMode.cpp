@@ -6,17 +6,16 @@
 #include "ABPlayerController.h"
 #include "ABPlayerState.h"
 #include "ABGameState.h"
+#include "EngineUtils.h"
 
 AABGameMode::AABGameMode()
 {
-	// 캐릭터 클래스로 지정
 	DefaultPawnClass = AABCharacter::StaticClass();
-	// 플레이어 컨트롤러 클래스를 AABPlayerController으로 지정
 	PlayerControllerClass = AABPlayerController::StaticClass();
 	PlayerStateClass = AABPlayerState::StaticClass();
 	GameStateClass = AABGameState::StaticClass();
 
-	ScoreToClear = 2;
+	ScoreToClear = 1;
 }
 
 void AABGameMode::PostInitializeComponents()
@@ -29,10 +28,8 @@ void AABGameMode::PostInitializeComponents()
 void AABGameMode::PostLogin(APlayerController* NewPlayer)
 {
 	// 2. 로그인 작업 시작
-	//ABLOG(Warning, TEXT("PostLogin Begin"));
 	Super::PostLogin(NewPlayer);
 	// 6. 게임에 입장된 플레이어 세팅이 끝난 시점
-	//ABLOG(Warning, TEXT("PostLogin End"));
 
 	auto ABPlayerState = Cast<AABPlayerState>(NewPlayer->PlayerState);
 	ABCHECK(nullptr != ABPlayerState);
@@ -56,12 +53,12 @@ void AABGameMode::AddScore(AABPlayerController* ScoredPlayer)
 	if (GetScore() >= ScoreToClear)
 	{
 		ABGameState->SetGameCleared();
-		/*
-		for (FConstPawnIterator It = GetWorld()->GetPawnIterator(); It; ++It)
+		
+		for (TActorIterator<APawn> It(GetWorld()); It; ++It)
 		{
 			(*It)->TurnOff();
 		}
-		*/
+		
 		for (FConstPlayerControllerIterator It = GetWorld()->GetPlayerControllerIterator(); It; ++It)
 		{
 			const auto ABPlayerController = Cast<AABPlayerController>(It->Get());

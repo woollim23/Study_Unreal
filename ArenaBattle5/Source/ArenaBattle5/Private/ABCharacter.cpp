@@ -5,9 +5,6 @@
 #include "ABAnimInstance.h"
 #include "ABWeapon.h"
 #include "ABCharacterStatComponent.h"
-#include "DrawDebugHelpers.h"
-#include "Components/WidgetComponent.h"
-#include "Engine/DamageEvents.h"
 #include "ABCharacterWidget.h"
 #include "ABAIController.h"
 #include "ABCharacterSetting.h"
@@ -16,6 +13,9 @@
 #include "ABPlayerState.h"
 #include "ABHUDWidget.h"
 #include "ABGameMode.h"
+#include "DrawDebugHelpers.h"
+#include "Engine/DamageEvents.h"
+#include "Components/WidgetComponent.h"
 
 // Sets default values
 AABCharacter::AABCharacter()
@@ -29,10 +29,7 @@ AABCharacter::AABCharacter()
 	CharacterStat = CreateDefaultSubobject<UABCharacterStatComponent>(TEXT("CHARACTERSTAT"));
 	HPBarWidget = CreateDefaultSubobject<UWidgetComponent>(TEXT("HPBARWIDGET"));
 
-	// 부모 클래스를 보면 캡슐 컴포넌트가 있다
-	// 스프링암을 캡슐컴포넌트에 부착
 	SpringArm->SetupAttachment(GetCapsuleComponent());
-	// 카메라는 스프링암에 부착
 	Camera->SetupAttachment(SpringArm);
 	HPBarWidget->SetupAttachment(GetMesh());
 
@@ -42,7 +39,7 @@ AABCharacter::AABCharacter()
 	SpringArm->SetRelativeRotation(FRotator(-15.0f, 0.0f, 0.0f));
 
 	// 에셋을 불러와 적용
-	static ConstructorHelpers::FObjectFinder<USkeletalMesh> SK_CARDBOARD(TEXT("/Script/Engine.SkeletalMesh'/Game/InfinityBladeWarriors/Character/CompleteCharacters/SK_CharM_Cardboard.SK_CharM_Cardboard'"));
+	static ConstructorHelpers::FObjectFinder<USkeletalMesh> SK_CARDBOARD(TEXT("/Game/InfinityBladeWarriors/Character/CompleteCharacters/SK_CharM_Cardboard.SK_CharM_Cardboard"));
 	if (SK_CARDBOARD.Succeeded())
 	{
 		GetMesh()->SetSkeletalMesh(SK_CARDBOARD.Object);
@@ -51,28 +48,12 @@ AABCharacter::AABCharacter()
 
 	// 에셋에 블루프린트 지정
 	GetMesh()->SetAnimationMode(EAnimationMode::AnimationBlueprint);
+
 	// 애님인스턴스 -> 블루프린트는 애님 그래프 로직에 따라 동작하는 캐릭터 애니메이션 시스템을 구동시키는데,
 	static ConstructorHelpers::FClassFinder<UAnimInstance> WARRIOR_ANIM(TEXT("/Game/Book/Animations/WarriorAnimBlueprint.WarriorAnimBlueprint_C"));
 	if (WARRIOR_ANIM.Succeeded())
 	{
 		GetMesh()->SetAnimInstanceClass(WARRIOR_ANIM.Class);
-	}
-
-	// 무기 컴포넌트 생성 후 부착
-	FName WeaponSocket(TEXT("hand_rSocket")); // 무기 소켓 파츠 찾음 -> 오른손
-	if (GetMesh()->DoesSocketExist(WeaponSocket))
-	{
-		// 무기의 스태틱메쉬컴포넌트를 만듦
-		Weapon = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("WEAPON"));
-		static ConstructorHelpers::FObjectFinder<USkeletalMesh> SK_WEAPON(TEXT("/Script/Engine.SkeletalMesh'/Game/InfinityBladeWeapons/Weapons/Blade/Swords/Blade_BlackKnight/SK_Blade_BlackKnight.SK_Blade_BlackKnight'"));
-		if (SK_WEAPON.Succeeded())
-		{
-			// 만든 무기 스태틱 메쉬 컴포넌트에 파일 경로에 있던 무기 오브젝트 연결
-			Weapon->SetSkeletalMesh(SK_WEAPON.Object);
-		}
-
-		// 무기를 무기 소켓파츠(오른손)에 부착
-		Weapon->SetupAttachment(GetMesh(), WeaponSocket);
 	}
 
 	// 초기 조작 모드를 디아블로
@@ -85,7 +66,6 @@ AABCharacter::AABCharacter()
 
 	// 공격 중인지 확인 하는 부울 false로 초기화
 	IsAttacking = false;
-
 	// 콤보 카운터의 최대치 = 4
 	MaxCombo = 4;
 	AttackEndComboState();
@@ -114,15 +94,6 @@ AABCharacter::AABCharacter()
 	// 월드에 배치되었거나 스폰 되었을때 자동으로 불러와짐
 	AutoPossessAI = EAutoPossessAI::PlacedInWorldOrSpawned;
 
-	auto DefaultSetting = GetDefault<UABCharacterSetting>();
-	if (DefaultSetting->CharacterAssets.Num() > 0)
-	{
-		for (auto CharacterAsset : DefaultSetting->CharacterAssets)
-		{
-			//ABLOG(Warning, TEXT("Character Asset : %s"), *CharacterAsset.ToString());
-		}
-	}
-
 	AssetIndex = 4;
 
 	SetActorHiddenInGame(true);
@@ -136,6 +107,12 @@ AABCharacter::AABCharacter()
 void AABCharacter::BeginPlay()
 {
 	Super::BeginPlay();
+
+	auto CharacterWidget = Cast<UABCharacterWidget>(HPBarWidget->GetUserWidgetObject());
+	if (nullptr != CharacterWidget)
+	{
+		CharacterWidget->BindCharacterStat(CharacterStat);
+	}
 	
 	bIsPlayer = IsPlayerControlled();
 	if (bIsPlayer)
@@ -184,8 +161,6 @@ void AABCharacter::SetCharacterState(ECharacterState NewState)
 		{
 			DisableInput(ABPlayerController);
 
-			ABPlayerController->GetHUDWidget()->BindCharacterStat(CharacterStat);
-
 			auto ABPlayerState = Cast<AABPlayerState>(GetPlayerState());
 			ABCHECK(nullptr != ABPlayerState);
 			CharacterStat->SetNewLevel(ABPlayerState->GetCharacterLevel());
@@ -220,6 +195,8 @@ void AABCharacter::SetCharacterState(ECharacterState NewState)
 
 		if (bIsPlayer)
 		{
+			ABPlayerController->GetHUDWidget()->BindCharacterStat(CharacterStat);
+
 			SetControlMode(EControlMode::DIABLO);
 			GetCharacterMovement()->MaxWalkSpeed = 600.0f;
 			EnableInput(ABPlayerController);
@@ -240,9 +217,10 @@ void AABCharacter::SetCharacterState(ECharacterState NewState)
 		HPBarWidget->SetHiddenInGame(true);
 		ABAnim->SetDeadAnim();
 		SetCanBeDamaged(false);
+
 		if (bIsPlayer)
 		{
-			ABPlayerController->ShowResultUI();
+			DisableInput(ABPlayerController);
 		}
 		else
 		{
@@ -252,7 +230,7 @@ void AABCharacter::SetCharacterState(ECharacterState NewState)
 		GetWorld()->GetTimerManager().SetTimer(DeadTimerHandle, FTimerDelegate::CreateLambda([this]() -> void {
 			if (bIsPlayer)
 			{
-				ABPlayerController->RestartLevel();
+				ABPlayerController->ShowResultUI();
 			}
 			else
 			{
@@ -285,7 +263,7 @@ float AABCharacter::GetFinalAttackDamage() const
 	float AttackDamage = (nullptr != CurrentWeapon) ? (CharacterStat->GetAttack() + CurrentWeapon->GetAttackDamage()) : CharacterStat->GetAttack();
 	float AttackModifier = (nullptr != CurrentWeapon) ? CurrentWeapon->GetAttackModifier() : 1.0f;
 
-	return AttackDamage*AttackModifier;
+	return AttackDamage * AttackModifier;
 }
 
 void AABCharacter::OnAssetLoadCompleted()
@@ -423,7 +401,6 @@ void AABCharacter::PostInitializeComponents()
 	// 람다식 구문을 이용
 	// 다음 공격 타이밍전까지 공격 명령이 들어오면 NextAttackCheck 타이밍에 다음 콤보 공격을 시작
 	ABAnim->OnNextAttackCheck.AddLambda([this]() -> void {
-		ABLOG(Warning, TEXT("OnNextAttackCheck"));
 		CanNextCombo = false;
 
 		if (IsComboInputOn)
@@ -436,6 +413,15 @@ void AABCharacter::PostInitializeComponents()
 
 	// 어택 체크 오브젝트 추가
 	ABAnim->OnAttackHitCheck.AddUObject(this, &AABCharacter::AttackCheck);
+
+	// 브로드캐스트로 발동하는 체력 0 감지 델리게이트
+	CharacterStat->OnHPIsZero.AddLambda([this]() -> void {
+		ABLOG(Warning, TEXT("OnHPIsZero"));
+		// 죽는 애니메이션 재생
+		ABAnim->SetDeadAnim();
+		// 충돌 끔
+		SetActorEnableCollision(false);
+	});
 }
 
 
@@ -462,25 +448,10 @@ void AABCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCompone
 void AABCharacter::PossessedBy(AController* NewController)
 {
 	Super::PossessedBy(NewController);
-
-	if (IsPlayerControlled())
-	{
-		SetControlMode(EControlMode::DIABLO);
-		GetCharacterMovement()->MaxWalkSpeed = 600.0f;
-	}
-	else
-	{
-		SetControlMode(EControlMode::NPC);
-		GetCharacterMovement()->MaxWalkSpeed = 300.0f;
-	}
 }
 
 void AABCharacter::UpDown(float NewAxisValue)
 {
-	// 함수 AddMovementInput() -> -1 ~ 1 사이의 입력 값을 폰 무브먼트 컴포넌트에 전달 해, 캐릭터를 움직이게 함
-	// 함수 GetActorForwardVector() 전진 후진 입력 값 받음
-	//AddMovementInput(GetActorForwardVector(), NewAxisValue);
-
 	switch (CurrentControlMode)
 	{
 	case EControlMode::GTA:
@@ -495,9 +466,6 @@ void AABCharacter::UpDown(float NewAxisValue)
 
 void AABCharacter::LeftRight(float NewAxisValue)
 {
-	// 함수 GetActorRightVector() 왼쪽 오른쪽 입력 값 받음
-	//AddMovementInput(GetActorRightVector(), NewAxisValue);
-	
 	switch (CurrentControlMode)
 	{
 	case EControlMode::GTA:

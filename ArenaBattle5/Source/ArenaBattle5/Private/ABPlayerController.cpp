@@ -35,7 +35,6 @@ void AABPlayerController::PostInitializeComponents()
 {
 	// 1. 플레이어 컨트롤러 생성시 로그 찍힘
 	Super::PostInitializeComponents();
-	//ABLOG_S(Warning);
 }
 
 void AABPlayerController::BeginPlay()
@@ -43,9 +42,6 @@ void AABPlayerController::BeginPlay()
 	Super::BeginPlay();
 
 	ChangeInputMode(true);
-	// 게임 시작 후 플레이어 컨트롤러에서 UI를 배제하고 게임에서만 입력 받도록 함
-	FInputModeGameOnly InputMode;
-	SetInputMode(InputMode);
 
 	HUDWidget = CreateWidget<UABHUDWidget>(this, HUDWidgetClass);
 	ABCHECK(nullptr != HUDWidget);
@@ -109,7 +105,6 @@ void AABPlayerController::ShowResultUI()
 void AABPlayerController::OnPossess(APawn* aPawn)
 {
 	// 4. 빙의시 로그 찍힘
-	//ABLOG_S(Warning);
 	Super::OnPossess(aPawn);
 }
 

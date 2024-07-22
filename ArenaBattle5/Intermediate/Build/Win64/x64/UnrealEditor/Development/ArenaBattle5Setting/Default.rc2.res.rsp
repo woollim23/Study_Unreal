@@ -81,5 +81,5 @@
 /DPROJECT_COPYRIGHT_STRING="Fill out your copyright notice in the Description page of Project Settings."
 /DPROJECT_PRODUCT_NAME="Third Person Game Template"
 /DPROJECT_PRODUCT_IDENTIFIER=ArenaBattle5
-/fo "C:\Users\Yelim\Documents\GitHub\Study_Unreal\ArenaBattle5\Intermediate\Build\Win64\x64\UnrealEditor\Development\ArenaBattle5Setting\Default.rc2.res"
+/fo "C:\Git\Study_Unreal\ArenaBattle5\Intermediate\Build\Win64\x64\UnrealEditor\Development\ArenaBattle5Setting\Default.rc2.res"
 "..\Build\Windows\Resources\Default.rc2"

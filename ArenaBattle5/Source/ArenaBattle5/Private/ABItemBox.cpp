@@ -21,13 +21,13 @@ AABItemBox::AABItemBox()
 	Effect->SetupAttachment(RootComponent);
 
 	Trigger->SetBoxExtent(FVector(40.0f, 42.0f, 30.0f));
-	static ConstructorHelpers::FObjectFinder<UStaticMesh> SM_BOX(TEXT("/Script/Engine.StaticMesh'/Game/InfinityBladeGrassLands/Environments/Breakables/StaticMesh/Box/SM_Env_Breakables_Box1.SM_Env_Breakables_Box1'"));
+	static ConstructorHelpers::FObjectFinder<UStaticMesh> SM_BOX(TEXT("/Game/InfinityBladeGrassLands/Environments/Breakables/StaticMesh/Box/SM_Env_Breakables_Box1.SM_Env_Breakables_Box1"));
 	if (SM_BOX.Succeeded())
 	{
 		Box->SetStaticMesh(SM_BOX.Object);
 	}
 
-	static ConstructorHelpers::FObjectFinder<UParticleSystem> P_CHESTOPEN(TEXT("/Script/Engine.ParticleSystem'/Game/InfinityBladeGrassLands/Effects/FX_Treasure/Chest/P_TreasureChest_Open_Mesh.P_TreasureChest_Open_Mesh'"));
+	static ConstructorHelpers::FObjectFinder<UParticleSystem> P_CHESTOPEN(TEXT("/Game/InfinityBladeGrassLands/Effects/FX_Treasure/Chest/P_TreasureChest_Open_Mesh.P_TreasureChest_Open_Mesh"));
 	if (P_CHESTOPEN.Succeeded())
 	{
 		Effect->SetTemplate(P_CHESTOPEN.Object);
@@ -88,11 +88,4 @@ void AABItemBox::OnCharacterOverlap(UPrimitiveComponent* OverlappedComp, AActor*
 void AABItemBox::OnEffectFinished(UParticleSystemComponent* PSystem)
 {
 	Destroy();
-}
-
-// Called every frame
-void AABItemBox::Tick(float DeltaTime)
-{
-	Super::Tick(DeltaTime);
-
 }

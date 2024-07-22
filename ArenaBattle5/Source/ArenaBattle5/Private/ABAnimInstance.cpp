@@ -5,14 +5,11 @@
 
 UABAnimInstance::UABAnimInstance()
 {
-	// 현재 캐릭속도 0 으로 초기화
 	CurrentPawnSpeed = 0.0f;
-	// 공중 확인 부울 변수를 false로 초기화
 	IsInAir = false;
-	// 죽음 애니메이션 부울 변수 초기화
 	IsDead = false;
 	// 애님 몽타주 불러와서 연결
-	static ConstructorHelpers::FObjectFinder<UAnimMontage> ATTACK_MONTAGE(TEXT("/Script/Engine.AnimMontage'/Game/Book/Animations/SK_Mannequin_Skeleton_Montage.SK_Mannequin_Skeleton_Montage'"));
+	static ConstructorHelpers::FObjectFinder<UAnimMontage> ATTACK_MONTAGE(TEXT("/Game/Book/Animations/SK_Mannequin_Skeleton_Montage.SK_Mannequin_Skeleton_Montage"));
 	if (ATTACK_MONTAGE.Succeeded())
 	{
 		AttackMontage = ATTACK_MONTAGE.Object;
@@ -29,7 +26,6 @@ void UABAnimInstance::NativeUpdateAnimation(float DeltaSeconds)
 
 	if (!::IsValid(Pawn)) return;
 
-	//if (::IsValid(Pawn))
 	if(!IsDead)
 	{
 		CurrentPawnSpeed = Pawn->GetVelocity().Size();

@@ -58,7 +58,6 @@ public:
 
 	// TakeDamage 함수를 오버라이드해 액터가 받은 대미지를 처리하는 로직
 	virtual float TakeDamage(float DamageAmount, struct FDamageEvent const& DamageEvent, class AController* EventInstigator, AActor* DamageCauser) override;
-	//
 	virtual void PossessedBy(AController* NewController) override;
 
 	// Called to bind functionality to input
@@ -79,9 +78,6 @@ public:
 	UPROPERTY(VisibleAnywhere, Category = Stat)
 	class UABCharacterStatComponent* CharacterStat;
 
-	// 무기 컴포넌트
-	UPROPERTY(VisibleAnywhere, Category = Weapon)
-	USkeletalMeshComponent* Weapon;
 	// 삼인칭 시점으로 카메라 구도를 편리하게 설정 할 수 있는 부가 컴포넌트
 	UPROPERTY(VisibleAnywhere, Category = Camera)
 	USpringArmComponent* SpringArm;
@@ -89,11 +85,10 @@ public:
 	UPROPERTY(VisibleAnywhere, Category = Camera)
 	UCameraComponent* Camera;
 	// HP UI 컴포넌트
-	UPROPERTY(VisibleAnywhere, Category = Camera)
+	UPROPERTY(VisibleAnywhere, Category = UI)
 	class UWidgetComponent* HPBarWidget;
 
 private:
-	void OnAssetLoadCompleted();
 	// 위아래 방향키 입력 함수
 	void UpDown(float NewAxisValue);
 	// 왼쪽오른쪽 방향키 입력 함수
@@ -116,6 +111,7 @@ private:
 	void AttackEndComboState();
 	// 공격 충돌(?) 감지 함수
 	void AttackCheck();
+	void OnAssetLoadCompleted();
 
 private:
 	// 공격 중인지 확인 하는 부울

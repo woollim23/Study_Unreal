@@ -16,6 +16,7 @@ void UABHUDWidget::BindCharacterStat(UABCharacterStatComponent* CharacterStat)
 	// 스탯 컴포넌트 클래스의 셋스탯 함수안에 있는 브로드 캐스트가 발동하면 작동
 	// 업데이트 스탯 함수를 호출하도록 바인딩 해둠
 	CharacterStat->OnHPChanged.AddUObject(this, &UABHUDWidget::UpdateCharacterStat);
+	UpdateCharacterStat();
 }
 
 void UABHUDWidget::BindPlayerState(AABPlayerState* PlayerState)
@@ -23,6 +24,7 @@ void UABHUDWidget::BindPlayerState(AABPlayerState* PlayerState)
 	ABCHECK(nullptr != PlayerState);
 	CurrentPlayerState = PlayerState;
 	PlayerState->OnPlayerStateChanged.AddUObject(this, &UABHUDWidget::UpdatePlayerState);
+	UpdatePlayerState();
 }
 
 void UABHUDWidget::NativeConstruct()

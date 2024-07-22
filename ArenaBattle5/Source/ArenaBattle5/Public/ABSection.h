@@ -68,11 +68,7 @@ private:
 	UPROPERTY(EditAnywhere, Category = Spawn, Meta = (AllowPrivateAccess = true))
 	float ItemBoxSpawnTime;
 
-	FTimerHandle SpawnNPCTimerHandle = {};
+	FTimerHandle SpawnNPCTimeHandle = {};
 	FTimerHandle SpawnItemBoxTimerHandle = {};
-
-public:	
-	// Called every frame
-	virtual void Tick(float DeltaTime) override;
 
 };

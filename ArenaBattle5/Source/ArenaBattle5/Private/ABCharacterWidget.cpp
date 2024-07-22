@@ -28,7 +28,6 @@ void UABCharacterWidget::UpdateHPWidget()
 	{
 		if (nullptr != HPProgressBar)
 		{
-			// 스탯 정보 불러와 HP바 세팅
 			HPProgressBar->SetPercent(CurrentCharacterStat->GetHPRatio());
 		}
 	}

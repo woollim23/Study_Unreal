@@ -14,7 +14,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define ARENABATTLE5SETTING_ABCharacterSetting_generated_h
 
-#define FID_Users_Yelim_Documents_GitHub_Study_Unreal_ArenaBattle5_Source_ArenaBattle5Setting_Public_ABCharacterSetting_h_15_INCLASS_NO_PURE_DECLS \
+#define FID_Git_Study_Unreal_ArenaBattle5_Source_ArenaBattle5Setting_Public_ABCharacterSetting_h_15_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUABCharacterSetting(); \
 	friend struct Z_Construct_UClass_UABCharacterSetting_Statics; \
@@ -25,7 +25,7 @@ public: \
 
 
 
-#define FID_Users_Yelim_Documents_GitHub_Study_Unreal_ArenaBattle5_Source_ArenaBattle5Setting_Public_ABCharacterSetting_h_15_ENHANCED_CONSTRUCTORS \
+#define FID_Git_Study_Unreal_ArenaBattle5_Source_ArenaBattle5Setting_Public_ABCharacterSetting_h_15_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	UABCharacterSetting(UABCharacterSetting&&); \
@@ -37,12 +37,12 @@ public: \
 	NO_API virtual ~UABCharacterSetting();
 
 
-#define FID_Users_Yelim_Documents_GitHub_Study_Unreal_ArenaBattle5_Source_ArenaBattle5Setting_Public_ABCharacterSetting_h_12_PROLOG
-#define FID_Users_Yelim_Documents_GitHub_Study_Unreal_ArenaBattle5_Source_ArenaBattle5Setting_Public_ABCharacterSetting_h_15_GENERATED_BODY \
+#define FID_Git_Study_Unreal_ArenaBattle5_Source_ArenaBattle5Setting_Public_ABCharacterSetting_h_12_PROLOG
+#define FID_Git_Study_Unreal_ArenaBattle5_Source_ArenaBattle5Setting_Public_ABCharacterSetting_h_15_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Users_Yelim_Documents_GitHub_Study_Unreal_ArenaBattle5_Source_ArenaBattle5Setting_Public_ABCharacterSetting_h_15_INCLASS_NO_PURE_DECLS \
-	FID_Users_Yelim_Documents_GitHub_Study_Unreal_ArenaBattle5_Source_ArenaBattle5Setting_Public_ABCharacterSetting_h_15_ENHANCED_CONSTRUCTORS \
+	FID_Git_Study_Unreal_ArenaBattle5_Source_ArenaBattle5Setting_Public_ABCharacterSetting_h_15_INCLASS_NO_PURE_DECLS \
+	FID_Git_Study_Unreal_ArenaBattle5_Source_ArenaBattle5Setting_Public_ABCharacterSetting_h_15_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -50,7 +50,7 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 template<> ARENABATTLE5SETTING_API UClass* StaticClass<class UABCharacterSetting>();
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_Users_Yelim_Documents_GitHub_Study_Unreal_ArenaBattle5_Source_ArenaBattle5Setting_Public_ABCharacterSetting_h
+#define CURRENT_FILE_ID FID_Git_Study_Unreal_ArenaBattle5_Source_ArenaBattle5Setting_Public_ABCharacterSetting_h
 
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

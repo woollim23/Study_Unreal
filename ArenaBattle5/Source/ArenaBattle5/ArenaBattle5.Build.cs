@@ -8,6 +8,8 @@ public class ArenaBattle5 : ModuleRules
 	{
 		PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
 
-		PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore", "UMG", "EnhancedInput", "NavigationSystem", "AIModule", "GameplayTasks", "ArenaBattle5Setting" });
-	}
+		PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore", "UMG", "EnhancedInput", "NavigationSystem", "AIModule", "GameplayTasks" });
+       
+		PrivateDependencyModuleNames.AddRange(new string[] { "ArenaBattle5Setting" });
+    }
 }
