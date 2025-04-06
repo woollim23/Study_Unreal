@@ -1,0 +1,8 @@
+{
+	"SourceFiles": [
+		"C:\\Git\\Study_Unreal\\ArenaBattle\\Source\\ArenaBattle\\ArenaBattle.Build.cs",
+		"C:\\Git\\Study_Unreal\\ArenaBattle\\Source\\ArenaBattle.Target.cs",
+		"C:\\Git\\Study_Unreal\\ArenaBattle\\Source\\ArenaBattleEditor.Target.cs"
+	],
+	"EngineVersion": "5.4.4"
+}

@@ -1,0 +1,14 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\git\\study_unreal\\arenabattle\\source\\arenabattle\\arenabattle.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\git\\study_unreal\\arenabattle\\intermediate\\build\\win64\\x64\\arenabattleeditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.h.pch",
+        "Includes": [
+            "c:\\git\\study_unreal\\arenabattle\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\arenabattle\\definitions.arenabattle.h",
+            "c:\\git\\study_unreal\\arenabattle\\source\\arenabattle\\arenabattle.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}
