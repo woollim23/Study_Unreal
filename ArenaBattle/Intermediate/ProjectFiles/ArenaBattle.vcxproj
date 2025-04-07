@@ -260,6 +260,7 @@
     <None Include="..\..\ArenaBattle.uproject"/>
     <None Include="..\..\Source\ArenaBattle.Target.cs"/>
     <None Include="..\..\Source\ArenaBattleEditor.Target.cs"/>
+    <None Include="..\..\.vsconfig"/>
     <None Include="..\..\Config\DefaultEditor.ini"/>
     <None Include="..\..\Config\DefaultEngine.ini"/>
     <None Include="..\..\Config\DefaultGame.ini"/>
