@@ -75,3 +75,6 @@ DerivedDataCache/*
 
 # Ignore custom asset folder
 ArenaBattle/Content/99_Assets/
+
+# Ignore custom Binaries folder
+ArenaBattle/Binaries/
