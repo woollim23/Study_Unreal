@@ -1,0 +1,9 @@
+{
+	"SourceFiles": [
+		"C:\\Git\\Study_Unreal\\YPP\\Source\\YPPSetting\\YPPSetting.Build.cs",
+		"C:\\Git\\Study_Unreal\\YPP\\Source\\YPP\\YPP.Build.cs",
+		"C:\\Git\\Study_Unreal\\YPP\\Source\\YPP.Target.cs",
+		"C:\\Git\\Study_Unreal\\YPP\\Source\\YPPEditor.Target.cs"
+	],
+	"EngineVersion": "5.4.4"
+}
